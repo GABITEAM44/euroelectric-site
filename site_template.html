@@ -269,6 +269,73 @@ section { padding: 90px 40px; }
 }
 .service-link:hover { gap: 14px; }
 
+/* ===== TABLOURI ELECTRICE DETAIL ===== */
+#tablouri-electrice { background: var(--grey-light); }
+.te-subtitle {
+  font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--navy);
+  font-size: 1.1rem; margin-bottom: 24px;
+  display: flex; align-items: center; gap: 16px;
+}
+.te-subtitle::after { content: ''; flex: 1; height: 2px; background: var(--cyan); opacity: 0.25; }
+.te-applications, .te-services-block, .te-standards { margin-bottom: 52px; }
+.te-apps-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.te-app-item {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--white); border-radius: 10px; padding: 16px 20px;
+  box-shadow: var(--shadow); border-left: 4px solid var(--cyan); transition: var(--transition);
+}
+.te-app-item:hover { transform: translateX(4px); box-shadow: var(--shadow-hover); }
+.te-app-item i { color: var(--cyan); font-size: 1.2rem; min-width: 24px; }
+.te-app-item span { font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 0.88rem; color: var(--text-dark); }
+.te-services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.te-srv-card {
+  background: var(--white); border-radius: var(--radius); padding: 28px 22px;
+  box-shadow: var(--shadow); text-align: center; transition: var(--transition);
+  border-top: 4px solid var(--navy);
+}
+.te-srv-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+.te-srv-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy), var(--cyan));
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px; color: var(--white); font-size: 1.4rem;
+}
+.te-srv-card h4 {
+  font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--navy);
+  font-size: 0.95rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.te-srv-card p { color: var(--text-grey); font-size: 0.85rem; line-height: 1.65; }
+.te-standards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.te-std-card {
+  background: var(--navy); border-radius: var(--radius); padding: 28px 24px;
+  text-align: center; transition: var(--transition);
+}
+.te-std-card:hover { transform: translateY(-4px); background: var(--navy-dark); }
+.te-std-badge {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: rgba(0,174,239,0.18); border: 2px solid var(--cyan);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 14px; color: var(--cyan); font-size: 1.3rem;
+}
+.te-std-card h4 {
+  font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--white);
+  font-size: 0.95rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.te-std-card p { color: rgba(255,255,255,0.75); font-size: 0.83rem; line-height: 1.65; }
+@media (max-width: 1024px) {
+  .te-apps-grid { grid-template-columns: repeat(2, 1fr); }
+  .te-services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .te-apps-grid { grid-template-columns: 1fr; }
+  .te-standards-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .te-services-grid { grid-template-columns: 1fr; }
+}
+
 /* ===== PROIECTE ===== */
 #proiecte { background: var(--white); }
 .projects-filter { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
@@ -747,8 +814,8 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60
         </div>
         <div class="service-body">
           <h3 data-i18n="s1-title">Tablouri Electrice</h3>
-          <p data-i18n="s1-desc">Proiectare și asamblare tablouri electrice principale și secundare conform normelor europene. Soluții personalizate pentru orice tip de instalație.</p>
-          <a href="#contact" class="service-link" data-i18n="srv-more">Află mai multe <i class="fas fa-arrow-right"></i></a>
+          <p data-i18n="s1-desc">Proiectare și asamblare tablouri electrice joasă tensiune până la 1000V. Soluții industriale, comerciale și publice conform normelor europene.</p>
+          <a href="#tablouri-electrice" class="service-link" data-i18n="srv-more">Află mai multe <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
       <div class="service-card reveal reveal-delay-1">
@@ -809,6 +876,77 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60
           <h3 data-i18n="s6-title">Instalații Curenți Slabi</h3>
           <p data-i18n="s6-desc">Infrastructuri de rețea structurată, fibră optică și sisteme wireless profesionale. Soluții complete pentru date și telecomunicații.</p>
           <a href="#contact" class="service-link" data-i18n="srv-more">Află mai multe <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABLOURI ELECTRICE DETAIL -->
+<section id="tablouri-electrice">
+  <div class="section-inner">
+    <div class="section-tag" data-i18n="te-tag">Serviciu Detaliat</div>
+    <h2 class="section-title reveal" data-i18n="te-title">Tablouri Electrice <span>Joasă Tensiune</span></h2>
+    <p class="section-desc reveal reveal-delay-1" data-i18n="te-desc">Panouri de distribuție și control pentru instalații până la 1000V. Soluții industriale, comerciale și publice — de la proiectare la punerea în funcțiune.</p>
+
+    <!-- Aplicatii principale -->
+    <div class="te-applications reveal reveal-delay-1">
+      <h3 class="te-subtitle" data-i18n="te-apps-title">Aplicații Principale</h3>
+      <div class="te-apps-grid">
+        <div class="te-app-item"><i class="fas fa-industry"></i><span data-i18n="te-app1">Industrie și Manufacturing</span></div>
+        <div class="te-app-item"><i class="fas fa-shopping-bag"></i><span data-i18n="te-app2">Centre Comerciale (Auchan, Lidl, Hornbach)</span></div>
+        <div class="te-app-item"><i class="fas fa-hospital"></i><span data-i18n="te-app3">Spitale și Instituții Publice</span></div>
+        <div class="te-app-item"><i class="fas fa-solar-panel"></i><span data-i18n="te-app4">Energie Regenerabilă (Solar, Eolian)</span></div>
+        <div class="te-app-item"><i class="fas fa-server"></i><span data-i18n="te-app5">Telecomunicații și Centre de Date</span></div>
+        <div class="te-app-item"><i class="fas fa-charging-station"></i><span data-i18n="te-app6">Stații de Încărcare Vehicule Electrice</span></div>
+      </div>
+    </div>
+
+    <!-- Servicii Complete -->
+    <div class="te-services-block reveal reveal-delay-2">
+      <h3 class="te-subtitle" data-i18n="te-srv-title">Servicii Complete</h3>
+      <div class="te-services-grid">
+        <div class="te-srv-card">
+          <div class="te-srv-icon"><i class="fas fa-drafting-compass"></i></div>
+          <h4 data-i18n="te-srv1-title">Proiectare</h4>
+          <p data-i18n="te-srv1-desc">Soluții personalizate, calcule, scheme electrice, documentație</p>
+        </div>
+        <div class="te-srv-card">
+          <div class="te-srv-icon"><i class="fas fa-cogs"></i></div>
+          <h4 data-i18n="te-srv2-title">Fabricație</h4>
+          <p data-i18n="te-srv2-desc">Prelucrare CNC, asamblare, cablare, protecție anticorozivă</p>
+        </div>
+        <div class="te-srv-card">
+          <div class="te-srv-icon"><i class="fas fa-tools"></i></div>
+          <h4 data-i18n="te-srv3-title">Montaj</h4>
+          <p data-i18n="te-srv3-desc">Echipă experimentată, instalare la fața locului, suport continuu</p>
+        </div>
+        <div class="te-srv-card">
+          <div class="te-srv-icon"><i class="fas fa-check-circle"></i></div>
+          <h4 data-i18n="te-srv4-title">Testare</h4>
+          <p data-i18n="te-srv4-desc">Teste izolație, verificare funcționalitate, rapoarte conformitate</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Standarde -->
+    <div class="te-standards reveal reveal-delay-1">
+      <h3 class="te-subtitle" data-i18n="te-std-title">Standarde și Conformitate</h3>
+      <div class="te-standards-grid">
+        <div class="te-std-card">
+          <div class="te-std-badge"><i class="fas fa-globe-europe"></i></div>
+          <h4 data-i18n="te-std1-title">Europene</h4>
+          <p data-i18n="te-std1-desc">EN 61439-1, EN 61439-2, EN 60950-1, EN 61010-1</p>
+        </div>
+        <div class="te-std-card">
+          <div class="te-std-badge"><i class="fas fa-flag"></i></div>
+          <h4 data-i18n="te-std2-title">Naționale</h4>
+          <p data-i18n="te-std2-desc">SR EN 60364, NTE 006, NTPA, Legea 123/2012</p>
+        </div>
+        <div class="te-std-card">
+          <div class="te-std-badge"><i class="fas fa-certificate"></i></div>
+          <h4 data-i18n="te-std3-title">Certificări</h4>
+          <p data-i18n="te-std3-desc">Marcaj CE, Declarație de Conformitate, Asigurare Răspundere Civilă</p>
         </div>
       </div>
     </div>
@@ -1236,7 +1374,34 @@ const translations = {
     'form-submit':'<i class="fas fa-paper-plane"></i> Trimite Solicitarea',
     'footer-brand':'Soluții electrice complete pentru sectorul rezidențial, comercial și industrial. Profesionalism și Siguranță — din 2003.',
     'footer-nav':'Navigare',
-    'footer-copy':'© 2025 S.C. EUROELECTRIC S.R.L. — Toate drepturile rezervate'
+    'footer-copy':'© 2025 S.C. EUROELECTRIC S.R.L. — Toate drepturile rezervate',
+    'te-tag':'Serviciu Detaliat',
+    'te-title':'Tablouri Electrice <span>Joasă Tensiune</span>',
+    'te-desc':'Panouri de distribuție și control pentru instalații până la 1000V. Soluții industriale, comerciale și publice — de la proiectare la punerea în funcțiune.',
+    'te-apps-title':'Aplicații Principale',
+    'te-app1':'Industrie și Manufacturing',
+    'te-app2':'Centre Comerciale (Auchan, Lidl, Hornbach)',
+    'te-app3':'Spitale și Instituții Publice',
+    'te-app4':'Energie Regenerabilă (Solar, Eolian)',
+    'te-app5':'Telecomunicații și Centre de Date',
+    'te-app6':'Stații de Încărcare Vehicule Electrice',
+    'te-srv-title':'Servicii Complete',
+    'te-srv1-title':'Proiectare',
+    'te-srv1-desc':'Soluții personalizate, calcule, scheme electrice, documentație',
+    'te-srv2-title':'Fabricație',
+    'te-srv2-desc':'Prelucrare CNC, asamblare, cablare, protecție anticorozivă',
+    'te-srv3-title':'Montaj',
+    'te-srv3-desc':'Echipă experimentată, instalare la fața locului, suport continuu',
+    'te-srv4-title':'Testare',
+    'te-srv4-desc':'Teste izolație, verificare funcționalitate, rapoarte conformitate',
+    'te-std-title':'Standarde și Conformitate',
+    'te-std1-title':'Europene',
+    'te-std1-desc':'EN 61439-1, EN 61439-2, EN 60950-1, EN 61010-1',
+    'te-std2-title':'Naționale',
+    'te-std2-desc':'SR EN 60364, NTE 006, NTPA, Legea 123/2012',
+    'te-std3-title':'Certificări',
+    'te-std3-desc':'Marcaj CE, Declarație de Conformitate, Asigurare Răspundere Civilă',
+    's1-desc':'Proiectare și asamblare tablouri electrice joasă tensiune până la 1000V. Soluții industriale, comerciale și publice conform normelor europene.'
   },
   en: {
     'nav-acasa':'Home','nav-de-ce-noi':'Why us?','nav-servicii':'Services',
@@ -1284,7 +1449,34 @@ const translations = {
     'form-submit':'<i class="fas fa-paper-plane"></i> Send Request',
     'footer-brand':'Complete electrical solutions for the residential, commercial and industrial sector. Professionalism and Safety — since 2003.',
     'footer-nav':'Navigation',
-    'footer-copy':'© 2025 S.C. EUROELECTRIC S.R.L. — All rights reserved'
+    'footer-copy':'© 2025 S.C. EUROELECTRIC S.R.L. — All rights reserved',
+    'te-tag':'Featured Service',
+    'te-title':'Low Voltage <span>Electrical Panels</span>',
+    'te-desc':'Distribution and control panels for installations up to 1000V. Industrial, commercial and public solutions — from design to commissioning.',
+    'te-apps-title':'Main Applications',
+    'te-app1':'Industry & Manufacturing',
+    'te-app2':'Shopping Centers (Auchan, Lidl, Hornbach)',
+    'te-app3':'Hospitals & Public Institutions',
+    'te-app4':'Renewable Energy (Solar, Wind)',
+    'te-app5':'Telecommunications & Data Centers',
+    'te-app6':'Electric Vehicle Charging Stations',
+    'te-srv-title':'Complete Services',
+    'te-srv1-title':'Design',
+    'te-srv1-desc':'Custom solutions, calculations, electrical diagrams, documentation',
+    'te-srv2-title':'Manufacturing',
+    'te-srv2-desc':'CNC machining, assembly, wiring, anti-corrosion protection',
+    'te-srv3-title':'Installation',
+    'te-srv3-desc':'Experienced team, on-site installation, ongoing support',
+    'te-srv4-title':'Testing',
+    'te-srv4-desc':'Insulation tests, functionality checks, compliance reports',
+    'te-std-title':'Standards & Compliance',
+    'te-std1-title':'European',
+    'te-std1-desc':'EN 61439-1, EN 61439-2, EN 60950-1, EN 61010-1',
+    'te-std2-title':'National',
+    'te-std2-desc':'SR EN 60364, NTE 006, NTPA, Law 123/2012',
+    'te-std3-title':'Certifications',
+    'te-std3-desc':'CE Marking, Declaration of Conformity, Civil Liability Insurance',
+    's1-desc':'Design and assembly of low-voltage electrical panels up to 1000V. Industrial, commercial and public solutions in accordance with European standards.'
   }
 };
 
