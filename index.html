@@ -919,13 +919,29 @@ section { padding: 90px 40px; }
   display: flex; align-items: center; justify-content: center; gap: 10px;
 }
 .btn-submit:hover { background: var(--cyan); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,174,239,0.3); }
-.map-placeholder {
-  margin-top: 24px; border-radius: var(--radius); overflow: hidden; height: 200px;
-  background: var(--grey-mid); display: flex; align-items: center; justify-content: center;
-  border: 2px dashed #cdd5e0; flex-direction: column; gap: 10px;
+.map-placeholder { margin-top: 24px; }
+.map-tabs { display: flex; gap: 0; margin-bottom: 0; border-radius: 10px 10px 0 0; overflow: hidden; }
+.map-tab-btn {
+  flex: 1; padding: 9px 12px; font-family: "Montserrat", sans-serif; font-size: 0.78rem;
+  font-weight: 700; border: none; cursor: pointer; background: var(--grey-mid);
+  color: var(--text-grey); transition: background 0.2s, color 0.2s; letter-spacing: 0.02em;
 }
-.map-placeholder i { font-size: 2.5rem; color: var(--cyan); opacity: 0.5; }
-.map-placeholder span { color: var(--text-grey); font-size: 0.85rem; }
+.map-tab-btn.active { background: var(--navy); color: #fff; }
+.map-tab-btn:hover:not(.active) { background: #d4dce8; }
+.map-frame-wrap {
+  border-radius: 0 0 var(--radius) var(--radius); overflow: hidden;
+  height: 240px; position: relative;
+}
+.map-frame-wrap iframe {
+  width: 100%; height: 100%; border: 0; display: block;
+}
+.map-open-link {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;
+  font-size: 0.78rem; color: var(--cyan); text-decoration: none; font-weight: 600;
+  transition: color 0.2s;
+}
+.map-open-link:hover { color: var(--navy); }
+.map-open-link i { font-size: 0.72rem; }
 
 /* ===== FOOTER ===== */
 footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60px 40px 0; }
@@ -1929,12 +1945,31 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60
           <a href="https://www.linkedin.com/company/euroelectric-srl/posts/?feedView=all" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
           <a href="mailto:office@euroelectric.ro" class="social-btn"><i class="fas fa-envelope"></i></a>
         </div>
-        <div class="map-placeholder" style="display:block;padding:0;border:none;background:none;">
-          <iframe
-            src="https://www.google.com/maps?q=Comuna+Baru,+nr.405%2FC,+judet+Hunedoara,+Romania&output=embed&z=15"
-            width="100%" height="200" style="border:0;border-radius:var(--radius);"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <div class="map-placeholder">
+          <div class="map-tabs">
+            <button class="map-tab-btn active" onclick="switchMap('baru',this)">
+              <i class="fas fa-building" style="margin-right:5px;"></i>Sediu Baru
+            </button>
+            <button class="map-tab-btn" onclick="switchMap('petrosani',this)">
+              <i class="fas fa-tools" style="margin-right:5px;"></i>Punct Lucru Petroșani
+            </button>
+          </div>
+          <div class="map-frame-wrap">
+            <iframe id="map-baru"
+              src="https://maps.google.com/maps?q=Baru,+Hunedoara,+Romania&z=14&ie=UTF8&output=embed"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <iframe id="map-petrosani"
+              src="https://maps.google.com/maps?q=Str.+Petru+Maior+14,+Petrosani,+Hunedoara,+Romania&z=15&ie=UTF8&output=embed"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              style="display:none;">
+            </iframe>
+          </div>
+          <a id="map-open-link" class="map-open-link"
+             href="https://www.google.com/maps/search/Baru,+Hunedoara,+Romania"
+             target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt"></i> Deschide în Google Maps
+          </a>
         </div>
       </div>
       <div class="contact-form reveal reveal-delay-1">
@@ -3059,6 +3094,24 @@ function closeBlogModal4(e) {
     if (!wrap.contains(e.target)) wrap.classList.remove("open");
   });
 })();
+
+// ===== MAP TABS =====
+function switchMap(loc, btn) {
+  document.querySelectorAll(".map-tab-btn").forEach(function(b){ b.classList.remove("active"); });
+  btn.classList.add("active");
+  var baru = document.getElementById("map-baru");
+  var petro = document.getElementById("map-petrosani");
+  var link = document.getElementById("map-open-link");
+  if (loc === "baru") {
+    baru.style.display = "block";
+    petro.style.display = "none";
+    link.href = "https://www.google.com/maps/search/Baru,+Hunedoara,+Romania";
+  } else {
+    baru.style.display = "none";
+    petro.style.display = "block";
+    link.href = "https://www.google.com/maps/search/Str.+Petru+Maior+14,+Petrosani,+Hunedoara";
+  }
+}
 
 // ===== LIGHTBOX =====
 function openLightbox(src, alt) {
