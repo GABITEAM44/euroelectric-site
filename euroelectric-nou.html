@@ -942,6 +942,19 @@ section { padding: 90px 40px; }
 }
 .map-open-link:hover { color: var(--navy); }
 .map-open-link i { font-size: 0.72rem; }
+.map-cookie-block {
+  display: none; position: absolute; inset: 0;
+  background: var(--grey-mid); flex-direction: column;
+  align-items: center; justify-content: center; gap: 10px; text-align: center; padding: 20px;
+}
+.map-cookie-block i { font-size: 2rem; color: var(--cyan); opacity: 0.7; }
+.map-cookie-block p { font-size: 0.83rem; color: var(--text-grey); }
+.map-cookie-block button {
+  background: var(--cyan); color: #fff; border: none; padding: 8px 20px;
+  border-radius: 8px; cursor: pointer; font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem; font-weight: 700; transition: background 0.2s;
+}
+.map-cookie-block button:hover { background: var(--navy); }
 
 /* ===== FOOTER ===== */
 footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60px 40px 0; }
@@ -1956,14 +1969,19 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60
           </div>
           <div class="map-frame-wrap">
             <iframe id="map-baru"
-              src="https://maps.google.com/maps?q=Baru,+Hunedoara,+Romania&z=14&ie=UTF8&output=embed"
+              data-src="https://maps.google.com/maps?q=Baru,+Hunedoara,+Romania&z=14&ie=UTF8&output=embed"
               allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
             <iframe id="map-petrosani"
-              src="https://maps.google.com/maps?q=Str.+Petru+Maior+14,+Petrosani,+Hunedoara,+Romania&z=15&ie=UTF8&output=embed"
+              data-src="https://maps.google.com/maps?q=Str.+Petru+Maior+14,+Petrosani,+Hunedoara,+Romania&z=15&ie=UTF8&output=embed"
               allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
               style="display:none;">
             </iframe>
+            <div id="map-cookie-block" class="map-cookie-block">
+              <i class="fas fa-map-marked-alt"></i>
+              <p>Harta necesită cookie-uri funcționale</p>
+              <button onclick="cookieChoice('all')">Acceptă și afișează harta</button>
+            </div>
           </div>
           <a id="map-open-link" class="map-open-link"
              href="https://www.google.com/maps/search/Baru,+Hunedoara,+Romania"
@@ -2999,18 +3017,48 @@ window.addEventListener("scroll", () => {
 })();
 
 // Cookie banner
+function loadMaps() {
+  var block = document.getElementById('map-cookie-block');
+  var baru = document.getElementById('map-baru');
+  var petro = document.getElementById('map-petrosani');
+  if (!baru) return;
+  if (block) block.style.display = 'none';
+  if (!baru.src || baru.src === window.location.href) {
+    baru.src = baru.getAttribute('data-src');
+  }
+  if (!petro.src || petro.src === window.location.href) {
+    petro.src = petro.getAttribute('data-src');
+  }
+}
+function showMapBlock() {
+  var block = document.getElementById('map-cookie-block');
+  if (block) block.style.display = 'flex';
+}
 (function() {
-  if (!localStorage.getItem('euro_cookie_consent')) {
+  var consent = localStorage.getItem('euro_cookie_consent');
+  if (!consent) {
     document.getElementById('cookieBanner').style.display = 'block';
+    showMapBlock();
+  } else if (localStorage.getItem('euro_cookie_functional') === '1') {
+    loadMaps();
+  } else {
+    showMapBlock();
   }
 })();
 function cookieChoice(type) {
   localStorage.setItem('euro_cookie_consent', type);
   localStorage.setItem('euro_cookie_functional', type === 'all' ? '1' : '0');
   var b = document.getElementById('cookieBanner');
-  b.style.transition = 'transform 0.4s ease';
-  b.style.transform = 'translateY(100%)';
-  setTimeout(function() { b.style.display = 'none'; }, 400);
+  if (b && b.style.display !== 'none') {
+    b.style.transition = 'transform 0.4s ease';
+    b.style.transform = 'translateY(100%)';
+    setTimeout(function() { b.style.display = 'none'; }, 400);
+  }
+  if (type === 'all') {
+    loadMaps();
+  } else {
+    showMapBlock();
+  }
 }
 
 var CERT_ANRE = [
