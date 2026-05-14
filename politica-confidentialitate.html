@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politica de Confidențialitate — EUROELECTRIC S.R.L.</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: "Open Sans", sans-serif; color: #1a1a2e; background: #fff; }
+:root {
+  --navy: #003B7A; --navy-dark: #002456; --cyan: #00AEEF;
+  --white: #FFFFFF; --grey-light: #F5F7FA; --grey-mid: #E8EDF4;
+  --text-dark: #1a2744; --text-grey: #5a6a80;
+  --shadow: 0 4px 24px rgba(0,59,122,0.10);
+  --radius: 12px; --transition: all 0.3s ease;
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--white); box-shadow: 0 2px 20px rgba(0,59,122,0.10);
+  padding: 0 40px; display: flex; align-items: center; justify-content: space-between;
+  height: 72px;
+}
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.nav-logo-text { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--navy); }
+.nav-logo-text span { color: var(--cyan); }
+.nav-back {
+  display: flex; align-items: center; gap: 8px;
+  text-decoration: none; color: var(--navy);
+  font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 0.85rem;
+  padding: 8px 16px; border-radius: 8px; border: 2px solid var(--grey-mid);
+  transition: var(--transition);
+}
+.nav-back:hover { background: var(--cyan); color: var(--white); border-color: var(--cyan); }
+
+/* HERO */
+.page-hero {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #0066CC 100%);
+  padding: 60px 40px; text-align: center; position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: ''; position: absolute; inset: 0; opacity: 0.06;
+  background-image: radial-gradient(circle at 2px 2px, var(--cyan) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+.page-hero-content { position: relative; max-width: 800px; margin: 0 auto; }
+.page-hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,174,239,0.2); border: 1px solid rgba(0,174,239,0.4);
+  color: var(--cyan); padding: 6px 16px; border-radius: 20px;
+  font-family: "Montserrat", sans-serif; font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;
+}
+.page-hero h1 {
+  font-family: "Montserrat", sans-serif; font-size: 2.4rem; font-weight: 800;
+  color: var(--white); margin-bottom: 16px; line-height: 1.2;
+}
+.page-hero p { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7; }
+.page-hero-meta {
+  display: flex; align-items: center; justify-content: center; gap: 24px;
+  margin-top: 24px; flex-wrap: wrap;
+}
+.page-hero-meta span {
+  display: flex; align-items: center; gap: 6px;
+  color: rgba(255,255,255,0.6); font-size: 0.82rem;
+}
+.page-hero-meta i { color: var(--cyan); }
+
+/* CONTENT */
+.content-wrapper { max-width: 860px; margin: 0 auto; padding: 60px 40px 80px; }
+
+.toc {
+  background: var(--grey-light); border-radius: var(--radius);
+  padding: 28px 32px; margin-bottom: 48px;
+  border-left: 4px solid var(--cyan);
+}
+.toc h2 {
+  font-family: "Montserrat", sans-serif; font-size: 0.88rem; font-weight: 700;
+  color: var(--navy); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;
+}
+.toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.toc li a {
+  color: var(--text-grey); text-decoration: none; font-size: 0.9rem;
+  transition: var(--transition);
+}
+.toc li a:hover { color: var(--cyan); }
+
+.policy-section { margin-bottom: 48px; }
+.policy-section:target { scroll-margin-top: 90px; }
+
+.section-header {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 20px; padding-bottom: 14px;
+  border-bottom: 2px solid var(--grey-mid);
+}
+.section-number {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--cyan); color: var(--white);
+  font-family: "Montserrat", sans-serif; font-size: 0.85rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.section-header h2 {
+  font-family: "Montserrat", sans-serif; font-size: 1.15rem;
+  font-weight: 700; color: var(--navy);
+}
+
+.policy-section p {
+  color: var(--text-grey); font-size: 0.92rem; line-height: 1.85;
+  margin-bottom: 14px;
+}
+.policy-section p:last-child { margin-bottom: 0; }
+
+.policy-section ul, .policy-section ol {
+  padding-left: 20px; color: var(--text-grey);
+  font-size: 0.92rem; line-height: 1.85;
+  display: flex; flex-direction: column; gap: 8px;
+  margin-bottom: 14px;
+}
+.policy-section li::marker { color: var(--cyan); }
+
+.info-box {
+  background: rgba(0,174,239,0.07); border: 1px solid rgba(0,174,239,0.2);
+  border-radius: var(--radius); padding: 20px 24px; margin: 20px 0;
+  display: flex; gap: 14px; align-items: flex-start;
+}
+.info-box i { color: var(--cyan); font-size: 1.1rem; margin-top: 2px; flex-shrink: 0; }
+.info-box p { margin: 0; color: var(--text-dark); font-size: 0.88rem; }
+
+.rights-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px; margin: 20px 0;
+}
+.right-card {
+  background: var(--grey-light); border-radius: 10px;
+  padding: 18px 20px; border-left: 3px solid var(--cyan);
+}
+.right-card h4 {
+  font-family: "Montserrat", sans-serif; font-size: 0.85rem;
+  font-weight: 700; color: var(--navy); margin-bottom: 6px;
+  display: flex; align-items: center; gap: 8px;
+}
+.right-card h4 i { color: var(--cyan); }
+.right-card p { font-size: 0.82rem; color: var(--text-grey); margin: 0; line-height: 1.6; }
+
+.cookie-table {
+  width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.86rem;
+}
+.cookie-table th {
+  background: var(--navy); color: var(--white);
+  font-family: "Montserrat", sans-serif; font-size: 0.78rem;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  padding: 12px 16px; text-align: left;
+}
+.cookie-table td { padding: 11px 16px; border-bottom: 1px solid var(--grey-mid); color: var(--text-grey); }
+.cookie-table tr:last-child td { border-bottom: none; }
+.cookie-table tr:nth-child(even) td { background: var(--grey-light); }
+.badge-necesar { background: #e8f5e9; color: #2e7d32; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+.badge-optional { background: #fff3e0; color: #e65100; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+
+.contact-card {
+  background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+  border-radius: var(--radius); padding: 32px; color: var(--white);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap; margin-top: 24px;
+}
+.contact-card h3 {
+  font-family: "Montserrat", sans-serif; font-size: 1.1rem;
+  font-weight: 700; margin-bottom: 8px;
+}
+.contact-card p { color: rgba(255,255,255,0.7); font-size: 0.88rem; }
+.contact-card-links { display: flex; gap: 12px; flex-wrap: wrap; }
+.contact-card-link {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.12); color: var(--white);
+  padding: 10px 18px; border-radius: 8px; text-decoration: none;
+  font-size: 0.85rem; font-weight: 600; transition: var(--transition);
+}
+.contact-card-link:hover { background: var(--cyan); }
+.contact-card-link i { font-size: 0.9rem; }
+
+/* FOOTER */
+footer {
+  background: var(--navy-dark); color: rgba(255,255,255,0.6);
+  text-align: center; padding: 24px 40px;
+  font-size: 0.82rem;
+}
+footer a { color: var(--cyan); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .page-hero { padding: 40px 20px; }
+  .page-hero h1 { font-size: 1.7rem; }
+  .content-wrapper { padding: 40px 20px 60px; }
+  .rights-grid { grid-template-columns: 1fr; }
+  .contact-card { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="euroelectric-nou.html">
+    <span class="nav-logo-text">EURO<span>ELECTRIC</span></span>
+  </a>
+  <a class="nav-back" href="euroelectric-nou.html">
+    <i class="fas fa-arrow-left"></i> Înapoi la site
+  </a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-tag"><i class="fas fa-shield-alt"></i> GDPR Compliant</div>
+    <h1>Politica de Confidențialitate</h1>
+    <p>Transparența în prelucrarea datelor cu caracter personal este o prioritate pentru EUROELECTRIC S.R.L. Această politică descrie cum colectăm, utilizăm și protejăm informațiile dumneavoastră.</p>
+    <div class="page-hero-meta">
+      <span><i class="fas fa-calendar-alt"></i> Ultima actualizare: Mai 2025</span>
+      <span><i class="fas fa-file-alt"></i> Regulamentul UE 2016/679 (GDPR)</span>
+      <span><i class="fas fa-building"></i> S.C. EUROELECTRIC S.R.L.</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrapper">
+
+  <!-- CUPRINS -->
+  <div class="toc">
+    <h2><i class="fas fa-list" style="color:var(--cyan);margin-right:8px"></i>Cuprins</h2>
+    <ol>
+      <li><a href="#s1">Identitatea operatorului de date</a></li>
+      <li><a href="#s2">Ce date colectăm și de ce</a></li>
+      <li><a href="#s3">Temeiul legal al prelucrării</a></li>
+      <li><a href="#s4">Politica de cookies</a></li>
+      <li><a href="#s5">Partajarea datelor cu terți</a></li>
+      <li><a href="#s6">Transferul datelor în afara UE</a></li>
+      <li><a href="#s7">Durata păstrării datelor</a></li>
+      <li><a href="#s8">Drepturile dumneavoastră GDPR</a></li>
+      <li><a href="#s9">Securitatea datelor</a></li>
+      <li><a href="#s10">Modificări ale politicii</a></li>
+      <li><a href="#s11">Contact și sesizări</a></li>
+    </ol>
+  </div>
+
+  <!-- S1 -->
+  <div class="policy-section" id="s1">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2>Identitatea operatorului de date</h2>
+    </div>
+    <p>Operatorul de date cu caracter personal în sensul Regulamentului (UE) 2016/679 (GDPR) este:</p>
+    <div class="info-box">
+      <i class="fas fa-building"></i>
+      <p>
+        <strong>S.C. EUROELECTRIC S.R.L.</strong><br>
+        Sediu social: Comuna Baru, Nr. 405/C, Județul Hunedoara, România<br>
+        CIF: RO 15193562 &nbsp;|&nbsp; Reg. Comerțului: J2003000134209<br>
+        Email: <a href="mailto:office@euroelectric.ro">office@euroelectric.ro</a><br>
+        Telefon: <a href="tel:+40254268059">0254 268 059</a>
+      </p>
+    </div>
+    <p>Prin accesarea site-ului nostru și utilizarea serviciilor noastre, confirmați că ați citit și înțeles prezenta Politică de Confidențialitate.</p>
+  </div>
+
+  <!-- S2 -->
+  <div class="policy-section" id="s2">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2>Ce date colectăm și de ce</h2>
+    </div>
+    <p>Colectăm date personale numai atunci când este necesar și numai în măsura în care este proporțional cu scopul urmărit. Categoriile de date și scopurile sunt:</p>
+
+    <p><strong>A. Formularul de contact</strong></p>
+    <ul>
+      <li>Nume și prenume — pentru identificarea persoanei de contact</li>
+      <li>Adresă de e-mail — pentru a trimite răspunsul la solicitare</li>
+      <li>Număr de telefon (opțional) — pentru contact telefonic, dacă este solicitat</li>
+      <li>Conținutul mesajului — pentru a înțelege solicitarea și a oferi un răspuns adecvat</li>
+    </ul>
+
+    <p><strong>B. Date tehnice (colectate automat)</strong></p>
+    <ul>
+      <li>Adresa IP — pentru securitatea site-ului și prevenirea abuzurilor</li>
+      <li>Tipul de browser și sistemul de operare — pentru optimizarea afișării site-ului</li>
+      <li>Paginile accesate și durata vizitei — pentru îmbunătățirea experienței utilizatorului</li>
+      <li>Data și ora accesului</li>
+    </ul>
+
+    <p><strong>C. Comunicații comerciale (doar cu consimțământ explicit)</strong></p>
+    <ul>
+      <li>Adresă de e-mail și nume — pentru transmiterea de oferte, noutăți sau informații despre servicii</li>
+    </ul>
+
+    <div class="info-box">
+      <i class="fas fa-info-circle"></i>
+      <p>Nu colectăm date sensibile (origine rasială, opinii politice, date medicale, biometrice etc.) și nu efectuăm profilare automată sau luare automată a deciziilor cu efecte juridice.</p>
+    </div>
+  </div>
+
+  <!-- S3 -->
+  <div class="policy-section" id="s3">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2>Temeiul legal al prelucrării</h2>
+    </div>
+    <p>Prelucrăm datele dumneavoastră cu caracter personal în baza unuia sau mai multor temeiuri legale prevăzute de GDPR:</p>
+    <ul>
+      <li><strong>Art. 6(1)(a) — Consimțământ:</strong> pentru comunicații comerciale și cookie-uri non-esențiale. Puteți retrage consimțământul oricând, fără a afecta legalitatea prelucrărilor anterioare.</li>
+      <li><strong>Art. 6(1)(b) — Executarea unui contract:</strong> atunci când prelucrarea este necesară pentru a răspunde solicitărilor de ofertă sau pentru derularea unui contract de prestări servicii.</li>
+      <li><strong>Art. 6(1)(c) — Obligație legală:</strong> pentru respectarea cerințelor fiscale, contabile și a altor obligații legale aplicabile în România.</li>
+      <li><strong>Art. 6(1)(f) — Interes legitim:</strong> pentru securitatea rețelei, prevenirea fraudelor și îmbunătățirea serviciilor noastre, cu condiția că interesele dumneavoastră fundamentale nu prevalează.</li>
+    </ul>
+  </div>
+
+  <!-- S4 -->
+  <div class="policy-section" id="s4">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2>Politica de cookies</h2>
+    </div>
+    <p>Site-ul nostru utilizează cookie-uri — fișiere text de mici dimensiuni stocate pe dispozitivul dumneavoastră. Acestea ne ajută să asigurăm funcționalitatea corectă a site-ului și să îmbunătățim experiența de navigare.</p>
+
+    <table class="cookie-table">
+      <thead>
+        <tr>
+          <th>Categorie</th>
+          <th>Scop</th>
+          <th>Durată</th>
+          <th>Tip</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cookie-uri tehnice / esențiale</td>
+          <td>Asigură funcționarea corectă a site-ului (navigare, securitate)</td>
+          <td>Sesiune</td>
+          <td><span class="badge-necesar">Necesar</span></td>
+        </tr>
+        <tr>
+          <td>Cookie-uri Google Maps</td>
+          <td>Afișarea hărții interactive cu locația sediului nostru</td>
+          <td>6 luni</td>
+          <td><span class="badge-optional">Funcțional</span></td>
+        </tr>
+        <tr>
+          <td>Cookie-uri de preferințe</td>
+          <td>Reținerea preferinței de limbă (RO/EN)</td>
+          <td>1 an</td>
+          <td><span class="badge-necesar">Necesar</span></td>
+        </tr>
+        <tr>
+          <td>Cookie-uri analitice</td>
+          <td>Statistici anonime de trafic (dacă sunt activate)</td>
+          <td>2 ani</td>
+          <td><span class="badge-optional">Opțional</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Puteți gestiona sau bloca cookie-urile prin setările browserului dumneavoastră. Dezactivarea cookie-urilor esențiale poate afecta funcționalitatea site-ului. Pentru informații despre gestionarea cookie-urilor în browserul dvs., consultați documentația oficială a acestuia.</p>
+  </div>
+
+  <!-- S5 -->
+  <div class="policy-section" id="s5">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2>Partajarea datelor cu terți</h2>
+    </div>
+    <p><strong>Nu vindem, nu închiriem și nu transferăm datele dumneavoastră personale către terți în scopuri comerciale.</strong></p>
+    <p>Datele pot fi partajate în mod limitat, doar în următoarele situații:</p>
+    <ul>
+      <li><strong>Furnizori de servicii tehnice:</strong> furnizorul de hosting și întreținere a site-ului, care acționează exclusiv în calitate de persoane împuternicite de operator și sunt obligați contractual să respecte confidențialitatea datelor.</li>
+      <li><strong>Google LLC:</strong> prin intermediul Google Maps integrat pe site (harta locației). Google poate colecta date conform propriei politici de confidențialitate.</li>
+      <li><strong>Autorități competente:</strong> dacă suntem obligați prin lege, hotărâre judecătorească sau decizie a autorităților publice să dezvăluim datele.</li>
+    </ul>
+    <p>Orice partajare a datelor se realizează numai în baza unor contracte de prelucrare a datelor (DPA) sau a unor obligații legale clare.</p>
+  </div>
+
+  <!-- S6 -->
+  <div class="policy-section" id="s6">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <h2>Transferul datelor în afara UE</h2>
+    </div>
+    <p>Datele dumneavoastră sunt prelucrate, în principiu, pe teritoriul Uniunii Europene / Spațiului Economic European.</p>
+    <p>În cazul în care servicii terțe (ex. Google Maps) implică transferul datelor în afara UE, acestea se realizează cu respectarea garanțiilor adecvate prevăzute de GDPR (Capitolul V), inclusiv:</p>
+    <ul>
+      <li>Clauze contractuale standard aprobate de Comisia Europeană</li>
+      <li>Decizii de adecvare ale Comisiei Europene</li>
+      <li>Reguli corporatiste obligatorii (BCR)</li>
+    </ul>
+  </div>
+
+  <!-- S7 -->
+  <div class="policy-section" id="s7">
+    <div class="section-header">
+      <div class="section-number">7</div>
+      <h2>Durata păstrării datelor</h2>
+    </div>
+    <p>Păstrăm datele dumneavoastră personale numai atât timp cât este necesar pentru scopurile descrise în această politică sau cât impune legislația aplicabilă:</p>
+    <ul>
+      <li><strong>Date din formularul de contact:</strong> maxim 2 ani de la ultima interacțiune, ulterior sunt șterse sau anonimizate ireversibil.</li>
+      <li><strong>Date contractuale (clienți activi):</strong> pe durata contractului și cel mult 10 ani ulterior (termen legal pentru documente financiar-contabile).</li>
+      <li><strong>Date tehnice (log-uri server):</strong> maxim 90 de zile, conform politicii furnizorului de hosting.</li>
+      <li><strong>Date marketing (cu consimțământ):</strong> până la retragerea consimțământului sau maxim 3 ani de la ultima interacțiune.</li>
+    </ul>
+    <div class="info-box">
+      <i class="fas fa-clock"></i>
+      <p>La expirarea termenelor de retenție, datele sunt șterse în mod securizat sau anonimizate astfel încât nu mai pot fi asociate cu nicio persoană identificabilă.</p>
+    </div>
+  </div>
+
+  <!-- S8 -->
+  <div class="policy-section" id="s8">
+    <div class="section-header">
+      <div class="section-number">8</div>
+      <h2>Drepturile dumneavoastră GDPR</h2>
+    </div>
+    <p>În conformitate cu Regulamentul (UE) 2016/679, beneficiați de următoarele drepturi:</p>
+    <div class="rights-grid">
+      <div class="right-card">
+        <h4><i class="fas fa-eye"></i> Dreptul de acces</h4>
+        <p>Puteți solicita o copie a datelor personale pe care le deținem despre dumneavoastră.</p>
+      </div>
+      <div class="right-card">
+        <h4><i class="fas fa-edit"></i> Dreptul la rectificare</h4>
+        <p>Puteți solicita corectarea datelor inexacte sau completarea celor incomplete.</p>
+      </div>
+      <div class="right-card">
+        <h4><i class="fas fa-trash-alt"></i> Dreptul la ștergere</h4>
+        <p>Puteți solicita ștergerea datelor în condițiile prevăzute de lege ("dreptul de a fi uitat").</p>
+      </div>
+      <div class="right-card">
+        <h4><i class="fas fa-pause-circle"></i> Dreptul la restricționare</h4>
+        <p>Puteți solicita limitarea prelucrării datelor în anumite circumstanțe.</p>
+      </div>
+      <div class="right-card">
+        <h4><i class="fas fa-download"></i> Dreptul la portabilitate</h4>
+        <p>Puteți primi datele furnizate într-un format structurat, utilizat frecvent, lizibil automat.</p>
+      </div>
+      <div class="right-card">
+        <h4><i class="fas fa-ban"></i> Dreptul la opoziție</h4>
+        <p>Vă puteți opune prelucrării datelor în scop de marketing direct sau în temeiul interesului legitim.</p>
+      </div>
+      <div class="right-card">
+        <h4><i class="fas fa-undo"></i> Retragerea consimțământului</h4>
+        <p>Dacă prelucrarea se bazează pe consimțământ, îl puteți retrage oricând, fără consecințe.</p>
+      </div>
+      <div class="right-card">
+        <h4><i class="fas fa-gavel"></i> Dreptul de a depune plângere</h4>
+        <p>Puteți depune plângere la ANSPDCP (Autoritatea Națională de Supraveghere) sau la o instanță competentă.</p>
+      </div>
+    </div>
+    <p style="margin-top:20px">Pentru exercitarea oricăruia dintre aceste drepturi, ne puteți contacta la <a href="mailto:office@euroelectric.ro" style="color:var(--cyan)">office@euroelectric.ro</a>. Vom răspunde în termen de maximum <strong>30 de zile calendaristice</strong>.</p>
+    <div class="info-box">
+      <i class="fas fa-landmark"></i>
+      <p><strong>ANSPDCP</strong> — Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal<br>
+      Adresă: B-dul G-ral. Gheorghe Magheru nr. 28-30, Sector 1, București &nbsp;|&nbsp; Tel: +40.318.059.211 &nbsp;|&nbsp; anspdcp.ro</p>
+    </div>
+  </div>
+
+  <!-- S9 -->
+  <div class="policy-section" id="s9">
+    <div class="section-header">
+      <div class="section-number">9</div>
+      <h2>Securitatea datelor</h2>
+    </div>
+    <p>Implementăm măsuri tehnice și organizatorice adecvate pentru a proteja datele dumneavoastră împotriva accesului neautorizat, pierderii, distrugerii sau divulgării:</p>
+    <ul>
+      <li><strong>Conexiune HTTPS/TLS:</strong> toate datele transmise între browserul dvs. și site-ul nostru sunt criptate.</li>
+      <li><strong>Acces restricționat:</strong> numai personalul autorizat are acces la datele cu caracter personal, în baza principiului "need-to-know".</li>
+      <li><strong>Actualizări de securitate:</strong> platforma și componentele sunt actualizate regulat pentru a corecta vulnerabilitățile cunoscute.</li>
+      <li><strong>Backup periodic:</strong> copii de rezervă securizate pentru prevenirea pierderii datelor.</li>
+      <li><strong>Monitorizare:</strong> activitatea neobișnuită este monitorizată și investigată prompt.</li>
+    </ul>
+    <p>În cazul unui incident de securitate care ar putea afecta drepturile și libertățile dumneavoastră, vom notifica ANSPDCP în termen de 72 de ore și, dacă este cazul, vă vom informa și pe dumneavoastră fără întârziere nejustificată.</p>
+  </div>
+
+  <!-- S10 -->
+  <div class="policy-section" id="s10">
+    <div class="section-header">
+      <div class="section-number">10</div>
+      <h2>Modificări ale politicii de confidențialitate</h2>
+    </div>
+    <p>Ne rezervăm dreptul de a actualiza această politică periodic, pentru a reflecta modificările legislative, schimbările în practicile noastre de prelucrare sau îmbunătățirile aduse serviciilor.</p>
+    <p>Data ultimei modificări este indicată în antetul acestei pagini. Modificările semnificative vor fi comunicate printr-un anunț vizibil pe site sau, dacă deținem adresa dvs. de e-mail, prin notificare directă.</p>
+    <p>Vă recomandăm să consultați periodic această pagină pentru a fi la curent cu modul în care protejăm datele dumneavoastră.</p>
+  </div>
+
+  <!-- S11 -->
+  <div class="policy-section" id="s11">
+    <div class="section-header">
+      <div class="section-number">11</div>
+      <h2>Contact și sesizări</h2>
+    </div>
+    <p>Pentru orice întrebare, solicitare sau reclamație privind prelucrarea datelor dumneavoastră cu caracter personal, ne puteți contacta prin oricare dintre mijloacele de mai jos. Ne angajăm să răspundem prompt și complet.</p>
+    <div class="contact-card">
+      <div>
+        <h3>Responsabil cu protecția datelor</h3>
+        <p>S.C. EUROELECTRIC S.R.L. — Comuna Baru, Nr. 405/C, Jud. Hunedoara</p>
+      </div>
+      <div class="contact-card-links">
+        <a class="contact-card-link" href="mailto:office@euroelectric.ro">
+          <i class="fas fa-envelope"></i> office@euroelectric.ro
+        </a>
+        <a class="contact-card-link" href="tel:+40254268059">
+          <i class="fas fa-phone"></i> 0254 268 059
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2025 S.C. EUROELECTRIC S.R.L. — CIF: RO 15193562 &nbsp;|&nbsp;
+  <a href="euroelectric-nou.html">Înapoi la site</a> &nbsp;|&nbsp;
+  <a href="#">Termeni și condiții</a>
+  </p>
+</footer>
+
+</body>
+</html>
