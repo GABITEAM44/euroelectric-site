@@ -1719,15 +1719,15 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60
     <h2 class="section-title reveal" data-i18n="prj-title">Proiecte <span>Realizate</span></h2>
     <p class="section-desc reveal reveal-delay-1" data-i18n="prj-desc">O selecție din lucrările noastre — de la instalații rezidențiale la proiecte industriale de amploare.</p>
     <div class="projects-filter reveal reveal-delay-2">
-      <button class="filter-btn active" data-i18n="prj-f0">Toate</button>
-      <button class="filter-btn" data-i18n="prj-f1">Tablouri Electrice</button>
-      <button class="filter-btn" data-i18n="prj-f2">Instalații</button>
-      <button class="filter-btn" data-i18n="prj-f3">Fotovoltaice</button>
-      <button class="filter-btn" data-i18n="prj-f4">Stații EV</button>
-      <button class="filter-btn" data-i18n="prj-f5">Verificări Instalații</button>
+      <button class="filter-btn active" data-filter="all" data-i18n="prj-f0">Toate</button>
+      <button class="filter-btn" data-filter="tablouri" data-i18n="prj-f1">Tablouri Electrice</button>
+      <button class="filter-btn" data-filter="instalatii" data-i18n="prj-f2">Instalații</button>
+      <button class="filter-btn" data-filter="fotovoltaice" data-i18n="prj-f3">Fotovoltaice</button>
+      <button class="filter-btn" data-filter="statii-ev" data-i18n="prj-f4">Stații EV</button>
+      <button class="filter-btn" data-filter="verificari" data-i18n="prj-f5">Verificări Instalații</button>
     </div>
     <div class="projects-grid">
-      <div class="project-card large reveal">
+      <div class="project-card large reveal" data-category="tablouri">
         <div class="project-slideshow" id="slideshow-tablou">
           <img loading="lazy" src="Materiale/Tablouri/Tablou1.jpg" alt="Tablou Electric 1">
           <img loading="lazy" src="Materiale/Tablouri/Tablou2.jpg" alt="Tablou Electric 2">
@@ -1743,7 +1743,7 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60
           <span class="project-tag">Tablouri Electrice</span>
         </div>
       </div>
-      <div class="project-card reveal reveal-delay-1">
+      <div class="project-card reveal reveal-delay-1" data-category="instalatii">
         <div class="project-slideshow" id="slideshow-instalatii">
           <img loading="lazy" src="Materiale/Instalatii/Instalatii1.jpeg" alt="Instalații Electrice 1">
           <img loading="lazy" src="Materiale/Instalatii/Instalatii2.jpeg" alt="Instalații Electrice 2">
@@ -1758,7 +1758,7 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60
           <span class="project-tag">Instalații Electrice</span>
         </div>
       </div>
-      <div class="project-card reveal reveal-delay-2">
+      <div class="project-card reveal reveal-delay-2" data-category="statii-ev">
         <div class="project-slideshow" id="slideshow-statii">
           <img loading="lazy" src="Materiale/Brosuri prezentare Statii Incarcare/StatiiEV1.jpg" alt="Stație Încărcare EV 1">
           <img loading="lazy" src="Materiale/Brosuri prezentare Statii Incarcare/StatiiEV2.jpg" alt="Stație Încărcare EV 2">
@@ -1770,7 +1770,7 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60
           <span class="project-tag">Stații Încărcare Vehicule Electrice</span>
         </div>
       </div>
-      <div class="project-card reveal reveal-delay-3">
+      <div class="project-card reveal reveal-delay-3" data-category="fotovoltaice">
         <div class="project-slideshow" id="slideshow-fotovoltaice">
           <img loading="lazy" src="Materiale/Fotovoltaice/Fotovoltaice1.jpg" alt="Fotovoltaice 1">
           <img loading="lazy" src="Materiale/Fotovoltaice/Fotovoltaice2.jpg" alt="Fotovoltaice 2">
@@ -2059,6 +2059,14 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
+    const filter = btn.getAttribute("data-filter");
+    document.querySelectorAll(".project-card").forEach(card => {
+      if (filter === "all" || card.getAttribute("data-category") === filter) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
   });
 });
 
