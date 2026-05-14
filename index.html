@@ -190,6 +190,7 @@ nav.scrolled .nav-logo img { height: 40px; }
   transition: var(--transition); white-space: nowrap;
 }
 .nav-menu a:hover { background: var(--grey-light); color: var(--cyan); }
+.nav-menu a.nav-active { color: var(--cyan); font-weight: 700; }
 .nav-menu .cta-btn {
   background: var(--cyan); color: var(--white) !important;
   padding: 10px 22px; border-radius: 8px;
@@ -1066,7 +1067,7 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60
     <li><a href="#servicii" data-i18n="nav-servicii">Servicii</a></li>
     <li><a href="#proiecte" data-i18n="nav-proiecte">Proiecte</a></li>
     <li><a href="#blog">Blog</a></li>
-    <li><a href="#contact" class="cta-btn" data-i18n="nav-contact">Contact</a></li>
+    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
   </ul>
   <div class="lang-switcher">
     <button class="lang-btn active" data-lang="ro" onclick="setLang('ro')">RO</button>
@@ -2045,6 +2046,22 @@ window.addEventListener("scroll", () => {
   navbar.classList.toggle("scrolled", window.scrollY > 50);
   backToTop.classList.toggle("visible", window.scrollY > 400);
 });
+
+// Scrollspy - evidentiaza sectiunea activa in navbar
+(function() {
+  const sections = document.querySelectorAll('section[id], div[id="acasa"]');
+  const navLinks = document.querySelectorAll('.nav-menu a');
+  window.addEventListener('scroll', function() {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('nav-active');
+      if (link.getAttribute('href') === '#' + current) link.classList.add('nav-active');
+    });
+  });
+})();
 
 // Mobile menu
 function toggleMenu() {
