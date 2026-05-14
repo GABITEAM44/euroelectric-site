@@ -1063,78 +1063,7 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
-/* ===== WHATSAPP FLOAT BUTTON ===== */
-.whatsapp-float {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-.whatsapp-float .wa-label {
-  background: #fff;
-  color: #128c7e;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.82rem;
-  font-weight: 700;
-  padding: 7px 14px;
-  border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-  white-space: nowrap;
-  opacity: 0;
-  transform: translateX(12px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
-}
-.whatsapp-float:hover .wa-label {
-  opacity: 1;
-  transform: translateX(0);
-}
-.whatsapp-float .wa-icon {
-  width: 58px;
-  height: 58px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 20px rgba(37,211,102,0.45);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  position: relative;
-  flex-shrink: 0;
-}
-.whatsapp-float .wa-icon i {
-  color: #fff;
-  font-size: 1.75rem;
-  line-height: 1;
-}
-.whatsapp-float:hover .wa-icon {
-  transform: scale(1.1);
-  box-shadow: 0 8px 28px rgba(37,211,102,0.6);
-}
-/* pulse ring */
-.whatsapp-float .wa-icon::before {
-  content: "";
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  border: 3px solid #25d366;
-  opacity: 0;
-  animation: wa-pulse 2.2s ease-out infinite;
-}
-@keyframes wa-pulse {
-  0%   { opacity: 0.7; transform: scale(1); }
-  70%  { opacity: 0;   transform: scale(1.45); }
-  100% { opacity: 0;   transform: scale(1.45); }
-}
-@media (max-width: 600px) {
-  .whatsapp-float { bottom: 18px; right: 16px; }
-  .whatsapp-float .wa-icon { width: 52px; height: 52px; }
-  .whatsapp-float .wa-icon i { font-size: 1.5rem; }
-}
+
 </style>
 </head>
 <body>
@@ -3160,17 +3089,6 @@ document.addEventListener("keydown", function(e) {
 });
 </script>
 
-<!-- ===== WHATSAPP FLOAT BUTTON ===== -->
-<a class="whatsapp-float"
-   href="https://wa.me/40254545444?text=Bun%C4%83%20ziua%2C%20a%C8%99%20dori%20o%20ofert%C4%83%20pentru%20serviciile%20EUROELECTRIC."
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Contactează-ne pe WhatsApp">
-  <span class="wa-label">Scrie-ne pe WhatsApp</span>
-  <span class="wa-icon">
-    <i class="fab fa-whatsapp"></i>
-  </span>
-</a>
 
 </body>
 </html>
