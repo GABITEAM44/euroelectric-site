@@ -2922,6 +2922,18 @@ window.addEventListener("scroll", () => {
   }, 3000);
 })();
 
+(function() {
+  var slides = document.querySelectorAll('#slideshow-verificari img');
+  if (!slides.length) return;
+  var idx = 0;
+  slides[0].classList.add('slide-active');
+  setInterval(function() {
+    slides[idx].classList.remove('slide-active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('slide-active');
+  }, 3500);
+})();
+
 // Cookie banner
 (function() {
   if (!localStorage.getItem('euro_cookie_consent')) {
