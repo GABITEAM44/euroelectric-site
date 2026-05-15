@@ -876,11 +876,12 @@ text-decoration: none; font-size: 0.9rem; transition: var(--transition);
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
 .form-group { margin-bottom: 16px; }
 .form-group label { display: block; font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 0.8rem; color: var(--navy); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
-.form-group input, .form-group textarea, .form-group select {
+.form-group input:not([type="checkbox"]), .form-group textarea, .form-group select {
 width: 100%; padding: 12px 16px; border: 2px solid var(--grey-mid); border-radius: 8px;
 font-family: "Open Sans", sans-serif; font-size: 0.92rem; color: var(--text-dark);
 background: var(--white); transition: var(--transition); outline: none; appearance: none;
 }
+.form-group input[type="checkbox"] { width: 18px; height: 18px; min-width: 18px; appearance: auto; -webkit-appearance: checkbox; cursor: pointer; flex-shrink: 0; }
 .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--cyan); box-shadow: 0 0 0 4px rgba(0,174,239,0.1); }
 .form-group textarea { height: 130px; resize: vertical; }
 .btn-submit {
