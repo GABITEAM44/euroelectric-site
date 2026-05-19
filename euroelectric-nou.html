@@ -1010,7 +1010,11 @@ opacity: 0; pointer-events: none; font-size: 1.1rem;
 /* Tabletă portrait (768px) */
 @media (max-width: 768px) {
 section { padding: 60px 20px; }
-nav { padding: 0 20px; }
+nav { padding: 0 16px; }
+.nav-logo img { height: 38px; max-width: 148px; }
+.lang-sep { display: none; }
+.lang-btn { padding: 4px 7px; font-size: 0.65rem; }
+.lang-switcher { gap: 3px; margin-left: 8px; }
 .nav-menu {
 display: none; flex-direction: column; position: fixed;
 top: 72px; left: 0; right: 0; background: var(--white);
