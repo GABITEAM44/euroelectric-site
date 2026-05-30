@@ -50,9 +50,48 @@ card.style.display = "none";
 });
 });
 });
-// Reveal on scroll
+// Reveal on scroll — variante aplicate automat pe tipuri de elemente
+(function applyRevealVariants() {
+  // Carduri servicii: alterneaza slide stanga/dreapta
+  document.querySelectorAll('.service-card.reveal').forEach(function(el, i) {
+    el.classList.add(i % 2 === 0 ? 'reveal-left' : 'reveal-right');
+  });
+  // Why-features: slide din stanga
+  document.querySelectorAll('.why-feature.reveal').forEach(function(el) {
+    el.classList.add('reveal-left');
+  });
+  // Cert-cards: scale (efect "pop")
+  document.querySelectorAll('.cert-card.reveal').forEach(function(el) {
+    el.classList.add('reveal-scale');
+  });
+  // Stat-cards: marcheaza ca reveal cu scale (daca nu sunt deja)
+  document.querySelectorAll('.stat-card').forEach(function(el, i) {
+    if (!el.classList.contains('reveal')) {
+      el.classList.add('reveal', 'reveal-scale');
+      if (i > 0 && i <= 5) el.classList.add('reveal-delay-' + i);
+    }
+  });
+  // Proiecte: zoom usor (poze)
+  document.querySelectorAll('.project-card.reveal').forEach(function(el) {
+    el.classList.add('reveal-zoom');
+  });
+  // Te-srv-card (servicii detaliate): scale
+  document.querySelectorAll('.te-srv-card').forEach(function(el, i) {
+    if (!el.classList.contains('reveal')) {
+      el.classList.add('reveal', 'reveal-scale');
+      if (i > 0 && i <= 5) el.classList.add('reveal-delay-' + i);
+    }
+  });
+  // Te-std-card (standarde): slide stanga
+  document.querySelectorAll('.te-std-card').forEach(function(el, i) {
+    if (!el.classList.contains('reveal')) {
+      el.classList.add('reveal', 'reveal-left');
+      if (i > 0 && i <= 5) el.classList.add('reveal-delay-' + i);
+    }
+  });
+})();
 const observer = new IntersectionObserver((entries) => {
-entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); observer.unobserve(e.target); } });
 }, { threshold: 0.12 });
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 // Counter animation (eased, rAF-based)
