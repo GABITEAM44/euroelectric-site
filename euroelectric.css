@@ -993,6 +993,8 @@ nav { padding: 0 16px; }
 .animate-delay-2 { animation-delay: 0.3s; opacity: 0; }
 .animate-delay-3 { animation-delay: 0.45s; opacity: 0; }
 .animate-delay-4 { animation-delay: 0.6s; opacity: 0; }
+/* <picture> ramane transparent ca layout — imaginea din interior se comporta ca inainte */
+picture { display: contents; }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.1s; }
