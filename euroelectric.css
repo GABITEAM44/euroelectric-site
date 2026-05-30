@@ -72,7 +72,7 @@ background-size: 40px 40px;
 .hero-shapes .shape-3 { width: 200px; height: 200px; bottom: -50px; left: 100px; opacity: 0.06; }
 .hero-container {
 max-width: 1400px; margin: 0 auto; padding: 60px 40px;
-display: grid; grid-template-columns: minmax(300px, 380px) 1fr; gap: 40px; align-items: stretch;
+display: grid; grid-template-columns: minmax(360px, 440px) 1fr; gap: 40px; align-items: stretch;
 position: relative; z-index: 1; width: 100%;
 }
 .hero-content {
@@ -92,9 +92,9 @@ padding: 8px 16px; border-radius: 50px; margin-bottom: 28px;
 }
 .hero-title {
 font-family: "Montserrat", sans-serif; font-weight: 800;
-font-size: clamp(1.1rem, 1.3vw, 1.55rem); line-height: 1.2;
+font-size: clamp(1.5rem, 1.9vw, 2.2rem); line-height: 1.2;
 color: var(--white); margin-bottom: 12px;
-hyphens: none;
+hyphens: none; white-space: nowrap;
 }
 .hero-title .highlight { color: var(--cyan); display: block; }
 .hero-subtitle {
@@ -838,12 +838,12 @@ opacity: 0; pointer-events: none; font-size: 1.1rem;
 .back-to-top:hover { background: var(--navy); transform: translateY(-3px); }
 /* ===== RESPONSIVE ===== */
 @media (min-width: 1600px) {
-.hero-container { grid-template-columns: minmax(340px, 420px) 1fr; }
-.hero-title { font-size: clamp(1.2rem, 1.4vw, 1.65rem); }
+.hero-container { grid-template-columns: minmax(380px, 460px) 1fr; }
+.hero-title { font-size: clamp(1.5rem, 1.9vw, 2.2rem); }
 }
 @media (max-width: 1200px) {
-.hero-container { grid-template-columns: minmax(280px, 340px) 1fr; gap: 30px; }
-.hero-title { font-size: clamp(1.2rem, 1.5vw, 1.8rem); }
+.hero-container { grid-template-columns: minmax(320px, 400px) 1fr; gap: 30px; }
+.hero-title { font-size: clamp(1.3rem, 1.7vw, 2rem); }
 .services-grid { grid-template-columns: repeat(2, 1fr); }
 .blog-grid { grid-template-columns: repeat(2, 1fr); }
 }
