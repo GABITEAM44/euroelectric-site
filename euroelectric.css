@@ -92,9 +92,9 @@ padding: 8px 16px; border-radius: 50px; margin-bottom: 28px;
 }
 .hero-title {
 font-family: "Montserrat", sans-serif; font-weight: 800;
-font-size: clamp(1.3rem, 1.6vw, 1.9rem); line-height: 1.2;
+font-size: clamp(1.1rem, 1.3vw, 1.55rem); line-height: 1.2;
 color: var(--white); margin-bottom: 12px;
-hyphens: none; word-break: keep-all;
+hyphens: none;
 }
 .hero-title .highlight { color: var(--cyan); display: block; }
 .hero-subtitle {
@@ -839,7 +839,7 @@ opacity: 0; pointer-events: none; font-size: 1.1rem;
 /* ===== RESPONSIVE ===== */
 @media (min-width: 1600px) {
 .hero-container { grid-template-columns: minmax(340px, 420px) 1fr; }
-.hero-title { font-size: clamp(1.5rem, 1.8vw, 2.1rem); }
+.hero-title { font-size: clamp(1.2rem, 1.4vw, 1.65rem); }
 }
 @media (max-width: 1200px) {
 .hero-container { grid-template-columns: minmax(280px, 340px) 1fr; gap: 30px; }
