@@ -745,6 +745,24 @@ background: var(--white); transition: var(--transition); outline: none; appearan
 .form-group input[type="checkbox"] { width: 18px; height: 18px; min-width: 18px; appearance: auto; -webkit-appearance: checkbox; cursor: pointer; flex-shrink: 0; }
 .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--cyan); box-shadow: 0 0 0 4px rgba(0,174,239,0.1); }
 .form-group textarea { height: 130px; resize: vertical; }
+/* ===== VALIDARE FORMULAR ===== */
+.form-group.has-error input:not([type="checkbox"]),
+.form-group.has-error textarea,
+.form-group.has-error select { border-color: #c0392b; background: #fff5f4; }
+.form-group.has-error input:focus,
+.form-group.has-error textarea:focus,
+.form-group.has-error select:focus { box-shadow: 0 0 0 4px rgba(192,57,43,0.12); }
+.form-group.is-valid input:not([type="checkbox"]),
+.form-group.is-valid textarea,
+.form-group.is-valid select { border-color: #2E8B2E; }
+.field-error { display: none; color: #c0392b; font-family: "Open Sans", sans-serif; font-size: 0.78rem; margin-top: 6px; font-weight: 600; line-height: 1.3; }
+.field-error i { margin-right: 5px; }
+.form-group.has-error .field-error { display: block; animation: fadeInUp 0.25s ease; }
+.form-group.has-error label { color: #c0392b; }
+.form-feedback { display: none; padding: 12px 14px; border-radius: 8px; margin-top: 14px; font-family: "Open Sans", sans-serif; font-size: 0.88rem; font-weight: 600; }
+.form-feedback.show { display: flex; align-items: center; gap: 8px; }
+.form-feedback.error { background: #fde8e7; color: #c0392b; border-left: 4px solid #c0392b; }
+.form-feedback.success { background: #e8f5e9; color: #2E8B2E; border-left: 4px solid #2E8B2E; }
 .btn-submit {
 background: var(--navy); color: var(--white); padding: 14px 36px; border-radius: 8px;
 border: none; cursor: pointer; font-family: "Montserrat", sans-serif; font-weight: 700;

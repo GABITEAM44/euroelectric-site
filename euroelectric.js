@@ -97,39 +97,102 @@ animateCounter(el, num, suffix, 1600);
 });
 });
 // Form submit
+// ===== VALIDARE INLINE FORMULAR =====
+const FORM_VALIDATORS = {
+  name: function(v) { return v.trim().length >= 2; },
+  phone: function(v) {
+    var digits = v.replace(/[\s\-\.\(\)]/g, '');
+    return /^(\+40|0)7\d{8}$/.test(digits);
+  },
+  email: function(v) {
+    if (!v.trim()) return true;
+    return /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/.test(v.trim());
+  },
+  message: function(v) { return v.trim().length >= 10; },
+  gdpr: function(_, el) { return el.checked; }
+};
+function validateField(input) {
+  var key = input.getAttribute('data-validate');
+  if (!key || !FORM_VALIDATORS[key]) return true;
+  var ok = FORM_VALIDATORS[key](input.value, input);
+  if (key === 'gdpr') {
+    var errEl = document.querySelector('[data-error-for="gdpr"]');
+    if (errEl) errEl.style.display = ok ? 'none' : 'block';
+    return ok;
+  }
+  var group = input.closest('.form-group');
+  if (!group) return ok;
+  group.classList.toggle('has-error', !ok);
+  group.classList.toggle('is-valid', ok && input.value.trim() !== '');
+  return ok;
+}
+(function initFormValidation() {
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+  form.querySelectorAll('[data-validate]').forEach(function(input) {
+    var ev = (input.type === 'checkbox') ? 'change' : 'blur';
+    input.addEventListener(ev, function() { validateField(input); });
+    input.addEventListener('input', function() {
+      var group = input.closest('.form-group');
+      if (group && group.classList.contains('has-error')) validateField(input);
+    });
+  });
+})();
 async function handleSubmit(e) {
-e.preventDefault();
-const form = e.target;
-const btn = form.querySelector(".btn-submit");
-btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Se trimite...';
-btn.disabled = true;
-try {
-const res = await fetch("https://formspree.io/f/maqvglgv", {
-method: "POST",
-body: new FormData(form),
-headers: { "Accept": "application/json" }
-});
-if (res.ok) {
-btn.innerHTML = '<i class="fas fa-check"></i> Solicitare trimisă!';
-btn.style.background = "#2E8B2E";
-form.reset();
-setTimeout(() => {
-btn.innerHTML = '<i class="fas fa-paper-plane"></i> Trimite Solicitarea';
-btn.style.background = "";
-btn.disabled = false;
-}, 4000);
-} else {
-throw new Error();
-}
-} catch {
-btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Eroare — reîncercați';
-btn.style.background = "#c0392b";
-setTimeout(() => {
-btn.innerHTML = '<i class="fas fa-paper-plane"></i> Trimite Solicitarea';
-btn.style.background = "";
-btn.disabled = false;
-}, 3500);
-}
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector(".btn-submit");
+  const feedback = document.getElementById('formFeedback');
+  if (feedback) { feedback.className = 'form-feedback'; feedback.textContent = ''; }
+  var allValid = true;
+  var firstInvalid = null;
+  form.querySelectorAll('[data-validate]').forEach(function(input) {
+    var ok = validateField(input);
+    if (!ok) { allValid = false; if (!firstInvalid) firstInvalid = input; }
+  });
+  if (!allValid) {
+    if (feedback) {
+      var lang = document.documentElement.lang || 'ro';
+      var msg = (window.translations && translations[lang] && translations[lang]['form-err-summary']) || 'Verificați câmpurile marcate cu roșu.';
+      feedback.className = 'form-feedback show error';
+      feedback.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + msg;
+    }
+    if (firstInvalid) firstInvalid.focus();
+    return;
+  }
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Se trimite...';
+  btn.disabled = true;
+  try {
+    const res = await fetch("https://formspree.io/f/maqvglgv", {
+      method: "POST", body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    });
+    if (res.ok) {
+      btn.innerHTML = '<i class="fas fa-check"></i> Solicitare trimisă!';
+      btn.style.background = "#2E8B2E";
+      if (feedback) {
+        var lang2 = document.documentElement.lang || 'ro';
+        var okMsg = (window.translations && translations[lang2] && translations[lang2]['form-ok-summary']) || 'Mesajul a fost trimis cu succes. Vă vom contacta în cel mai scurt timp.';
+        feedback.className = 'form-feedback show success';
+        feedback.innerHTML = '<i class="fas fa-check-circle"></i> ' + okMsg;
+      }
+      form.reset();
+      form.querySelectorAll('.form-group').forEach(function(g) { g.classList.remove('has-error','is-valid'); });
+      var gdprErr = document.querySelector('[data-error-for="gdpr"]');
+      if (gdprErr) gdprErr.style.display = 'none';
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Trimite Solicitarea';
+        btn.style.background = ""; btn.disabled = false;
+      }, 4000);
+    } else { throw new Error(); }
+  } catch {
+    btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Eroare — reîncercați';
+    btn.style.background = "#c0392b";
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Trimite Solicitarea';
+      btn.style.background = ""; btn.disabled = false;
+    }, 3500);
+  }
 }
 // ===== BILINGUAL SYSTEM =====
 const translations = {
@@ -183,6 +246,13 @@ ro: {
 'form-select':'— Selectați serviciul —|Tablouri Electrice|Instalații Electrice|Panouri Fotovoltaice|Stații Încărcare Vehicule Electrice|Altele / General',
 'form-gdpr':'Sunt de acord cu prelucrarea datelor cu caracter personal conform <a href="politica-confidentialitate.html" target="_blank" style="color:var(--cyan);font-weight:600;">Politicii de Confidențialitate</a>. *',
 'form-submit':'<i class="fas fa-paper-plane"></i> Trimite Solicitarea',
+'err-name':'Introduceți numele (minim 2 caractere).',
+'err-phone':'Număr de telefon invalid. Format: 07XX XXX XXX sau +40 7XX XXX XXX.',
+'err-email':'Adresă email invalidă (ex: nume@domeniu.ro).',
+'err-message':'Mesajul trebuie să aibă minim 10 caractere.',
+'err-gdpr':'Trebuie să acceptați Politica de Confidențialitate.',
+'form-err-summary':'Verificați câmpurile marcate cu roșu.',
+'form-ok-summary':'Mesajul a fost trimis cu succes. Vă vom contacta în cel mai scurt timp.',
 'footer-brand':'Soluții electrice complete pentru sectorul rezidențial, comercial și industrial. Profesionalism și Siguranță — din 2003.',
 'footer-nav':'Navigare',
 'footer-copy':'© 2026 S.C. EUROELECTRIC S.R.L. — Toate drepturile rezervate',
@@ -342,6 +412,13 @@ en: {
 'form-select':'— Select service —|Electrical Panels|Electrical Installations|Photovoltaic Panels|EV Charging Stations|Other / General',
 'form-gdpr':'I agree to the processing of personal data in accordance with the <a href="politica-confidentialitate.html" target="_blank" style="color:var(--cyan);font-weight:600;">Privacy Policy</a>. *',
 'form-submit':'<i class="fas fa-paper-plane"></i> Send Request',
+'err-name':'Please enter your name (minimum 2 characters).',
+'err-phone':'Invalid phone number. Format: 07XX XXX XXX or +40 7XX XXX XXX.',
+'err-email':'Invalid email address (e.g., name@domain.com).',
+'err-message':'Message must be at least 10 characters long.',
+'err-gdpr':'You must accept the Privacy Policy.',
+'form-err-summary':'Please check the fields marked in red.',
+'form-ok-summary':'Your message was sent successfully. We will contact you shortly.',
 'blog-rittal-tag':'Video','blog-rittal-title':'Rittal &amp; Eplan Solutions for Professional Electrical Panels','blog-rittal-desc':'Discover how EUROELECTRIC integrates Rittal and Eplan technologies in the design and assembly of high-quality electrical panels.','blog-rittal-link':'Watch on LinkedIn <i class="fas fa-arrow-right"></i>',
 'blog-siemens-tag':'Partner','blog-siemens-title':'Siemens Digital Industries — Automation &amp; Energy Efficiency Solutions','blog-siemens-desc':'EUROELECTRIC collaborates with Siemens Romania to integrate the most advanced industrial automation and electrical equipment solutions.','blog-siemens-link':'View on LinkedIn <i class="fas fa-arrow-right"></i>',
 'blog-euro-video-tag':'Video','blog-euro-video-title':'EUROELECTRIC — Industrial Electrical Installations & Projects','blog-euro-video-desc':'Discover the latest projects and achievements of EUROELECTRIC SRL — electrical installations, panels and equipment for the industrial sector.','blog-euro-video-link':'Watch on LinkedIn <i class="fas fa-arrow-right"></i>',
@@ -517,6 +594,13 @@ de: {
 'form-select':'— Leistung auswählen —|Schaltschränke|Elektroinstallationen|Photovoltaikanlagen|EV-Ladestationen|Sonstiges / Allgemein',
 'form-gdpr':'Ich stimme der Verarbeitung personenbezogener Daten gemäß der <a href="politica-confidentialitate.html" target="_blank" style="color:var(--cyan);font-weight:600;">Datenschutzrichtlinie</a> zu. *',
 'form-submit':'<i class="fas fa-paper-plane"></i> Anfrage absenden',
+'err-name':'Bitte geben Sie Ihren Namen ein (mindestens 2 Zeichen).',
+'err-phone':'Ungültige Telefonnummer. Format: 07XX XXX XXX oder +40 7XX XXX XXX.',
+'err-email':'Ungültige E-Mail-Adresse (z. B. name@domain.de).',
+'err-message':'Die Nachricht muss mindestens 10 Zeichen lang sein.',
+'err-gdpr':'Sie müssen die Datenschutzrichtlinie akzeptieren.',
+'form-err-summary':'Bitte überprüfen Sie die rot markierten Felder.',
+'form-ok-summary':'Ihre Nachricht wurde erfolgreich gesendet. Wir werden Sie in Kürze kontaktieren.',
 'footer-brand':'Komplette Elektrolösungen für Wohn-, Gewerbe- und Industriebereich. Professionalität und Sicherheit – seit 2003.',
 'footer-nav':'Navigation','footer-copy':'© 2026 S.C. EUROELECTRIC S.R.L. — Alle Rechte vorbehalten',
 'footer-srv':'Leistungen','footer-contact-title':'Kontakt','footer-privacy':'Datenschutz','footer-cookies':'Cookie-Richtlinie',

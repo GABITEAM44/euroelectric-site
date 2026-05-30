@@ -1127,20 +1127,23 @@ target="_blank" rel="noopener">
 </div>
 <div class="contact-form reveal reveal-delay-1">
 <h3 data-i18n="form-title">Trimite o solicitare</h3>
-<form id="contactForm" onsubmit="handleSubmit(event)">
+<form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
 <div class="form-row">
 <div class="form-group">
 <label data-i18n="form-name">Nume *</label>
-<input type="text" name="name" data-i18n-placeholder="form-name-ph" placeholder="Numele dvs." required>
+<input type="text" name="name" data-i18n-placeholder="form-name-ph" placeholder="Numele dvs." data-validate="name" required>
+<div class="field-error" data-error-for="name"><i class="fas fa-exclamation-circle"></i><span data-i18n="err-name">Introduceți numele (minim 2 caractere).</span></div>
 </div>
 <div class="form-group">
 <label data-i18n="form-phone">Telefon *</label>
-<input type="tel" name="phone" placeholder="07XX XXX XXX" required>
+<input type="tel" name="phone" placeholder="07XX XXX XXX" data-validate="phone" required>
+<div class="field-error" data-error-for="phone"><i class="fas fa-exclamation-circle"></i><span data-i18n="err-phone">Număr de telefon invalid. Format: 07XX XXX XXX sau +40 7XX XXX XXX.</span></div>
 </div>
 </div>
 <div class="form-group">
 <label data-i18n="form-email">Email</label>
-<input type="email" name="email" data-i18n-placeholder="form-email-ph" placeholder="email@exemplu.ro">
+<input type="email" name="email" data-i18n-placeholder="form-email-ph" placeholder="email@exemplu.ro" data-validate="email">
+<div class="field-error" data-error-for="email"><i class="fas fa-exclamation-circle"></i><span data-i18n="err-email">Adresă email invalidă (ex: nume@domeniu.ro).</span></div>
 </div>
 <div class="form-group">
 <label data-i18n="form-service">Serviciu solicitat</label>
@@ -1155,18 +1158,21 @@ target="_blank" rel="noopener">
 </div>
 <div class="form-group">
 <label data-i18n="form-message">Mesaj *</label>
-<textarea name="message" data-i18n-placeholder="form-msg-ph" placeholder="Descrieți pe scurt proiectul sau solicitarea dvs..." required></textarea>
+<textarea name="message" data-i18n-placeholder="form-msg-ph" placeholder="Descrieți pe scurt proiectul sau solicitarea dvs..." data-validate="message" required></textarea>
+<div class="field-error" data-error-for="message"><i class="fas fa-exclamation-circle"></i><span data-i18n="err-message">Mesajul trebuie să aibă minim 10 caractere.</span></div>
 </div>
-<div class="form-group" style="display:flex;align-items:flex-start;gap:10px;margin-bottom:20px;">
-  <input type="checkbox" id="gdpr-consent" name="gdpr" required style="width:18px;height:18px;min-width:18px;margin-top:3px;accent-color:var(--navy);cursor:pointer;">
+<div class="form-group" style="display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;">
+  <input type="checkbox" id="gdpr-consent" name="gdpr" data-validate="gdpr" required style="width:18px;height:18px;min-width:18px;margin-top:3px;accent-color:var(--navy);cursor:pointer;">
   <label for="gdpr-consent" style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:var(--text-grey);line-height:1.6;cursor:pointer;text-transform:none;letter-spacing:0;font-weight:400;">
     <span data-i18n="form-gdpr">Sunt de acord cu prelucrarea datelor cu caracter personal conform <a href="politica-confidentialitate.html" target="_blank" style="color:var(--cyan);font-weight:600;">Politicii de Confidențialitate</a>. *</span>
   </label>
 </div>
+<div class="field-error" data-error-for="gdpr" style="margin-bottom:14px;"><i class="fas fa-exclamation-circle"></i><span data-i18n="err-gdpr">Trebuie să acceptați Politica de Confidențialitate.</span></div>
 <input type="hidden" name="_subject" value="Solicitare nouă — EUROELECTRIC">
 <button type="submit" class="btn-submit" data-i18n="form-submit">
 <i class="fas fa-paper-plane"></i> Trimite Solicitarea
 </button>
+<div id="formFeedback" class="form-feedback"></div>
 </form>
 </div>
 </div>
