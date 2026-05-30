@@ -92,8 +92,9 @@ padding: 8px 16px; border-radius: 50px; margin-bottom: 28px;
 }
 .hero-title {
 font-family: "Montserrat", sans-serif; font-weight: 800;
-font-size: clamp(2.2rem, 2.8vw, 3.2rem); line-height: 1.15;
+font-size: clamp(1.6rem, 2.2vw, 2.4rem); line-height: 1.2;
 color: var(--white); margin-bottom: 12px;
+word-break: break-word; overflow-wrap: break-word;
 }
 .hero-title .highlight { color: var(--cyan); display: block; }
 .hero-subtitle {
@@ -838,11 +839,11 @@ opacity: 0; pointer-events: none; font-size: 1.1rem;
 /* ===== RESPONSIVE ===== */
 @media (min-width: 1600px) {
 .hero-container { grid-template-columns: minmax(340px, 420px) 1fr; }
-.hero-title { font-size: clamp(2.4rem, 2.8vw, 3.6rem); }
+.hero-title { font-size: clamp(1.8rem, 2.4vw, 2.8rem); }
 }
 @media (max-width: 1200px) {
 .hero-container { grid-template-columns: minmax(280px, 340px) 1fr; gap: 30px; }
-.hero-title { font-size: clamp(2rem, 2.5vw, 2.8rem); }
+.hero-title { font-size: clamp(1.5rem, 2vw, 2.2rem); }
 .services-grid { grid-template-columns: repeat(2, 1fr); }
 .blog-grid { grid-template-columns: repeat(2, 1fr); }
 }
