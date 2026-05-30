@@ -150,7 +150,7 @@
 <body>
 <nav id="navbar">
 <a href="#acasa" class="nav-logo">
-<img src="Materiale/logo-euroelectric.png" alt="EUROELECTRIC S.R.L. — Profesionalism și Siguranță">
+<img src="Materiale/logo-euroelectric.png" alt="EUROELECTRIC S.R.L. — Profesionalism și Siguranță" width="272" height="48">
 </a>
 <ul class="nav-menu" id="navMenu">
 <li><a href="#acasa" data-i18n="nav-acasa">Acasă</a></li>
@@ -230,28 +230,28 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 <div class="why-feature reveal">
 <div class="why-feature-icon"><i class="fas fa-medal"></i></div>
 <div class="why-feature-text">
-<h4 data-i18n="why-f1-title">Experiență și Profesionalism</h4>
+<h3 data-i18n="why-f1-title">Experiență și Profesionalism</h3>
 <p data-i18n="why-f1-desc">Peste 20 de ani de activitate în instalații electrice comerciale, industriale și rezidențiale de înaltă performanță.</p>
 </div>
 </div>
 <div class="why-feature reveal reveal-delay-1">
 <div class="why-feature-icon"><i class="fas fa-certificate"></i></div>
 <div class="why-feature-text">
-<h4 data-i18n="why-f2-title">Certificări ISO</h4>
+<h3 data-i18n="why-f2-title">Certificări ISO</h3>
 <p data-i18n="why-f2-desc">Certificați ISO 9001, ISO 14001 și ISO 45001 — garanția calității, responsabilității ecologice și siguranței muncii.</p>
 </div>
 </div>
 <div class="why-feature reveal reveal-delay-2">
 <div class="why-feature-icon"><i class="fas fa-bolt"></i></div>
 <div class="why-feature-text">
-<h4 data-i18n="why-f3-title">Autorizat ANRE &amp; IGSU</h4>
+<h3 data-i18n="why-f3-title">Autorizat ANRE &amp; IGSU</h3>
 <p data-i18n="why-f3-desc">Autorizație completă pentru proiectare, execuție și verificare instalații electrice la toate tensiunile.</p>
 </div>
 </div>
 <div class="why-feature reveal reveal-delay-3">
 <div class="why-feature-icon"><i class="fas fa-headset"></i></div>
 <div class="why-feature-text">
-<h4 data-i18n="why-f4-title">Suport și Garanție</h4>
+<h3 data-i18n="why-f4-title">Suport și Garanție</h3>
 <p data-i18n="why-f4-desc">Asistență tehnică post-instalare și garanție extinsă pentru toate lucrările realizate.</p>
 </div>
 </div>
@@ -1089,9 +1089,9 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 <span>RO51 BTRL 0220 1202 2333 49XX<br>Banca Transilvania — Petroșani</span>
 </div>
 <div class="social-row">
-<a href="https://www.facebook.com/EuroElectricHD/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-<a href="https://www.linkedin.com/company/euroelectric-srl/posts/?feedView=all" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-<a href="mailto:office@euroelectric.ro" class="social-btn"><i class="fas fa-envelope"></i></a>
+<a href="https://www.facebook.com/EuroElectricHD/" target="_blank" rel="noopener" class="social-btn" aria-label="EUROELECTRIC pe Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+<a href="https://www.linkedin.com/company/euroelectric-srl/posts/?feedView=all" target="_blank" rel="noopener" class="social-btn" aria-label="EUROELECTRIC pe LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+<a href="mailto:office@euroelectric.ro" class="social-btn" aria-label="Trimite email la office@euroelectric.ro"><i class="fas fa-envelope" aria-hidden="true"></i></a>
 </div>
 <div class="map-placeholder">
 <div class="map-tabs">
@@ -1103,11 +1103,11 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 </button>
 </div>
 <div class="map-frame-wrap">
-<iframe id="map-baru"
+<iframe id="map-baru" title="Harta Google: Sediu EUROELECTRIC Baru, Hunedoara"
 data-src="https://maps.google.com/maps?q=Baru,+Hunedoara,+Romania&z=14&ie=UTF8&output=embed"
 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
 </iframe>
-<iframe id="map-petrosani"
+<iframe id="map-petrosani" title="Harta Google: Punct de lucru EUROELECTRIC Petrosani"
 data-src="https://maps.google.com/maps?q=Str.+Petru+Maior+14,+Petrosani,+Hunedoara,+Romania&z=15&ie=UTF8&output=embed"
 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
 style="display:none;">
@@ -1146,8 +1146,8 @@ target="_blank" rel="noopener">
 <div class="field-error" data-error-for="email"><i class="fas fa-exclamation-circle"></i><span data-i18n="err-email">Adresă email invalidă (ex: nume@domeniu.ro).</span></div>
 </div>
 <div class="form-group">
-<label data-i18n="form-service">Serviciu solicitat</label>
-<select name="service" data-i18n-select="form-select">
+<label for="service-select" data-i18n="form-service">Serviciu solicitat</label>
+<select id="service-select" name="service" data-i18n-select="form-select" aria-label="Selecteaza serviciul solicitat">
 <option value="">— Selectați serviciul —</option>
 <option>Tablouri Electrice</option>
 <option>Instalații Electrice</option>
@@ -1181,12 +1181,12 @@ target="_blank" rel="noopener">
 <footer>
 <div class="footer-grid">
 <div class="footer-brand">
-<img src="Materiale/logo-euroelectric.png" alt="EUROELECTRIC S.R.L.">
+<img src="Materiale/logo-euroelectric.png" alt="EUROELECTRIC S.R.L." width="200" height="40">
 <p data-i18n="footer-brand">Soluții electrice complete pentru sectorul rezidențial, comercial și industrial. Profesionalism și Siguranță — din 2003.</p>
 <div class="social-row">
-<a href="https://www.facebook.com/EuroElectricHD/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-<a href="https://www.linkedin.com/company/euroelectric-srl/posts/?feedView=all" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-<a href="mailto:office@euroelectric.ro" class="social-btn"><i class="fas fa-envelope"></i></a>
+<a href="https://www.facebook.com/EuroElectricHD/" target="_blank" rel="noopener" class="social-btn" aria-label="EUROELECTRIC pe Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+<a href="https://www.linkedin.com/company/euroelectric-srl/posts/?feedView=all" target="_blank" rel="noopener" class="social-btn" aria-label="EUROELECTRIC pe LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+<a href="mailto:office@euroelectric.ro" class="social-btn" aria-label="Trimite email la office@euroelectric.ro"><i class="fas fa-envelope" aria-hidden="true"></i></a>
 </div>
 </div>
 <div>
@@ -1243,8 +1243,8 @@ target="_blank" rel="noopener">
 </div>
 </div>
 </footer>
-<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-<i class="fas fa-chevron-up"></i>
+<button class="back-to-top" id="backToTop" aria-label="Inapoi sus" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<i class="fas fa-chevron-up" aria-hidden="true"></i>
 </button>
 
 <div id="cookieBanner" style="display:none">
