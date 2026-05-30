@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagină negăsită — EUROELECTRIC S.R.L.</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#003B7A">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23003B7A'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='%2300AEEF' font-family='Arial' font-weight='bold'>E</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --navy: #003B7A;
+    --navy-dark: #002456;
+    --cyan: #00AEEF;
+    --cyan-light: #4CC8F5;
+    --white: #FFFFFF;
+    --grey-light: #F5F7FA;
+    --text-grey: #5a6a80;
+  }
+  html, body {
+    height: 100%;
+    font-family: "Open Sans", sans-serif;
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, #0066CC 100%);
+    color: var(--white);
+    overflow: hidden;
+  }
+
+  /* Dot pattern */
+  body::before {
+    content: "";
+    position: fixed; inset: 0; pointer-events: none;
+    opacity: 0.07;
+    background-image: radial-gradient(circle at 2px 2px, var(--cyan) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+
+  /* Decorative shapes */
+  .shape { position: fixed; border-radius: 50%; opacity: 0.07; background: var(--cyan); pointer-events: none; }
+  .shape-1 { width: 500px; height: 500px; top: -150px; right: -100px; }
+  .shape-2 { width: 300px; height: 300px; bottom: -80px; left: -60px; opacity: 0.05; }
+
+  .page {
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 40px 20px;
+    position: relative; z-index: 1;
+    text-align: center;
+  }
+
+  /* Logo */
+  .logo {
+    font-family: "Montserrat", sans-serif; font-weight: 800;
+    font-size: 1.5rem; letter-spacing: 1px; color: var(--white);
+    margin-bottom: 48px; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .logo span { color: var(--cyan); }
+
+  /* 404 number */
+  .error-code {
+    font-family: "Montserrat", sans-serif; font-weight: 800;
+    font-size: clamp(6rem, 20vw, 10rem); line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 3px rgba(0,174,239,0.5);
+    letter-spacing: -4px;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .error-code::after {
+    content: "404";
+    position: absolute; inset: 0;
+    color: rgba(255,255,255,0.06);
+    -webkit-text-stroke: 0;
+  }
+
+  /* Icon */
+  .error-icon {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: rgba(0,174,239,0.15);
+    border: 2px solid rgba(0,174,239,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 28px;
+    font-size: 2rem; color: var(--cyan);
+  }
+
+  .error-title {
+    font-family: "Montserrat", sans-serif; font-weight: 800;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: var(--white); margin-bottom: 16px;
+  }
+  .error-title span { color: var(--cyan); }
+
+  .error-desc {
+    color: rgba(255,255,255,0.65);
+    font-size: 1rem; line-height: 1.8;
+    max-width: 480px; margin: 0 auto 40px;
+  }
+
+  /* Buttons */
+  .btn-group { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+  .btn-primary {
+    background: var(--cyan); color: var(--white);
+    padding: 14px 32px; border-radius: 8px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 0.9rem;
+    box-shadow: 0 6px 24px rgba(0,174,239,0.4);
+    transition: all 0.3s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: var(--navy-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,174,239,0.3); }
+
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    padding: 14px 32px; border-radius: 8px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 0.9rem;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: all 0.3s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+  /* Quick links */
+  .quick-links {
+    margin-top: 48px;
+    display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
+  }
+  .quick-link {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif; font-size: 0.78rem; font-weight: 600;
+    padding: 6px 14px; border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: all 0.3s ease;
+  }
+  .quick-link:hover { color: var(--cyan); border-color: rgba(0,174,239,0.4); background: rgba(0,174,239,0.08); }
+
+  /* Footer */
+  .page-footer {
+    position: fixed; bottom: 20px; left: 0; right: 0;
+    text-align: center;
+    color: rgba(255,255,255,0.3);
+    font-size: 0.75rem;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  @media (max-width: 480px) {
+    .btn-group { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-secondary { width: 100%; max-width: 280px; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="shape shape-1"></div>
+<div class="shape shape-2"></div>
+
+<div class="page">
+
+  <a href="/" class="logo"><span style="color:var(--white)">EURO</span><span>ELECTRIC</span></a>
+
+  <div class="error-code">404</div>
+
+  <div class="error-icon">
+    <i class="fas fa-map-signs"></i>
+  </div>
+
+  <h1 class="error-title">Pagina nu a <span>fost găsită</span></h1>
+  <p class="error-desc">
+    Ne pare rău, pagina pe care o cauți nu există sau a fost mutată.<br>
+    Verificați adresa sau reveniți la pagina principală.
+  </p>
+
+  <div class="btn-group">
+    <a href="/" class="btn-primary">
+      <i class="fas fa-home"></i> Înapoi la pagina principală
+    </a>
+    <a href="/#contact" class="btn-secondary">
+      <i class="fas fa-envelope"></i> Contactați-ne
+    </a>
+  </div>
+
+  <div class="quick-links">
+    <a href="/#servicii" class="quick-link"><i class="fas fa-bolt"></i> Servicii</a>
+    <a href="/#proiecte" class="quick-link"><i class="fas fa-images"></i> Portofoliu</a>
+    <a href="/#blog" class="quick-link"><i class="fas fa-newspaper"></i> Blog</a>
+    <a href="/#contact" class="quick-link"><i class="fas fa-phone"></i> Contact</a>
+  </div>
+
+</div>
+
+<div class="page-footer">© 2026 S.C. EUROELECTRIC S.R.L. — Toate drepturile rezervate</div>
+
+</body>
+</html>

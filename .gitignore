@@ -1,0 +1,17 @@
+# Fișiere interne / unelte
+build_site.py
+logo_src.txt
+site_template.html
+find_video.py
+.claude/
+
+# Versiune veche
+euroelectric-nou-EUROEL-PC1.html
+
+# Subfolder cu repo separat
+SITEWEB/
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini

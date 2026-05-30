@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politica de Cookie-uri — EUROELECTRIC S.R.L.</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: "Open Sans", sans-serif; color: #1a1a2e; background: #fff; }
+:root {
+  --navy: #003B7A; --navy-dark: #002456; --cyan: #00AEEF;
+  --white: #FFFFFF; --grey-light: #F5F7FA; --grey-mid: #E8EDF4;
+  --text-dark: #1a2744; --text-grey: #5a6a80;
+  --green: #2E8B2E; --orange: #E65100;
+  --shadow: 0 4px 24px rgba(0,59,122,0.10);
+  --radius: 12px; --transition: all 0.3s ease;
+}
+
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--white); box-shadow: 0 2px 20px rgba(0,59,122,0.10);
+  padding: 0 40px; display: flex; align-items: center; justify-content: space-between;
+  height: 72px;
+}
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.nav-logo-text { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--navy); }
+.nav-logo-text span { color: var(--cyan); }
+.nav-back {
+  display: flex; align-items: center; gap: 8px; text-decoration: none;
+  color: var(--navy); font-family: "Montserrat", sans-serif; font-weight: 600;
+  font-size: 0.85rem; padding: 8px 16px; border-radius: 8px;
+  border: 2px solid var(--grey-mid); transition: var(--transition);
+}
+.nav-back:hover { background: var(--cyan); color: var(--white); border-color: var(--cyan); }
+
+.page-hero {
+  background: linear-gradient(135deg, #002456 0%, #003B7A 55%, #005599 100%);
+  padding: 60px 40px; text-align: center; position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: ''; position: absolute; inset: 0; opacity: 0.06;
+  background-image: radial-gradient(circle at 2px 2px, var(--cyan) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+.page-hero-content { position: relative; max-width: 800px; margin: 0 auto; }
+.page-hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,174,239,0.2); border: 1px solid rgba(0,174,239,0.4);
+  color: var(--cyan); padding: 6px 16px; border-radius: 20px;
+  font-family: "Montserrat", sans-serif; font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;
+}
+.page-hero h1 {
+  font-family: "Montserrat", sans-serif; font-size: 2.4rem; font-weight: 800;
+  color: var(--white); margin-bottom: 16px; line-height: 1.2;
+}
+.page-hero p { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7; }
+.page-hero-meta {
+  display: flex; align-items: center; justify-content: center; gap: 24px;
+  margin-top: 24px; flex-wrap: wrap;
+}
+.page-hero-meta span { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.6); font-size: 0.82rem; }
+.page-hero-meta i { color: var(--cyan); }
+
+.content-wrapper { max-width: 860px; margin: 0 auto; padding: 60px 40px 80px; }
+
+/* WHAT IS COOKIE */
+.cookie-intro {
+  display: grid; grid-template-columns: auto 1fr; gap: 24px;
+  background: var(--grey-light); border-radius: var(--radius);
+  padding: 28px 32px; margin-bottom: 48px; align-items: center;
+}
+.cookie-intro-icon {
+  width: 64px; height: 64px; background: var(--cyan);
+  border-radius: 16px; display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; color: var(--white);
+}
+.cookie-intro h3 { font-family: "Montserrat",sans-serif; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.cookie-intro p { color: var(--text-grey); font-size: 0.9rem; line-height: 1.8; margin: 0; }
+
+/* SECTIONS */
+.policy-section { margin-bottom: 48px; }
+.policy-section:target { scroll-margin-top: 90px; }
+.section-header {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 20px;
+  padding-bottom: 14px; border-bottom: 2px solid var(--grey-mid);
+}
+.section-number {
+  width: 36px; height: 36px; border-radius: 50%; background: var(--cyan);
+  color: var(--white); font-family: "Montserrat",sans-serif; font-size: 0.85rem;
+  font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.section-header h2 { font-family: "Montserrat",sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--navy); }
+.policy-section p { color: var(--text-grey); font-size: 0.92rem; line-height: 1.85; margin-bottom: 14px; }
+.policy-section p:last-child { margin-bottom: 0; }
+.policy-section ul { padding-left: 20px; color: var(--text-grey); font-size: 0.92rem; line-height: 1.85; display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+.policy-section li::marker { color: var(--cyan); }
+
+/* COOKIE CATEGORIES */
+.cookie-categories { display: flex; flex-direction: column; gap: 16px; margin: 20px 0; }
+.cookie-cat {
+  border: 1px solid var(--grey-mid); border-radius: var(--radius);
+  overflow: hidden;
+}
+.cookie-cat-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px; background: var(--grey-light);
+  cursor: pointer; transition: var(--transition);
+}
+.cookie-cat-header:hover { background: var(--grey-mid); }
+.cookie-cat-left { display: flex; align-items: center; gap: 14px; }
+.cookie-cat-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; font-size: 1rem;
+}
+.cat-essential .cookie-cat-icon { background: #e3f2fd; color: var(--navy); }
+.cat-functional .cookie-cat-icon { background: #e8f5e9; color: var(--green); }
+.cat-analytics .cookie-cat-icon { background: #fff3e0; color: var(--orange); }
+.cat-marketing .cookie-cat-icon { background: #fce4ec; color: #c62828; }
+.cookie-cat-title { font-family: "Montserrat",sans-serif; font-weight: 700; font-size: 0.92rem; color: var(--navy); margin-bottom: 2px; }
+.cookie-cat-sub { font-size: 0.78rem; color: var(--text-grey); }
+.cookie-cat-right { display: flex; align-items: center; gap: 12px; }
+.badge {
+  padding: 4px 12px; border-radius: 20px;
+  font-family: "Montserrat",sans-serif; font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.badge-req { background: #e3f2fd; color: var(--navy); }
+.badge-opt { background: #fff3e0; color: var(--orange); }
+.badge-no  { background: #f1f8e9; color: var(--green); }
+.toggle-switch {
+  position: relative; width: 44px; height: 24px;
+}
+.toggle-switch input { opacity: 0; width: 0; height: 0; }
+.toggle-slider {
+  position: absolute; inset: 0; border-radius: 24px;
+  background: #ccc; cursor: pointer; transition: var(--transition);
+}
+.toggle-slider::before {
+  content: ''; position: absolute; height: 18px; width: 18px;
+  left: 3px; bottom: 3px; background: white; border-radius: 50%;
+  transition: var(--transition);
+}
+.toggle-switch input:checked + .toggle-slider { background: var(--cyan); }
+.toggle-switch input:checked + .toggle-slider::before { transform: translateX(20px); }
+.toggle-switch input:disabled + .toggle-slider { opacity: 0.6; cursor: not-allowed; }
+.cookie-cat-body { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.2s; }
+.cookie-cat-body.open { max-height: 600px; padding: 16px 20px 20px; }
+
+/* COOKIE TABLE */
+.cookie-table {
+  width: 100%; border-collapse: collapse; font-size: 0.84rem; margin-top: 8px;
+}
+.cookie-table th {
+  background: var(--navy); color: var(--white);
+  font-family: "Montserrat",sans-serif; font-size: 0.75rem;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  padding: 10px 14px; text-align: left;
+}
+.cookie-table td { padding: 10px 14px; border-bottom: 1px solid var(--grey-mid); color: var(--text-grey); }
+.cookie-table tr:last-child td { border-bottom: none; }
+.cookie-table tr:nth-child(even) td { background: var(--grey-light); }
+
+/* BROWSER STEPS */
+.browser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0; }
+.browser-card {
+  background: var(--grey-light); border-radius: 10px; padding: 18px;
+  text-align: center; border: 1px solid var(--grey-mid);
+}
+.browser-card i { font-size: 1.8rem; margin-bottom: 10px; display: block; }
+.browser-card h4 { font-family: "Montserrat",sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.browser-card p { font-size: 0.78rem; color: var(--text-grey); line-height: 1.6; }
+.browser-card a { color: var(--cyan); text-decoration: none; font-weight: 600; }
+.browser-card a:hover { text-decoration: underline; }
+
+.info-box {
+  background: rgba(0,174,239,0.07); border: 1px solid rgba(0,174,239,0.2);
+  border-radius: var(--radius); padding: 18px 22px; margin: 16px 0;
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.info-box i { color: var(--cyan); font-size: 1rem; margin-top: 2px; flex-shrink: 0; }
+.info-box p { margin: 0; color: var(--text-dark); font-size: 0.87rem; line-height: 1.7; }
+.warn-box {
+  background: rgba(230,81,0,0.07); border: 1px solid rgba(230,81,0,0.2);
+  border-radius: var(--radius); padding: 18px 22px; margin: 16px 0;
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.warn-box i { color: var(--orange); font-size: 1rem; margin-top: 2px; flex-shrink: 0; }
+.warn-box p { margin: 0; color: var(--text-dark); font-size: 0.87rem; line-height: 1.7; }
+
+/* SAVE PREFERENCES */
+.pref-bar {
+  background: var(--grey-light); border-radius: var(--radius);
+  padding: 20px 24px; display: flex; align-items: center;
+  justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  border: 1px solid var(--grey-mid); margin-top: 24px;
+}
+.pref-bar p { font-size: 0.88rem; color: var(--text-grey); margin: 0; }
+.pref-btn {
+  background: var(--cyan); color: var(--white); border: none;
+  padding: 10px 24px; border-radius: 8px; font-family: "Montserrat",sans-serif;
+  font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: var(--transition);
+}
+.pref-btn:hover { background: var(--navy); }
+.pref-btn-outline {
+  background: none; color: var(--navy); border: 2px solid var(--grey-mid);
+  padding: 10px 20px; border-radius: 8px; font-family: "Montserrat",sans-serif;
+  font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: var(--transition);
+}
+.pref-btn-outline:hover { border-color: var(--cyan); color: var(--cyan); }
+
+/* CONTACT CARD */
+.contact-card {
+  background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+  border-radius: var(--radius); padding: 28px 32px; color: var(--white);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; flex-wrap: wrap; margin-top: 20px;
+}
+.contact-card h3 { font-family: "Montserrat",sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+.contact-card p { color: rgba(255,255,255,0.7); font-size: 0.85rem; }
+.contact-card-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.contact-card-link {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.12); color: var(--white);
+  padding: 10px 16px; border-radius: 8px; text-decoration: none;
+  font-size: 0.83rem; font-weight: 600; transition: var(--transition);
+}
+.contact-card-link:hover { background: var(--cyan); }
+
+footer {
+  background: var(--navy-dark); color: rgba(255,255,255,0.6);
+  text-align: center; padding: 24px 40px; font-size: 0.82rem;
+}
+footer a { color: var(--cyan); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+#save-toast {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px);
+  background: var(--navy); color: var(--white); padding: 12px 28px;
+  border-radius: 30px; font-family: "Montserrat",sans-serif; font-size: 0.85rem;
+  font-weight: 600; box-shadow: 0 8px 30px rgba(0,59,122,0.3);
+  transition: transform 0.4s ease; z-index: 999; pointer-events: none;
+}
+#save-toast.show { transform: translateX(-50%) translateY(0); }
+
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .page-hero { padding: 40px 20px; }
+  .page-hero h1 { font-size: 1.7rem; }
+  .content-wrapper { padding: 40px 20px 60px; }
+  .cookie-intro { grid-template-columns: 1fr; }
+  .browser-grid { grid-template-columns: 1fr 1fr; }
+  .contact-card { flex-direction: column; }
+  .pref-bar { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .browser-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="euroelectric-nou.html">
+    <span class="nav-logo-text">EURO<span>ELECTRIC</span></span>
+  </a>
+  <a class="nav-back" href="euroelectric-nou.html">
+    <i class="fas fa-arrow-left"></i> Înapoi la site
+  </a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-tag"><i class="fas fa-cookie-bite"></i> Transparență digitală</div>
+    <h1>Politica de Cookie-uri</h1>
+    <p>Informații clare și complete despre cookie-urile utilizate pe site-ul EUROELECTRIC S.R.L., scopul acestora și cum puteți controla preferințele dumneavoastră.</p>
+    <div class="page-hero-meta">
+      <span><i class="fas fa-calendar-alt"></i> Actualizat: Mai 2025</span>
+      <span><i class="fas fa-balance-scale"></i> Conform GDPR & Legea 506/2004</span>
+      <span><i class="fas fa-cookie"></i> Cookie-uri minime, fără tracking</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrapper">
+
+  <!-- CE ESTE UN COOKIE -->
+  <div class="cookie-intro">
+    <div class="cookie-cat-icon cookie-intro-icon"><i class="fas fa-cookie-bite"></i></div>
+    <div>
+      <h3>Ce este un cookie?</h3>
+      <p>Un cookie este un fișier text de mici dimensiuni pe care un site web îl stochează pe dispozitivul dumneavoastră (computer, tabletă, smartphone) atunci când îl vizitați. Cookie-urile nu conțin programe executabile, nu pot accesa alte fișiere de pe dispozitiv și nu pot identifica direct persoana care le utilizează. Ele permit site-ului să rețină informații despre vizita dumneavoastră pentru a îmbunătăți experiența de navigare.</p>
+    </div>
+  </div>
+
+  <!-- S1 - CATEGORII -->
+  <div class="policy-section" id="s1">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2>Categoriile de cookie-uri utilizate</h2>
+    </div>
+    <p>Site-ul EUROELECTRIC utilizează un număr minim de cookie-uri, strict necesare funcționării corecte. <strong>Nu folosim cookie-uri de marketing, remarketing sau urmărire comportamentală.</strong></p>
+
+    <div class="cookie-categories">
+
+      <!-- ESENȚIALE -->
+      <div class="cookie-cat cat-essential">
+        <div class="cookie-cat-header" onclick="toggleCat(this)">
+          <div class="cookie-cat-left">
+            <div class="cookie-cat-icon"><i class="fas fa-lock"></i></div>
+            <div>
+              <div class="cookie-cat-title">Cookie-uri esențiale</div>
+              <div class="cookie-cat-sub">Necesare pentru funcționarea site-ului</div>
+            </div>
+          </div>
+          <div class="cookie-cat-right">
+            <span class="badge badge-req">Întotdeauna active</span>
+            <label class="toggle-switch" onclick="event.stopPropagation()">
+              <input type="checkbox" checked disabled>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="cookie-cat-body">
+          <p>Aceste cookie-uri sunt indispensabile pentru funcționarea corectă a site-ului și nu pot fi dezactivate. Ele nu stochează informații de identificare personală.</p>
+          <table class="cookie-table">
+            <thead><tr><th>Nume</th><th>Scop</th><th>Durată</th><th>Tip</th></tr></thead>
+            <tbody>
+              <tr><td>cookie_consent</td><td>Reține preferința dvs. privind cookie-urile</td><td>12 luni</td><td>First-party</td></tr>
+              <tr><td>lang_pref</td><td>Reține limba selectată (RO/EN)</td><td>12 luni</td><td>First-party</td></tr>
+              <tr><td>session_id</td><td>Identifică sesiunea de navigare curentă</td><td>Sesiune</td><td>First-party</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- FUNCȚIONALE -->
+      <div class="cookie-cat cat-functional">
+        <div class="cookie-cat-header" onclick="toggleCat(this)">
+          <div class="cookie-cat-left">
+            <div class="cookie-cat-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="cookie-cat-title">Cookie-uri funcționale</div>
+              <div class="cookie-cat-sub">Google Maps — harta locației noastre</div>
+            </div>
+          </div>
+          <div class="cookie-cat-right">
+            <span class="badge badge-opt">Opțional</span>
+            <label class="toggle-switch" onclick="event.stopPropagation()">
+              <input type="checkbox" id="toggle-functional" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="cookie-cat-body">
+          <p>Aceste cookie-uri sunt setate de Google Maps, serviciu integrat pe site-ul nostru pentru a afișa locația sediului EUROELECTRIC S.R.L. Dacă dezactivați aceste cookie-uri, harta nu va fi disponibilă.</p>
+          <table class="cookie-table">
+            <thead><tr><th>Furnizor</th><th>Scop</th><th>Durată</th><th>Tip</th></tr></thead>
+            <tbody>
+              <tr><td>Google LLC (maps.google.com)</td><td>Afișare hartă interactivă, preferințe hartă</td><td>6 luni</td><td>Third-party</td></tr>
+              <tr><td>Google LLC (google.com)</td><td>Statistici de utilizare internă Maps</td><td>2 ani</td><td>Third-party</td></tr>
+            </tbody>
+          </table>
+          <div class="info-box" style="margin-top:12px">
+            <i class="fas fa-info-circle"></i>
+            <p>Google poate procesa datele conform propriei <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--cyan)">Politici de confidențialitate</a>. EUROELECTRIC S.R.L. nu controlează aceste cookie-uri third-party.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANALYTICS -->
+      <div class="cookie-cat cat-analytics">
+        <div class="cookie-cat-header" onclick="toggleCat(this)">
+          <div class="cookie-cat-left">
+            <div class="cookie-cat-icon"><i class="fas fa-chart-bar"></i></div>
+            <div>
+              <div class="cookie-cat-title">Cookie-uri analitice</div>
+              <div class="cookie-cat-sub">Statistici de trafic și comportament pe site</div>
+            </div>
+          </div>
+          <div class="cookie-cat-right">
+            <span class="badge badge-no">Nu folosim</span>
+            <label class="toggle-switch" onclick="event.stopPropagation()">
+              <input type="checkbox" disabled>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="cookie-cat-body">
+          <p><strong>Site-ul EUROELECTRIC nu utilizează Google Analytics sau orice alt sistem de analiză a traficului care colectează date personale.</strong> Nu monitorizăm comportamentul individual al vizitatorilor și nu creăm profiluri de utilizare.</p>
+          <div class="info-box">
+            <i class="fas fa-check-circle"></i>
+            <p>Această decizie reflectă angajamentul nostru față de confidențialitatea vizitatorilor. Dacă în viitor vom implementa instrumente analitice, vom actualiza această politică și vom solicita consimțământul dumneavoastră.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MARKETING -->
+      <div class="cookie-cat cat-marketing">
+        <div class="cookie-cat-header" onclick="toggleCat(this)">
+          <div class="cookie-cat-left">
+            <div class="cookie-cat-icon"><i class="fas fa-ad"></i></div>
+            <div>
+              <div class="cookie-cat-title">Cookie-uri de marketing</div>
+              <div class="cookie-cat-sub">Publicitate, remarketing, rețele sociale</div>
+            </div>
+          </div>
+          <div class="cookie-cat-right">
+            <span class="badge badge-no">Nu folosim</span>
+            <label class="toggle-switch" onclick="event.stopPropagation()">
+              <input type="checkbox" disabled>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="cookie-cat-body">
+          <p><strong>Nu utilizăm cookie-uri de marketing, remarketing, Facebook Pixel, publicitate comportamentală sau butoane de rețele sociale care urmăresc vizitatorii.</strong></p>
+          <p>Suntem o companie de servicii electrice și credem că relația cu clienții noștri se construiește prin calitate și profesionalism, nu prin urmărire publicitară.</p>
+        </div>
+      </div>
+
+    </div><!-- end cookie-categories -->
+
+    <!-- SAVE PREFERENCES -->
+    <div class="pref-bar">
+      <p><i class="fas fa-sliders-h" style="color:var(--cyan);margin-right:8px"></i> Modificați și salvați preferințele dvs. privind cookie-urile opționale.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="pref-btn-outline" onclick="rejectOptional()">Refuz opționale</button>
+        <button class="pref-btn" onclick="savePreferences()">Salvează preferințele</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- S2 - DURATA -->
+  <div class="policy-section" id="s2">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2>Durata stocării cookie-urilor</h2>
+    </div>
+    <p>Cookie-urile se clasifică după durata de viață în două categorii principale:</p>
+    <ul>
+      <li><strong>Cookie-uri de sesiune:</strong> sunt temporare și se șterg automat când închideți browserul. Sunt utilizate pentru menținerea stării de navigare pe parcursul unei singure vizite.</li>
+      <li><strong>Cookie-uri persistente:</strong> rămân pe dispozitivul dumneavoastră pentru o perioadă determinată (specificată în tabelele de mai sus) sau până când le ștergeți manual. Sunt utilizate pentru a reține preferințele dvs. între vizite.</li>
+    </ul>
+    <div class="info-box">
+      <i class="fas fa-clock"></i>
+      <p>Duratele menționate sunt maxime. Cookie-urile pot fi șterse oricând din setările browserului dumneavoastră, indiferent de durata nominală.</p>
+    </div>
+  </div>
+
+  <!-- S3 - CONTROL -->
+  <div class="policy-section" id="s3">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2>Cum controlați cookie-urile din browser</h2>
+    </div>
+    <p>Fiecare browser modern vă oferă posibilitatea de a gestiona, bloca sau șterge cookie-urile. Mai jos găsiți instrucțiuni rapide pentru cele mai utilizate browsere:</p>
+
+    <div class="browser-grid">
+      <div class="browser-card">
+        <i class="fab fa-chrome" style="color:#4285F4"></i>
+        <h4>Google Chrome</h4>
+        <p>Setări → Confidențialitate și securitate → Cookie-uri și alte date ale site-urilor</p>
+      </div>
+      <div class="browser-card">
+        <i class="fab fa-firefox" style="color:#FF7139"></i>
+        <h4>Mozilla Firefox</h4>
+        <p>Setări → Confidențialitate și securitate → Cookie-uri și date de site</p>
+      </div>
+      <div class="browser-card">
+        <i class="fab fa-edge" style="color:#0078D4"></i>
+        <h4>Microsoft Edge</h4>
+        <p>Setări → Cookie-uri și permisiuni ale site-urilor → Gestionare și ștergere cookie-uri</p>
+      </div>
+      <div class="browser-card">
+        <i class="fab fa-safari" style="color:#006CFF"></i>
+        <h4>Safari</h4>
+        <p>Preferințe → Confidențialitate → Gestionare date site-uri web</p>
+      </div>
+      <div class="browser-card">
+        <i class="fab fa-opera" style="color:#FF1B2D"></i>
+        <h4>Opera</h4>
+        <p>Setări → Avansat → Confidențialitate și securitate → Cookie-uri</p>
+      </div>
+      <div class="browser-card">
+        <i class="fas fa-mobile-alt" style="color:#5a6a80"></i>
+        <h4>Dispozitive mobile</h4>
+        <p>Setările browserului → Confidențialitate sau Date de navigare → Cookie-uri</p>
+      </div>
+    </div>
+
+    <div class="warn-box">
+      <i class="fas fa-exclamation-triangle"></i>
+      <p>Blocarea tuturor cookie-urilor poate afecta funcționalitatea unor site-uri web, inclusiv a celui de față (ex. reținerea preferinței de limbă). Cookie-urile esențiale sunt necesare pentru navigarea corectă.</p>
+    </div>
+  </div>
+
+  <!-- S4 - CONSIMTAMANT -->
+  <div class="policy-section" id="s4">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2>Consimțământul și retragerea acestuia</h2>
+    </div>
+    <p>La prima vizitare a site-ului nostru, vi se afișează un banner de informare privind utilizarea cookie-urilor. Prin alegerea opțiunilor din acel banner, vă exprimați preferințele.</p>
+    <ul>
+      <li><strong>Acceptați toate:</strong> activați cookie-urile esențiale și pe cele funcționale (Google Maps).</li>
+      <li><strong>Doar necesare:</strong> activați exclusiv cookie-urile esențiale fără de care site-ul nu funcționează.</li>
+      <li><strong>Personalizare:</strong> alegeți individual ce categorii acceptați.</li>
+    </ul>
+    <p>Vă puteți retrage sau modifica consimțământul oricând folosind secțiunea de preferințe de mai sus sau ștergând cookie-urile din browser. Retragerea consimțământului nu afectează legalitatea prelucrărilor anterioare.</p>
+    <div class="info-box">
+      <i class="fas fa-gavel"></i>
+      <p>Această politică respectă prevederile <strong>Legii nr. 506/2004</strong> privind prelucrarea datelor cu caracter personal în sectorul comunicațiilor electronice și ale <strong>Regulamentului UE 2016/679 (GDPR)</strong>.</p>
+    </div>
+  </div>
+
+  <!-- S5 - ACTUALIZARI -->
+  <div class="policy-section" id="s5">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2>Actualizări ale politicii de cookie-uri</h2>
+    </div>
+    <p>Ne rezervăm dreptul de a actualiza această politică ori de câte ori este necesar — de exemplu, la implementarea unor noi funcționalități sau la modificări legislative. Data ultimei actualizări este indicată în antetul paginii.</p>
+    <p>Modificările semnificative vor fi comunicate printr-un nou banner de informare la accesarea site-ului.</p>
+  </div>
+
+  <!-- S6 - CONTACT -->
+  <div class="policy-section" id="s6">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <h2>Contact</h2>
+    </div>
+    <p>Dacă aveți întrebări despre modul în care utilizăm cookie-urile sau doriți să exercitați drepturile prevăzute de GDPR în legătură cu datele colectate prin cookie-uri, ne puteți contacta:</p>
+    <div class="contact-card">
+      <div>
+        <h3>S.C. EUROELECTRIC S.R.L.</h3>
+        <p>Comuna Baru, Nr. 405/C, Județul Hunedoara, România</p>
+      </div>
+      <div class="contact-card-links">
+        <a class="contact-card-link" href="mailto:office@euroelectric.ro">
+          <i class="fas fa-envelope"></i> office@euroelectric.ro
+        </a>
+        <a class="contact-card-link" href="tel:+40254268059">
+          <i class="fas fa-phone"></i> 0254 268 059
+        </a>
+        <a class="contact-card-link" href="politica-confidentialitate.html">
+          <i class="fas fa-shield-alt"></i> Politica de confidențialitate
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end content-wrapper -->
+
+<div id="save-toast">✓ Preferințe salvate cu succes</div>
+
+<footer>
+  <p>© 2025 S.C. EUROELECTRIC S.R.L. &nbsp;|&nbsp;
+  <a href="euroelectric-nou.html">Înapoi la site</a> &nbsp;|&nbsp;
+  <a href="politica-confidentialitate.html">Politica de confidențialitate</a>
+  </p>
+</footer>
+
+<script>
+function toggleCat(header) {
+  var body = header.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+function savePreferences() {
+  var functional = document.getElementById('toggle-functional').checked;
+  localStorage.setItem('euro_cookie_consent', 'custom');
+  localStorage.setItem('euro_cookie_functional', functional ? '1' : '0');
+  showToast('✓ Preferințe salvate cu succes');
+}
+
+function rejectOptional() {
+  document.getElementById('toggle-functional').checked = false;
+  localStorage.setItem('euro_cookie_consent', 'necessary');
+  localStorage.setItem('euro_cookie_functional', '0');
+  showToast('✓ Doar cookie-urile necesare sunt active');
+}
+
+function showToast(msg) {
+  var t = document.getElementById('save-toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function() { t.classList.remove('show'); }, 3000);
+}
+
+// Load saved preferences
+window.addEventListener('load', function() {
+  var f = localStorage.getItem('euro_cookie_functional');
+  if (f === '0') document.getElementById('toggle-functional').checked = false;
+});
+</script>
+</body>
+</html>
