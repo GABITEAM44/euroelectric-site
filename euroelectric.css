@@ -287,7 +287,7 @@ font-size: 0.85rem; font-weight: 700; min-width: 42px; text-align: center;
 .cert-modal-body { flex: 1; overflow: hidden; }
 .cert-modal-body iframe { width: 100%; height: 100%; border: none; }
 /* ===== FLOATING CONTACT BUTTON ===== */
-.float-contact { position: fixed; bottom: 28px; right: 28px; z-index: 8000; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.float-contact { position: fixed; bottom: 28px; left: 28px; z-index: 8000; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
 .float-contact-main {
 width: 56px; height: 56px; border-radius: 50%; background: var(--navy);
 color: var(--white); border: none; cursor: pointer; font-size: 1.4rem;
@@ -295,7 +295,7 @@ box-shadow: 0 4px 20px rgba(0,59,122,0.4); transition: var(--transition);
 display: flex; align-items: center; justify-content: center;
 }
 .float-contact-main:hover { background: var(--cyan); transform: scale(1.1); }
-.float-contact-options { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; overflow: hidden; max-height: 0; transition: max-height 0.35s ease, opacity 0.3s ease; opacity: 0; }
+.float-contact-options { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; overflow: hidden; max-height: 0; transition: max-height 0.35s ease, opacity 0.3s ease; opacity: 0; }
 .float-contact.open .float-contact-options { max-height: 200px; opacity: 1; }
 .float-option {
 display: flex; align-items: center; gap: 10px;
@@ -306,7 +306,7 @@ font-size: 0.82rem; font-weight: 700;
 box-shadow: 0 3px 14px rgba(0,59,122,0.35); transition: var(--transition);
 white-space: nowrap;
 }
-.float-option:hover { background: var(--cyan); transform: translateX(-4px); }
+.float-option:hover { background: var(--cyan); transform: translateX(4px); }
 .float-option i { font-size: 1rem; }
 .float-option.email-opt { background: var(--green); }
 .float-option.email-opt:hover { background: #237a23; }
