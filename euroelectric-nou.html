@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- EUROELECTRIC v1.0 | 2026-05-16 | pregatit-lansare euroelectric.ro -->
 <html lang="ro">
 <head>
@@ -11,6 +11,8 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://euroelectric.ro/">
 <link rel="alternate" hreflang="ro" href="https://euroelectric.ro/">
+<link rel="alternate" hreflang="en" href="https://euroelectric.ro/">
+<link rel="alternate" hreflang="de" href="https://euroelectric.ro/">
 <link rel="alternate" hreflang="x-default" href="https://euroelectric.ro/">
 <meta name="theme-color" content="#003B7A">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -18,18 +20,15 @@
 <meta property="og:url" content="https://euroelectric.ro/">
 <meta property="og:title" content="Tablouri Electrice & Instalații Hunedoara | EUROELECTRIC S.R.L.">
 <meta property="og:description" content="Tablouri electrice, instalații electrice și sisteme fotovoltaice în Hunedoara. Peste 20 de ani experiență, autorizat ANRE, certificat ISO 9001/14001/45001.">
-<meta property="og:image" content="https://euroelectric.ro/Materiale/Foto-sediu-optimizat.jpg">
+<meta property="og:image" content="https://euroelectric.ro/Materiale/Foto%20sediu.webp">
 <meta property="og:locale" content="ro_RO">
 <meta property="og:site_name" content="EUROELECTRIC S.R.L.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Tablouri Electrice & Instalații Hunedoara | EUROELECTRIC S.R.L.">
 <meta name="twitter:description" content="Tablouri electrice, instalații electrice și sisteme fotovoltaice în Hunedoara. Autorizat ANRE, certificat ISO 9001/14001/45001.">
-<meta name="twitter:image" content="https://euroelectric.ro/Materiale/Foto-sediu-optimizat.jpg">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="shortcut icon" href="favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<meta name="twitter:image" content="https://euroelectric.ro/Materiale/Foto%20sediu.webp">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23003B7A'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='%2300AEEF' font-family='Arial' font-weight='bold'>E</text></svg>">
+<link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23003B7A'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='%2300AEEF' font-family='Arial' font-weight='bold'>E</text></svg>">
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -41,7 +40,7 @@
 "alternateName": "Euroelectric",
 "url": "https://euroelectric.ro",
 "logo": "https://euroelectric.ro/Materiale/logo-euroelectric.png",
-"image": "https://euroelectric.ro/Materiale/Foto-sediu-optimizat.jpg",
+"image": "https://euroelectric.ro/Materiale/Foto%20sediu.webp",
 "description": "Proiectare, execuție și mentenanță instalații electrice comerciale și industriale. Tablouri electrice, panouri fotovoltaice, stații de încărcare EV. Autorizat ANRE, certificat ISO 9001/14001/45001.",
 "foundingDate": "2003",
 "telephone": "+40254545444",
@@ -125,7 +124,7 @@
 }
 }
 ]
-}
+},
 },
 {
 "@type": "WebSite",
@@ -138,22 +137,997 @@
 ]
 }
 </script>
-<link rel="preload" as="image" href="Materiale/Foto-sediu-optimizat.webp" type="image/webp">
-<link rel="preload" as="image" href="Materiale/Foto-sediu-optimizat-600w.webp" type="image/webp" media="(max-width: 700px)">
-<link rel="preload" as="style" href="euroelectric.css">
+<link rel="preload" as="image" href="Materiale/Foto-sediu-optimizat.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-<!-- Font Awesome incarcat non-blocking (trucul print->all) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-<link rel="stylesheet" href="euroelectric.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-snap-type: y mandatory; overflow-y: scroll; }
+body { font-family: "Open Sans", sans-serif; color: #1a1a2e; background: #fff; overflow-x: hidden; }
+/* ===== VARIABLES ===== */
+:root {
+--navy: #003B7A;
+--navy-dark: #002456;
+--cyan: #00AEEF;
+--cyan-light: #4CC8F5;
+--green: #2E8B2E;
+--white: #FFFFFF;
+--grey-light: #F5F7FA;
+--grey-mid: #E8EDF4;
+--text-dark: #1a2744;
+--text-grey: #5a6a80;
+--shadow: 0 4px 24px rgba(0,59,122,0.12);
+--shadow-hover: 0 8px 40px rgba(0,59,122,0.22);
+--radius: 12px;
+--transition: all 0.3s ease;
+}
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--grey-light); }
+::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 4px; }
+/* ===== NAVBAR ===== */
+nav {
+position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+background: var(--white);
+box-shadow: 0 2px 20px rgba(0,59,122,0.10);
+padding: 0 40px;
+display: flex; align-items: center; justify-content: space-between;
+height: 72px;
+transition: var(--transition);
+}
+nav.scrolled { height: 60px; box-shadow: 0 4px 30px rgba(0,59,122,0.18); }
+.nav-logo img { height: 48px; object-fit: contain; transition: var(--transition); }
+nav.scrolled .nav-logo img { height: 40px; }
+.nav-menu { display: flex; list-style: none; gap: 8px; align-items: center; }
+.nav-menu a {
+text-decoration: none; color: var(--navy);
+font-family: "Montserrat", sans-serif; font-weight: 600;
+font-size: 0.82rem; letter-spacing: 0.5px; text-transform: uppercase;
+padding: 8px 14px; border-radius: 6px;
+transition: var(--transition); white-space: nowrap;
+}
+.nav-menu a:hover { background: var(--grey-light); color: var(--cyan); }
+.nav-menu a.nav-active { color: var(--cyan); font-weight: 700; }
+.nav-menu .cta-btn {
+background: var(--cyan); color: var(--white) !important;
+padding: 10px 22px; border-radius: 8px;
+box-shadow: 0 4px 15px rgba(0,174,239,0.3);
+}
+.nav-menu .cta-btn:hover { background: var(--navy) !important; box-shadow: 0 6px 20px rgba(0,59,122,0.3); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+.hamburger span { display: block; width: 26px; height: 2.5px; background: var(--navy); border-radius: 2px; transition: var(--transition); }
+.nav-lang-mobile { display: none; }
+/* ===== HERO ===== */
+#acasa {
+min-height: 100vh; position: relative;
+background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, #0066CC 100%);
+display: flex; align-items: center; overflow: hidden; padding-top: 72px;
+}
+.hero-bg-pattern {
+position: absolute; inset: 0; opacity: 0.07;
+background-image: radial-gradient(circle at 2px 2px, var(--cyan) 1px, transparent 0);
+background-size: 40px 40px;
+}
+.hero-shapes .shape { position: absolute; border-radius: 50%; opacity: 0.08; background: var(--cyan); }
+.hero-shapes .shape-1 { width: 500px; height: 500px; top: -100px; right: -100px; }
+.hero-shapes .shape-2 { width: 300px; height: 300px; bottom: 50px; right: 200px; opacity: 0.05; }
+.hero-shapes .shape-3 { width: 200px; height: 200px; bottom: -50px; left: 100px; opacity: 0.06; }
+.hero-container {
+max-width: 1400px; margin: 0 auto; padding: 60px 40px;
+display: grid; grid-template-columns: minmax(300px, 380px) 1fr; gap: 40px; align-items: stretch;
+position: relative; z-index: 1; width: 100%;
+}
+.hero-content {
+display: flex; flex-direction: column; justify-content: center;
+border: 1px solid rgba(0,174,239,0.25);
+border-radius: 16px;
+padding: 30px 20px;
+background: rgba(0,60,130,0.25);
+box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+}
+.hero-badge {
+display: inline-flex; align-items: center; gap: 8px;
+background: rgba(0,174,239,0.15); border: 1px solid rgba(0,174,239,0.3);
+color: var(--cyan-light); font-family: "Montserrat", sans-serif;
+font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+padding: 8px 16px; border-radius: 50px; margin-bottom: 28px;
+}
+.hero-title {
+font-family: "Montserrat", sans-serif; font-weight: 800;
+font-size: clamp(1.2rem, 1.5vw, 1.7rem); line-height: 1.15;
+color: var(--white); margin-bottom: 12px;
+}
+.hero-title .highlight { color: var(--cyan); display: block; }
+.hero-subtitle {
+font-family: "Montserrat", sans-serif; font-weight: 300;
+font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.7);
+margin-bottom: 24px; letter-spacing: 1px;
+}
+.hero-desc { color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.8; margin-bottom: 40px; max-width: 480px; }
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+.btn-primary {
+background: var(--cyan); color: var(--white);
+padding: 14px 32px; border-radius: 8px; text-decoration: none;
+font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 0.9rem;
+box-shadow: 0 6px 24px rgba(0,174,239,0.4); transition: var(--transition);
+border: 2px solid var(--cyan); display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover { background: transparent; transform: translateY(-2px); }
+.btn-secondary {
+background: transparent; color: var(--white);
+padding: 14px 32px; border-radius: 8px; text-decoration: none;
+font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 0.9rem;
+border: 2px solid rgba(255,255,255,0.3); transition: var(--transition);
+display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+.hero-stats { display: flex; gap: 40px; flex-wrap: wrap; }
+.hero-stat { text-align: center; }
+.hero-stat-num { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 2rem; color: var(--cyan); display: block; }
+.hero-stat-label { color: rgba(255,255,255,0.6); font-size: 0.8rem; }
+.hero-stat-divider { width: 1px; background: rgba(255,255,255,0.15); align-self: stretch; }
+.hero-visual { position: relative; display: flex; align-items: stretch; justify-content: center; }
+.hero-card-main {
+background: transparent; border-radius: 16px; width: 100%; overflow: hidden;
+box-shadow: 0 24px 70px rgba(0,0,0,0.45); display: flex; align-items: stretch; position: relative;
+}
+.hero-card-main video { width: 100%; height: auto; border-radius: 12px; display: block; object-fit: contain; background: #001830; }
+.hero-card-main img.hero-photo {
+width: 100%; height: 100%; min-height: 380px;
+object-fit: cover; object-position: center 30%;
+border-radius: 16px; display: block;
+}
+.hero-photo-overlay {
+position: absolute; inset: 0; border-radius: 16px;
+background: linear-gradient(to top, rgba(0,20,60,0.55) 0%, transparent 60%);
+pointer-events: none;
+}
+.hero-img-placeholder {
+width: 100%; height: 280px; border-radius: 12px;
+background: linear-gradient(135deg, rgba(0,174,239,0.2), rgba(0,59,122,0.4));
+display: flex; flex-direction: column; align-items: center; justify-content: center;
+gap: 12px; border: 1px dashed rgba(0,174,239,0.3);
+}
+.hero-img-placeholder i { font-size: 3rem; color: var(--cyan); opacity: 0.7; }
+.hero-img-placeholder span { color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+.cert-badges { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; justify-content: center; }
+.cert-badge {
+background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+color: var(--white); padding: 6px 12px; border-radius: 6px;
+font-family: "Montserrat", sans-serif; font-size: 0.7rem; font-weight: 700;
+}
+.floating-card {
+position: absolute; background: var(--white); border-radius: 12px;
+padding: 14px 18px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+display: flex; align-items: center; gap: 12px; font-family: "Montserrat", sans-serif;
+}
+.floating-card-1 { top: -20px; right: -20px; }
+.floating-card-2 { bottom: -10px; left: -20px; }
+.floating-card i { font-size: 1.4rem; color: var(--cyan); }
+.floating-card-text strong { display: block; font-size: 0.85rem; color: var(--navy); font-weight: 700; }
+.floating-card-text span { font-size: 0.72rem; color: var(--text-grey); }
+/* ===== CERT BANNER ===== */
+.cert-banner { background: var(--grey-light); border-top: 3px solid var(--cyan); padding: 24px 40px; }
+.cert-banner-inner {
+max-width: 1280px; margin: 0 auto;
+display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+}
+.cert-banner-label {
+font-family: "Montserrat", sans-serif; font-weight: 700;
+color: var(--navy); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap;
+}
+.cert-banner-items { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.cert-item {
+display: flex; align-items: center; gap: 8px;
+background: var(--white); border-radius: 8px; padding: 8px 14px;
+box-shadow: 0 2px 8px rgba(0,59,122,0.08);
+font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--navy); font-size: 0.78rem;
+}
+.cert-item i { color: var(--cyan); }
+.cert-item.green i { color: var(--green); }
+.cert-clickable { cursor: pointer; transition: var(--transition); }
+.cert-clickable:hover { background: var(--cyan); color: var(--white); box-shadow: 0 4px 16px rgba(0,174,239,0.35); }
+.cert-clickable:hover i { color: var(--white); }
+.cert-dropdown-wrap { position: relative; padding: 0; background: none; box-shadow: none; flex-direction: column; gap: 0; align-items: stretch; }
+.cert-item-inner { display: flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 8px; background: var(--white); box-shadow: 0 2px 8px rgba(0,59,122,0.08); font-family: "Montserrat",sans-serif; font-weight: 700; color: var(--navy); font-size: 0.78rem; white-space: nowrap; }
+.cert-item-inner:hover { background: var(--green); color: var(--white); box-shadow: 0 4px 16px rgba(46,139,46,0.35); }
+.cert-item-inner:hover i { color: var(--white); }
+.cert-chev { font-size: 0.65rem; margin-left: 2px; transition: transform 0.25s ease; }
+.cert-dropdown-wrap.open .cert-chev { transform: rotate(180deg); }
+.cert-dropdown { display: none; position: absolute; top: calc(100% + 6px); left: 0; background: var(--white); border-radius: 10px; box-shadow: 0 8px 28px rgba(0,59,122,0.18); min-width: 180px; overflow: hidden; z-index: 500; }
+.cert-dropdown-wrap.open .cert-dropdown { display: block; }
+.cert-dropdown div { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-family: "Montserrat",sans-serif; font-weight: 600; font-size: 0.78rem; color: var(--navy); cursor: pointer; transition: var(--transition); }
+.cert-dropdown div:hover { background: var(--grey-light); color: var(--green); }
+.cert-dropdown div i { color: var(--green); font-size: 0.9rem; }
+/* ===== COOKIE BANNER ===== */
+#cookieBanner {
+position: fixed; bottom: 0; left: 0; right: 0; z-index: 8000;
+background: var(--navy-dark); border-top: 3px solid var(--cyan);
+box-shadow: 0 -4px 30px rgba(0,0,0,0.25);
+animation: slideUpBanner 0.5s ease;
+}
+@keyframes slideUpBanner {
+from { transform: translateY(100%); }
+to   { transform: translateY(0); }
+}
+.cookie-banner-inner {
+max-width: 1200px; margin: 0 auto;
+padding: 18px 40px;
+display: flex; align-items: center; justify-content: space-between; gap: 24px;
+flex-wrap: wrap;
+}
+.cookie-banner-text {
+display: flex; align-items: flex-start; gap: 14px; flex: 1;
+}
+.cookie-banner-text strong {
+display: block; color: var(--white);
+font-family: "Montserrat",sans-serif; font-size: 0.9rem; margin-bottom: 4px;
+}
+.cookie-banner-text span {
+color: rgba(255,255,255,0.65); font-size: 0.82rem; line-height: 1.6;
+}
+.cookie-banner-text a { color: var(--cyan); text-decoration: none; font-weight: 600; }
+.cookie-banner-text a:hover { text-decoration: underline; }
+.cookie-banner-btns { display: flex; gap: 10px; flex-shrink: 0; }
+.cb-btn {
+background: var(--cyan); color: var(--white); border: none;
+padding: 10px 22px; border-radius: 8px; cursor: pointer;
+font-family: "Montserrat",sans-serif; font-size: 0.83rem; font-weight: 700;
+transition: var(--transition); white-space: nowrap;
+}
+.cb-btn:hover { background: #0099d4; }
+.cb-btn-outline {
+background: transparent; color: rgba(255,255,255,0.75);
+border: 1px solid rgba(255,255,255,0.25); padding: 10px 20px;
+border-radius: 8px; cursor: pointer;
+font-family: "Montserrat",sans-serif; font-size: 0.83rem; font-weight: 600;
+transition: var(--transition); white-space: nowrap;
+}
+.cb-btn-outline:hover { border-color: var(--cyan); color: var(--cyan); }
+@media (max-width: 600px) {
+.cookie-banner-inner { padding: 16px 20px; flex-direction: column; }
+.cookie-banner-btns { width: 100%; }
+.cb-btn, .cb-btn-outline { flex: 1; text-align: center; }
+}
+/* ===== CERT MODAL ===== */
+.cert-modal-overlay {
+display: none; position: fixed; inset: 0; z-index: 9000;
+background: rgba(0,27,60,0.75); backdrop-filter: blur(4px);
+align-items: center; justify-content: center;
+}
+.cert-modal-overlay.active { display: flex; }
+.cert-modal-box {
+background: var(--white); border-radius: 16px;
+box-shadow: 0 20px 60px rgba(0,59,122,0.35);
+width: 90vw; max-width: 900px; height: 88vh;
+display: flex; flex-direction: column; overflow: hidden;
+}
+.cert-modal-header {
+display: flex; align-items: center; justify-content: space-between;
+padding: 16px 24px; background: var(--navy);
+}
+.cert-modal-header h3 { color: var(--white); font-family: "Montserrat",sans-serif; font-size: 1rem; font-weight: 700; }
+.cert-modal-close {
+background: none; border: none; color: var(--white); font-size: 1.4rem;
+cursor: pointer; line-height: 1; padding: 4px 8px; border-radius: 6px;
+transition: var(--transition);
+}
+.cert-modal-close:hover { background: rgba(255,255,255,0.15); }
+.cert-nav-btn {
+background: rgba(255,255,255,0.15); border: none; color: var(--white);
+font-size: 1.6rem; line-height: 1; width: 32px; height: 32px;
+border-radius: 6px; cursor: pointer; transition: var(--transition);
+display: flex; align-items: center; justify-content: center;
+}
+.cert-nav-btn:hover:not(:disabled) { background: rgba(255,255,255,0.3); }
+.cert-nav-btn:disabled { opacity: 0.3; cursor: default; }
+#certModalCounter {
+color: var(--white); font-family: "Montserrat",sans-serif;
+font-size: 0.85rem; font-weight: 700; min-width: 42px; text-align: center;
+}
+.cert-modal-body { flex: 1; overflow: hidden; }
+.cert-modal-body iframe { width: 100%; height: 100%; border: none; }
+/* ===== FLOATING CONTACT BUTTON ===== */
+.float-contact { position: fixed; bottom: 28px; right: 28px; z-index: 8000; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.float-contact-main {
+width: 56px; height: 56px; border-radius: 50%; background: var(--navy);
+color: var(--white); border: none; cursor: pointer; font-size: 1.4rem;
+box-shadow: 0 4px 20px rgba(0,59,122,0.4); transition: var(--transition);
+display: flex; align-items: center; justify-content: center;
+}
+.float-contact-main:hover { background: var(--cyan); transform: scale(1.1); }
+.float-contact-options { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; overflow: hidden; max-height: 0; transition: max-height 0.35s ease, opacity 0.3s ease; opacity: 0; }
+.float-contact.open .float-contact-options { max-height: 200px; opacity: 1; }
+.float-option {
+display: flex; align-items: center; gap: 10px;
+text-decoration: none; color: var(--white);
+background: var(--navy); border-radius: 28px;
+padding: 10px 16px; font-family: "Montserrat",sans-serif;
+font-size: 0.82rem; font-weight: 700;
+box-shadow: 0 3px 14px rgba(0,59,122,0.35); transition: var(--transition);
+white-space: nowrap;
+}
+.float-option:hover { background: var(--cyan); transform: translateX(-4px); }
+.float-option i { font-size: 1rem; }
+.float-option.email-opt { background: var(--green); }
+.float-option.email-opt:hover { background: #237a23; }
+/* ===== LIGHTBOX ===== */
+.lightbox-overlay {
+display: none; position: fixed; inset: 0; z-index: 9500;
+background: rgba(0,0,0,0.92); backdrop-filter: blur(6px);
+align-items: center; justify-content: center;
+}
+.lightbox-overlay.active { display: flex; }
+.lightbox-img { max-width: 92vw; max-height: 90vh; object-fit: contain; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+.lightbox-close {
+position: fixed; top: 20px; right: 24px;
+background: rgba(255,255,255,0.15); border: none; color: #fff;
+font-size: 2rem; line-height: 1; padding: 6px 12px; border-radius: 8px;
+cursor: pointer; transition: var(--transition);
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.3); }
+.project-slideshow img { cursor: zoom-in; }
+/* ===== BLOG MODAL ===== */
+.blog-modal-overlay {
+display: none; position: fixed; inset: 0; z-index: 9000;
+background: rgba(0,27,60,0.75); backdrop-filter: blur(4px);
+align-items: center; justify-content: center;
+}
+.blog-modal-overlay.active { display: flex; }
+.blog-modal-box {
+background: var(--white); border-radius: 16px;
+box-shadow: 0 20px 60px rgba(0,59,122,0.35);
+width: 90vw; max-width: 860px; max-height: 90vh;
+display: flex; flex-direction: column; overflow: hidden;
+}
+.blog-modal-header {
+display: flex; align-items: center; justify-content: space-between;
+padding: 16px 24px; background: var(--navy); flex-shrink: 0;
+}
+.blog-modal-header h3 { color: var(--white); font-family: "Montserrat",sans-serif; font-size: 1rem; font-weight: 700; }
+.blog-modal-close {
+background: none; border: none; color: var(--white); font-size: 1.4rem;
+cursor: pointer; line-height: 1; padding: 4px 8px; border-radius: 6px;
+transition: var(--transition);
+}
+.blog-modal-close:hover { background: rgba(255,255,255,0.15); }
+.blog-modal-body {
+flex: 1; overflow-y: auto; padding: 32px 36px;
+font-family: "Open Sans", sans-serif; color: var(--text-dark); font-size: 0.92rem; line-height: 1.75;
+}
+.blog-modal-body::-webkit-scrollbar { width: 6px; }
+.blog-modal-body::-webkit-scrollbar-track { background: var(--grey-light); }
+.blog-modal-body::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 3px; }
+.blog-modal-eu-bar {
+display: flex; align-items: center; justify-content: space-between;
+margin-bottom: 24px; padding-bottom: 20px; border-bottom: 2px solid var(--grey-mid);
+}
+.blog-modal-eu-badge {
+display: flex; align-items: center; gap: 10px;
+background: #003399; color: #fff; padding: 8px 14px; border-radius: 8px;
+font-family: "Montserrat",sans-serif; font-size: 0.78rem; font-weight: 700; line-height: 1.3;
+white-space: nowrap; flex-shrink: 0;
+}
+.blog-modal-eu-badge .eu-stars { font-size: 1.1rem; letter-spacing: 1px; }
+.blog-modal-gov-badge {
+display: flex; align-items: center; gap: 8px;
+border: 2px solid var(--grey-mid); padding: 6px 12px; border-radius: 8px;
+font-family: "Montserrat",sans-serif; font-size: 0.75rem; color: var(--navy); font-weight: 700;
+}
+.blog-modal-intro {
+background: var(--grey-light); border-left: 4px solid var(--cyan);
+padding: 16px 20px; border-radius: 0 8px 8px 0; margin-bottom: 24px;
+font-size: 0.9rem; line-height: 1.7;
+}
+.blog-modal-intro strong { color: var(--navy); }
+.blog-modal-funded {
+font-size: 0.82rem; color: var(--text-grey); text-align: center;
+margin-bottom: 28px; font-style: italic;
+}
+.blog-modal-section { margin-bottom: 22px; }
+.blog-modal-section h4 {
+font-family: "Montserrat",sans-serif; font-weight: 700; font-size: 0.95rem;
+color: var(--navy); margin-bottom: 10px; padding-bottom: 6px;
+border-bottom: 2px solid var(--cyan); display: inline-block;
+}
+.blog-modal-section p { margin-bottom: 8px; }
+.blog-modal-section ul { padding-left: 20px; }
+.blog-modal-section ul li { margin-bottom: 6px; }
+.blog-modal-section ol { padding-left: 20px; }
+.blog-modal-section ol li { margin-bottom: 8px; }
+.blog-modal-financiar {
+background: linear-gradient(135deg,#f0f7ff 0%,#e8f4fd 100%);
+border: 1px solid var(--cyan); border-radius: 12px;
+padding: 20px 24px; margin-bottom: 22px;
+}
+.blog-modal-financiar h4 {
+font-family: "Montserrat",sans-serif; font-weight: 700; color: var(--navy);
+font-size: 0.95rem; margin-bottom: 14px; text-align: center;
+}
+.blog-modal-fin-grid {
+display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.blog-modal-fin-item {
+background: var(--white); border-radius: 8px; padding: 10px 14px;
+border-left: 3px solid var(--cyan);
+}
+.blog-modal-fin-item .fin-label { font-size: 0.75rem; color: var(--text-grey); margin-bottom: 3px; }
+.blog-modal-fin-item .fin-value { font-family: "Montserrat",sans-serif; font-weight: 700; color: var(--navy); font-size: 0.95rem; }
+.blog-modal-fin-item.fin-total { border-left-color: var(--navy); background: var(--navy); }
+.blog-modal-fin-item.fin-total .fin-label { color: rgba(255,255,255,0.75); }
+.blog-modal-fin-item.fin-total .fin-value { color: var(--white); font-size: 1.05rem; }
+.blog-modal-dates {
+display: flex; gap: 16px; margin-bottom: 24px;
+}
+.blog-modal-date-item {
+flex: 1; background: var(--grey-light); border-radius: 10px;
+padding: 12px 16px; text-align: center;
+}
+.blog-modal-date-item .date-label { font-size: 0.75rem; color: var(--text-grey); margin-bottom: 4px; }
+.blog-modal-date-item .date-value { font-family: "Montserrat",sans-serif; font-weight: 700; color: var(--navy); font-size: 0.9rem; }
+.blog-modal-contact {
+background: var(--navy); color: var(--white); border-radius: 12px;
+padding: 20px 24px; text-align: center;
+}
+.blog-modal-contact p { margin-bottom: 4px; font-size: 0.88rem; line-height: 1.6; }
+.blog-modal-contact a { color: var(--cyan); text-decoration: none; }
+.blog-modal-contact a:hover { text-decoration: underline; }
+.blog-modal-footer-logos {
+display: flex; align-items: center; justify-content: center; gap: 24px;
+margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--grey-mid);
+}
+.blog-modal-footer-logos span {
+font-family: "Montserrat",sans-serif; font-weight: 800;
+font-size: 1rem; color: var(--navy);
+}
+.blog-modal-footer-logos span em { color: var(--cyan); font-style: normal; }
+.blog-modal-adr-badge {
+border: 2px solid var(--grey-mid); border-radius: 8px;
+padding: 6px 14px; font-family: "Montserrat",sans-serif;
+font-weight: 800; font-size: 0.9rem; color: #e63946;
+}
+@media(max-width:600px) {
+.blog-modal-fin-grid { grid-template-columns: 1fr; }
+.blog-modal-dates { flex-direction: column; }
+.blog-modal-eu-bar { flex-direction: column; gap: 10px; }
+.blog-modal-body { padding: 20px 18px; }
+}
+/* ===== SECTIONS ===== */
+section { padding: 90px 40px; scroll-snap-align: start; min-height: 100vh; box-sizing: border-box; }
+.section-inner { max-width: 1280px; margin: 0 auto; }
+.section-tag {
+display: inline-flex; align-items: center; gap: 8px;
+font-family: "Montserrat", sans-serif; font-weight: 700;
+font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); margin-bottom: 16px;
+}
+.section-tag::before { content: ""; display: block; width: 24px; height: 3px; background: var(--cyan); border-radius: 2px; }
+.section-title {
+font-family: "Montserrat", sans-serif; font-weight: 800;
+font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--navy); margin-bottom: 16px; line-height: 1.2;
+}
+.section-title span { color: var(--cyan); }
+.section-desc { color: var(--text-grey); font-size: 1rem; line-height: 1.8; max-width: 600px; margin-bottom: 60px; }
+/* ===== DE CE NOI ===== */
+#de-ce-noi { background: var(--white); }
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px; }
+.why-features { display: flex; flex-direction: column; gap: 24px; }
+.why-feature {
+display: flex; align-items: flex-start; gap: 20px; padding: 24px;
+border-radius: var(--radius); border: 1px solid var(--grey-mid); transition: var(--transition);
+}
+.why-feature:hover { border-color: var(--cyan); box-shadow: var(--shadow); transform: translateX(6px); }
+.why-feature-icon {
+width: 52px; height: 52px; border-radius: 10px;
+background: linear-gradient(135deg, var(--cyan), var(--navy));
+display: flex; align-items: center; justify-content: center;
+flex-shrink: 0; font-size: 1.3rem; color: var(--white);
+}
+.why-feature-text h4 { font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--navy); font-size: 1rem; margin-bottom: 6px; }
+.why-feature-text p { color: var(--text-grey); font-size: 0.9rem; line-height: 1.7; }
+.why-visual {
+background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+border-radius: 20px; padding: 40px; color: var(--white); box-shadow: var(--shadow-hover);
+}
+.why-visual h3 { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 1.4rem; margin-bottom: 32px; color: var(--cyan-light); }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.stat-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-number { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 2.2rem; color: var(--cyan); display: block; margin-bottom: 8px; }
+.stat-label { color: rgba(255,255,255,0.7); font-size: 0.82rem; line-height: 1.4; }
+.certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+.cert-card {
+background: var(--grey-light); border-radius: var(--radius); padding: 28px 20px; text-align: center;
+border: 2px solid transparent; transition: var(--transition);
+}
+.cert-card:hover { border-color: var(--cyan); box-shadow: var(--shadow); transform: translateY(-4px); }
+.cert-card i { font-size: 2rem; color: var(--cyan); margin-bottom: 12px; display: block; }
+.cert-card h4 { font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--navy); font-size: 0.9rem; margin-bottom: 6px; }
+.cert-card p { color: var(--text-grey); font-size: 0.78rem; }
+/* ===== SERVICII ===== */
+#servicii { background: var(--grey-light); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.service-card {
+background: var(--white); border-radius: var(--radius); overflow: hidden;
+box-shadow: var(--shadow); transition: var(--transition); border: 1px solid var(--grey-mid);
+display: flex; flex-direction: column;
+}
+.service-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-6px); }
+.service-img {
+height: 200px; position: relative; overflow: hidden;
+background: linear-gradient(135deg, var(--navy), var(--cyan));
+display: flex; align-items: center; justify-content: center;
+}
+.service-img i { font-size: 3.5rem; color: rgba(255,255,255,0.25); }
+.service-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,36,86,0.8) 0%, transparent 60%); }
+.service-icon-badge {
+position: absolute; bottom: 16px; left: 20px; width: 50px; height: 50px; border-radius: 12px;
+background: var(--white); display: flex; align-items: center; justify-content: center;
+box-shadow: 0 4px 16px rgba(0,0,0,0.2); font-size: 1.4rem; color: var(--cyan);
+}
+.service-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+.service-body h3 { font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--navy); font-size: 1.1rem; margin-bottom: 12px; }
+.service-body p { color: var(--text-grey); font-size: 0.9rem; line-height: 1.7; flex: 1; margin-bottom: 20px; }
+.service-link {
+display: inline-flex; align-items: center; gap: 8px; color: var(--cyan);
+font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 0.82rem;
+text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; transition: var(--transition);
+}
+.service-link:hover { gap: 14px; }
+/* ===== TABLOURI ELECTRICE DETAIL ===== */
+#tablouri-electrice { background: var(--grey-light); }
+.te-subtitle {
+font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--navy);
+font-size: 1.1rem; margin-bottom: 24px;
+display: flex; align-items: center; gap: 16px;
+}
+.te-subtitle::after { content: ''; flex: 1; height: 2px; background: var(--cyan); opacity: 0.25; }
+.te-applications, .te-services-block, .te-standards { margin-bottom: 52px; }
+.te-apps-grid {
+display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.te-app-item {
+display: flex; align-items: center; gap: 14px;
+background: var(--white); border-radius: 10px; padding: 16px 20px;
+box-shadow: var(--shadow); border-left: 4px solid var(--cyan); transition: var(--transition);
+}
+.te-app-item:hover { transform: translateX(4px); box-shadow: var(--shadow-hover); }
+.te-app-item i { color: var(--cyan); font-size: 1.2rem; min-width: 24px; }
+.te-app-item span { font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 0.88rem; color: var(--text-dark); }
+.te-services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.te-srv-card {
+background: var(--white); border-radius: var(--radius); padding: 28px 22px;
+box-shadow: var(--shadow); text-align: center; transition: var(--transition);
+border-top: 4px solid var(--navy);
+}
+.te-srv-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+.te-srv-icon {
+width: 56px; height: 56px; border-radius: 50%;
+background: linear-gradient(135deg, var(--navy), var(--cyan));
+display: flex; align-items: center; justify-content: center;
+margin: 0 auto 16px; color: var(--white); font-size: 1.4rem;
+}
+.te-srv-card h4 {
+font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--navy);
+font-size: 0.95rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.te-srv-card p { color: var(--text-grey); font-size: 0.85rem; line-height: 1.65; }
+.te-standards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.te-std-card {
+background: var(--navy); border-radius: var(--radius); padding: 28px 24px;
+text-align: center; transition: var(--transition);
+}
+.te-std-card:hover { transform: translateY(-4px); background: var(--navy-dark); }
+.te-std-badge {
+width: 52px; height: 52px; border-radius: 50%;
+background: rgba(0,174,239,0.18); border: 2px solid var(--cyan);
+display: flex; align-items: center; justify-content: center;
+margin: 0 auto 14px; color: var(--cyan); font-size: 1.3rem;
+}
+.te-std-card h4 {
+font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--white);
+font-size: 0.95rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.te-std-card p { color: rgba(255,255,255,0.75); font-size: 0.83rem; line-height: 1.65; }
+@media (max-width: 1024px) {
+.te-apps-grid { grid-template-columns: repeat(2, 1fr); }
+.te-services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+.te-apps-grid { grid-template-columns: 1fr; }
+.te-standards-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+.te-services-grid { grid-template-columns: 1fr; }
+}
+/* ===== PROIECTE ===== */
+#proiecte { background: var(--white); }
+.projects-filter { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+.filter-btn {
+padding: 8px 20px; border-radius: 50px; border: 2px solid var(--grey-mid); background: transparent;
+font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 0.8rem;
+color: var(--text-grey); cursor: pointer; transition: var(--transition);
+}
+.filter-btn.active, .filter-btn:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(0,174,239,0.05); }
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.project-card { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); position: relative; }
+.project-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+.project-card.large { grid-column: span 2; }
+.project-placeholder { width: 100%; padding-top: 62%; position: relative; background: linear-gradient(135deg, #0a3d6b, #0077b6); overflow: hidden; }
+.project-slideshow { width: 100%; padding-top: 62%; position: relative; overflow: hidden; background: #0a3d6b; color: transparent; font-size: 0; }
+.project-slideshow img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease; }
+.project-slideshow img.slide-active { opacity: 1; }
+.project-card:not(.large) { min-height: 280px; }
+.project-card:not(.large) .project-slideshow { position: absolute; inset: 0; padding-top: 0; height: 100%; }
+.project-placeholder.alt { background: linear-gradient(135deg, #023e8a, #00b4d8); }
+.project-placeholder.alt2 { background: linear-gradient(135deg, #1b4332, #40916c); }
+.project-placeholder.alt3 { background: linear-gradient(135deg, #2d3561, #00aeef); }
+.project-placeholder i { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3.5rem; color: rgba(255,255,255,0.2); }
+.project-overlay {
+position: absolute; inset: 0;
+background: linear-gradient(to top, rgba(0,36,86,0.92) 0%, transparent 60%);
+display: flex; flex-direction: column; justify-content: flex-end; padding: 24px;
+opacity: 0; transition: var(--transition);
+}
+.project-card:hover .project-overlay { opacity: 1; }
+.project-overlay-static {
+position: absolute; inset: 0;
+background: linear-gradient(to top, rgba(0,36,86,0.8) 0%, transparent 55%);
+display: flex; flex-direction: column; justify-content: flex-end; padding: 20px;
+}
+.project-tag {
+display: inline-block; background: var(--cyan); color: var(--white);
+font-family: "Montserrat", sans-serif; font-weight: 700;
+font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase;
+padding: 4px 10px; border-radius: 4px; margin-bottom: 8px; width: fit-content;
+}
+.project-title { font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--white); font-size: 1rem; }
+.project-subtitle { color: rgba(255,255,255,0.7); font-size: 0.82rem; margin-top: 4px; }
+/* ===== CTA BANNER ===== */
+.cta-banner {
+background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+padding: 70px 40px; text-align: center; position: relative; overflow: hidden;
+}
+.cta-banner::before {
+content: ""; position: absolute; inset: 0; opacity: 0.05;
+background-image: radial-gradient(circle at 2px 2px, var(--cyan) 1px, transparent 0);
+background-size: 40px 40px;
+}
+.cta-banner-inner { max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+.cta-banner h2 { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--white); margin-bottom: 16px; }
+.cta-banner h2 span { color: var(--cyan); }
+.cta-banner p { color: rgba(255,255,255,0.7); margin-bottom: 36px; font-size: 1rem; line-height: 1.7; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-cta-primary {
+background: var(--cyan); color: var(--white); padding: 15px 36px; border-radius: 8px;
+text-decoration: none; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 0.95rem;
+box-shadow: 0 6px 24px rgba(0,174,239,0.4); transition: var(--transition);
+display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-cta-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 35px rgba(0,174,239,0.5); }
+.btn-cta-phone {
+background: transparent; color: var(--white); padding: 15px 36px; border-radius: 8px;
+text-decoration: none; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 0.95rem;
+border: 2px solid rgba(255,255,255,0.3); transition: var(--transition);
+display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-cta-phone:hover { border-color: var(--white); background: rgba(255,255,255,0.08); transform: translateY(-3px); }
+/* ===== BLOG ===== */
+#blog { background: var(--grey-light); }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.blog-card {
+background: var(--white); border-radius: var(--radius);
+overflow: hidden; box-shadow: var(--shadow); transition: var(--transition);
+display: flex; flex-direction: column;
+}
+.blog-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+.blog-card-img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.blog-card-img-placeholder {
+width: 100%; height: 200px;
+background: linear-gradient(135deg, var(--navy), var(--cyan));
+display: flex; align-items: center; justify-content: center;
+}
+.blog-card-img-placeholder i { font-size: 3rem; color: rgba(255,255,255,0.3); }
+.blog-card-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+.blog-card-tag {
+display: inline-block; background: rgba(0,174,239,0.1); color: var(--cyan);
+font-family: "Montserrat", sans-serif; font-weight: 700;
+font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase;
+padding: 4px 12px; border-radius: 50px; margin-bottom: 14px; width: fit-content;
+}
+.blog-card-meta { color: var(--text-grey); font-size: 0.78rem; margin-bottom: 12px; display: flex; gap: 16px; }
+.blog-card-meta i { color: var(--cyan); }
+.blog-card-body h3 {
+font-family: "Montserrat", sans-serif; font-weight: 700;
+color: var(--navy); font-size: 1rem; margin-bottom: 12px; line-height: 1.5; flex: 1;
+}
+.blog-card-body p { color: var(--text-grey); font-size: 0.88rem; line-height: 1.7; margin-bottom: 20px; }
+.blog-card-link {
+color: var(--cyan); font-family: "Montserrat", sans-serif; font-weight: 700;
+font-size: 0.82rem; text-decoration: none; text-transform: uppercase;
+letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 6px;
+transition: var(--transition);
+}
+.blog-card-link:hover { gap: 12px; }
+.blog-coming-soon {
+text-align: center; padding: 60px 20px; background: var(--white);
+border-radius: var(--radius); border: 2px dashed var(--grey-mid);
+}
+.blog-coming-soon i { font-size: 3rem; color: var(--cyan); opacity: 0.35; margin-bottom: 16px; display: block; }
+.blog-coming-soon h3 { font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--navy); font-size: 1.1rem; margin-bottom: 8px; }
+.blog-coming-soon p { color: var(--text-grey); font-size: 0.9rem; }
+/* ===== CONTACT ===== */
+#contact { background: var(--white); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; }
+.contact-info h3 { font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--navy); font-size: 1.3rem; margin-bottom: 32px; }
+.contact-locations { display: flex; flex-direction: column; gap: 20px; margin-bottom: 28px; }
+.contact-location { background: var(--grey-light); border-radius: var(--radius); padding: 24px; border-left: 4px solid var(--cyan); }
+.contact-location h4 { font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--navy); font-size: 0.95rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.contact-location h4 i { color: var(--cyan); }
+.contact-detail { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; font-size: 0.88rem; color: var(--text-grey); }
+.contact-detail i { color: var(--cyan); margin-top: 2px; width: 14px; flex-shrink: 0; }
+.contact-detail a { color: var(--navy); text-decoration: none; font-weight: 600; transition: var(--transition); }
+.contact-detail a:hover { color: var(--cyan); }
+.social-row { display: flex; gap: 10px; margin-top: 16px; }
+.social-btn {
+width: 40px; height: 40px; border-radius: 8px; background: var(--navy); color: var(--white);
+display: flex; align-items: center; justify-content: center;
+text-decoration: none; font-size: 0.9rem; transition: var(--transition);
+}
+.social-btn:hover { background: var(--cyan); transform: translateY(-2px); }
+.contact-form { background: var(--grey-light); border-radius: 20px; padding: 40px; }
+.contact-form h3 { font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--navy); font-size: 1.3rem; margin-bottom: 32px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 0.8rem; color: var(--navy); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+.form-group input:not([type="checkbox"]), .form-group textarea, .form-group select {
+width: 100%; padding: 12px 16px; border: 2px solid var(--grey-mid); border-radius: 8px;
+font-family: "Open Sans", sans-serif; font-size: 0.92rem; color: var(--text-dark);
+background: var(--white); transition: var(--transition); outline: none; appearance: none;
+}
+.form-group input[type="checkbox"] { width: 18px; height: 18px; min-width: 18px; appearance: auto; -webkit-appearance: checkbox; cursor: pointer; flex-shrink: 0; }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--cyan); box-shadow: 0 0 0 4px rgba(0,174,239,0.1); }
+.form-group textarea { height: 130px; resize: vertical; }
+.btn-submit {
+background: var(--navy); color: var(--white); padding: 14px 36px; border-radius: 8px;
+border: none; cursor: pointer; font-family: "Montserrat", sans-serif; font-weight: 700;
+font-size: 0.92rem; transition: var(--transition); width: 100%;
+display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.btn-submit:hover { background: var(--cyan); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,174,239,0.3); }
+.map-placeholder { margin-top: 24px; }
+.map-tabs { display: flex; gap: 0; margin-bottom: 0; border-radius: 10px 10px 0 0; overflow: hidden; }
+.map-tab-btn {
+flex: 1; padding: 9px 12px; font-family: "Montserrat", sans-serif; font-size: 0.78rem;
+font-weight: 700; border: none; cursor: pointer; background: var(--grey-mid);
+color: var(--text-grey); transition: background 0.2s, color 0.2s; letter-spacing: 0.02em;
+}
+.map-tab-btn.active { background: var(--navy); color: #fff; }
+.map-tab-btn:hover:not(.active) { background: #d4dce8; }
+.map-frame-wrap {
+border-radius: 0 0 var(--radius) var(--radius); overflow: hidden;
+height: 240px; position: relative;
+}
+.map-frame-wrap iframe {
+width: 100%; height: 100%; border: 0; display: block;
+}
+.map-open-link {
+display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;
+font-size: 0.78rem; color: var(--cyan); text-decoration: none; font-weight: 600;
+transition: color 0.2s;
+}
+.map-open-link:hover { color: var(--navy); }
+.map-open-link i { font-size: 0.72rem; }
+.map-cookie-block {
+display: none; position: absolute; inset: 0;
+background: var(--grey-mid); flex-direction: column;
+align-items: center; justify-content: center; gap: 10px; text-align: center; padding: 20px;
+}
+.map-cookie-block i { font-size: 2rem; color: var(--cyan); opacity: 0.7; }
+.map-cookie-block p { font-size: 0.83rem; color: var(--text-grey); }
+.map-cookie-block button {
+background: var(--cyan); color: #fff; border: none; padding: 8px 20px;
+border-radius: 8px; cursor: pointer; font-family: "Montserrat", sans-serif;
+font-size: 0.8rem; font-weight: 700; transition: background 0.2s;
+}
+.map-cookie-block button:hover { background: var(--navy); }
+/* ===== FOOTER ===== */
+footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 60px 40px 0; }
+.footer-grid {
+max-width: 1280px; margin: 0 auto;
+display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-brand img { height: 44px; object-fit: contain; margin-bottom: 20px; display: block; }
+.footer-brand p { font-size: 0.88rem; line-height: 1.8; max-width: 300px; margin-bottom: 20px; }
+.footer-title { font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--white); font-size: 0.88rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.88rem; transition: var(--transition); display: flex; align-items: center; gap: 8px; }
+.footer-links a:hover { color: var(--cyan); padding-left: 4px; }
+.footer-links a i { font-size: 0.7rem; color: var(--cyan); }
+.footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 0.85rem; }
+.footer-contact-item i { color: var(--cyan); margin-top: 2px; flex-shrink: 0; }
+.footer-contact-item a { color: rgba(255,255,255,0.7); text-decoration: none; transition: var(--transition); }
+.footer-contact-item a:hover { color: var(--cyan); }
+.footer-bottom {
+max-width: 1280px; margin: 0 auto;
+display: flex; justify-content: space-between; align-items: center;
+padding: 24px 0; font-size: 0.8rem; flex-wrap: wrap; gap: 12px;
+}
+.footer-bottom-links { display: flex; gap: 24px; }
+.footer-bottom-links a { color: rgba(255,255,255,0.5); text-decoration: none; transition: var(--transition); }
+.footer-bottom-links a:hover { color: var(--cyan); }
+/* ===== LANGUAGE SWITCHER ===== */
+.lang-switcher { display: flex; align-items: center; gap: 4px; margin-left: 16px; }
+.lang-btn {
+background: none; border: 1.5px solid rgba(0,59,122,0.25); color: var(--navy);
+font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 0.72rem;
+letter-spacing: 1px; padding: 5px 10px; border-radius: 6px; cursor: pointer;
+transition: var(--transition);
+}
+.lang-btn:hover { background: var(--grey-light); border-color: var(--cyan); color: var(--cyan); }
+.lang-btn.active { background: var(--cyan); border-color: var(--cyan); color: var(--white); }
+.lang-sep { color: var(--grey-mid); font-size: 0.8rem; }
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+position: fixed; bottom: 30px; right: 30px; z-index: 999;
+width: 46px; height: 46px; border-radius: 10px;
+background: var(--cyan); color: var(--white); border: none; cursor: pointer;
+display: flex; align-items: center; justify-content: center;
+box-shadow: 0 6px 20px rgba(0,174,239,0.4); transition: var(--transition);
+opacity: 0; pointer-events: none; font-size: 1.1rem;
+}
+.back-to-top.visible { opacity: 1; pointer-events: all; }
+.back-to-top:hover { background: var(--navy); transform: translateY(-3px); }
+/* ===== RESPONSIVE ===== */
+/* Ecrane foarte mari (> 1600px) */
+@media (min-width: 1600px) {
+.hero-container { grid-template-columns: minmax(340px, 420px) 1fr; }
+.hero-title { font-size: clamp(1.4rem, 1.5vw, 1.9rem); }
+}
+/* Desktop mare (1200px - 1600px) */
+@media (max-width: 1200px) {
+.hero-container { grid-template-columns: minmax(280px, 340px) 1fr; gap: 30px; }
+.hero-title { font-size: clamp(1.2rem, 1.5vw, 1.7rem); }
+.services-grid { grid-template-columns: repeat(2, 1fr); }
+.blog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+/* Tabletă landscape + desktop mic (1024px) */
+@media (max-width: 1024px) {
+.hero-container { grid-template-columns: 1fr; text-align: center; padding: 50px 30px; }
+.hero-content { align-items: center; }
+.hero-desc { max-width: 600px; margin: 0 auto; }
+.hero-buttons { justify-content: center; }
+.hero-stats { justify-content: center; }
+.hero-visual { max-width: 640px; margin: 0 auto; width: 100%; }
+.why-grid { grid-template-columns: 1fr; }
+.projects-grid { grid-template-columns: 1fr 1fr; }
+.project-card.large { grid-column: span 1; }
+.contact-grid { grid-template-columns: 1fr; }
+.footer-grid { grid-template-columns: 1fr 1fr; }
+}
+/* Tabletă portrait (768px) */
+@media (max-width: 768px) {
+section { padding: 60px 20px; }
+nav { padding: 0 16px; }
+.lang-switcher { display: none; }
+.nav-lang-mobile { display: flex; gap: 8px; padding: 12px 16px; justify-content: center; }
+.nav-menu {
+display: none; flex-direction: column; position: fixed;
+top: 72px; left: 0; right: 0; background: var(--white);
+padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); gap: 4px;
+}
+.nav-menu.open { display: flex; }
+.nav-menu a { padding: 12px 16px; border-radius: 8px; }
+.hamburger { display: flex; }
+.hero-container { padding: 40px 20px; }
+.hero-title { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+.hero-visual { max-width: 100%; }
+.services-grid { grid-template-columns: 1fr; }
+.projects-grid { grid-template-columns: 1fr; }
+.blog-grid { grid-template-columns: 1fr; }
+.form-row { grid-template-columns: 1fr; }
+.footer-grid { grid-template-columns: 1fr; gap: 32px; }
+.cert-banner { padding: 20px; }
+.cert-banner-inner { flex-direction: column; align-items: flex-start; }
+.why-features { gap: 16px; }
+}
+/* Telefon (480px) */
+@media (max-width: 480px) {
+section { padding: 50px 16px; }
+nav { padding: 0 16px; }
+.hero-container { padding: 30px 16px; }
+.hero-title { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+.hero-badge { font-size: 0.65rem; padding: 6px 12px; }
+.hero-content { padding: 24px 20px; border-radius: 12px; }
+.section-title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+.service-card, .project-card, .blog-card { border-radius: 12px; }
+.footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+.footer-bottom-links { justify-content: center; flex-wrap: wrap; }
+.back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+}
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.animate { animation: fadeInUp 0.6s ease forwards; }
+.animate-delay-1 { animation-delay: 0.15s; opacity: 0; }
+.animate-delay-2 { animation-delay: 0.3s; opacity: 0; }
+.animate-delay-3 { animation-delay: 0.45s; opacity: 0; }
+.animate-delay-4 { animation-delay: 0.6s; opacity: 0; }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ===== FULLPAGE DOT NAV ===== */
+#fp-nav {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 8px 4px;
+}
+.fp-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: 2px solid rgba(0,59,122,0.4);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s, border-color 0.25s;
+  padding: 0;
+  position: relative;
+  outline: none;
+  display: block;
+}
+.fp-dot.active {
+  background: #003B7A;
+  border-color: #003B7A;
+  transform: scale(1.4);
+}
+.fp-dot:hover:not(.active) {
+  background: #00AEEF;
+  border-color: #00AEEF;
+  transform: scale(1.15);
+}
+.fp-dot::after {
+  content: attr(data-label);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #003B7A;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.fp-dot:hover::after { opacity: 1; }
+@media (max-width: 900px) {
+  #fp-nav { display: none; }
+  html { scroll-snap-type: none !important; }
+  section { scroll-snap-align: unset !important; min-height: unset !important; }
+}
+</style>
 </head>
 <body>
 <nav id="navbar">
 <a href="#acasa" class="nav-logo">
-<img src="Materiale/logo-euroelectric.png" alt="EUROELECTRIC S.R.L. — Profesionalism și Siguranță" width="272" height="48">
+<img src="Materiale/logo-euroelectric.webp" alt="EUROELECTRIC S.R.L. — Profesionalism și Siguranță">
 </a>
 <ul class="nav-menu" id="navMenu">
 <li><a href="#acasa" data-i18n="nav-acasa">Acasă</a></li>
@@ -175,7 +1149,7 @@
 <span class="lang-sep">|</span>
 <button class="lang-btn" data-lang="de" onclick="setLang('de')">DE</button>
 </div>
-<div class="hamburger" id="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Deschide meniul de navigare" aria-expanded="false" aria-controls="navMenu" onkeydown="if(event.key==='Enter'||event.key===' ')toggleMenu()">
+<div class="hamburger" id="hamburger" onclick="toggleMenu()">
 <span></span><span></span><span></span>
 </div>
 </nav>
@@ -202,7 +1176,7 @@ Euroelectric este o firmă cu capital privat românesc înființată în anul 20
 </div>
 <div class="hero-visual">
 <div class="hero-card-main">
-<picture><source media="(max-width: 700px)" srcset="Materiale/Foto-sediu-optimizat-600w.webp" type="image/webp"><source srcset="Materiale/Foto-sediu-optimizat.webp" type="image/webp"><img class="hero-photo" src="Materiale/Foto-sediu-optimizat.jpg" alt="Sediu EUROELECTRIC — Baru, Hunedoara" loading="eager"></picture>
+<img class="hero-photo" src="Materiale/Foto-sediu-optimizat.jpg" alt="Sediu EUROELECTRIC — Baru, Hunedoara" loading="eager">
 <div class="hero-photo-overlay"></div>
 </div>
 </div>
@@ -233,28 +1207,28 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 <div class="why-feature reveal">
 <div class="why-feature-icon"><i class="fas fa-medal"></i></div>
 <div class="why-feature-text">
-<h3 data-i18n="why-f1-title">Experiență și Profesionalism</h3>
+<h4 data-i18n="why-f1-title">Experiență și Profesionalism</h4>
 <p data-i18n="why-f1-desc">Peste 20 de ani de activitate în instalații electrice comerciale, industriale și rezidențiale de înaltă performanță.</p>
 </div>
 </div>
 <div class="why-feature reveal reveal-delay-1">
 <div class="why-feature-icon"><i class="fas fa-certificate"></i></div>
 <div class="why-feature-text">
-<h3 data-i18n="why-f2-title">Certificări ISO</h3>
+<h4 data-i18n="why-f2-title">Certificări ISO</h4>
 <p data-i18n="why-f2-desc">Certificați ISO 9001, ISO 14001 și ISO 45001 — garanția calității, responsabilității ecologice și siguranței muncii.</p>
 </div>
 </div>
 <div class="why-feature reveal reveal-delay-2">
 <div class="why-feature-icon"><i class="fas fa-bolt"></i></div>
 <div class="why-feature-text">
-<h3 data-i18n="why-f3-title">Autorizat ANRE &amp; IGSU</h3>
+<h4 data-i18n="why-f3-title">Autorizat ANRE &amp; IGSU</h4>
 <p data-i18n="why-f3-desc">Autorizație completă pentru proiectare, execuție și verificare instalații electrice la toate tensiunile.</p>
 </div>
 </div>
 <div class="why-feature reveal reveal-delay-3">
 <div class="why-feature-icon"><i class="fas fa-headset"></i></div>
 <div class="why-feature-text">
-<h3 data-i18n="why-f4-title">Suport și Garanție</h3>
+<h4 data-i18n="why-f4-title">Suport și Garanție</h4>
 <p data-i18n="why-f4-desc">Asistență tehnică post-instalare și garanție extinsă pentru toate lucrările realizate.</p>
 </div>
 </div>
@@ -771,12 +1745,12 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 <div class="projects-grid">
 <div class="project-card large reveal" data-category="tablouri">
 <div class="project-slideshow" id="slideshow-tablou">
-<picture><source srcset="Materiale/Tablouri/Tablou1.webp" type="image/webp"><img loading="lazy" src="Materiale/Tablouri/Tablou1.jpg" alt="Tablou electric joasă tensiune proiectat și asamblat de EUROELECTRIC"></picture>
-<picture><source srcset="Materiale/Tablouri/Tablou2.webp" type="image/webp"><img loading="lazy" src="Materiale/Tablouri/Tablou2.jpg" alt="Tablou de distribuție industrială 400V — execuție EUROELECTRIC Hunedoara"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/Tablouri/Tablou3-600w.webp" type="image/webp"><source srcset="Materiale/Tablouri/Tablou3.webp" type="image/webp"><img loading="lazy" src="Materiale/Tablouri/Tablou3.jpg" alt="Panou electric comandă și automatizare — soluție personalizată EUROELECTRIC"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/Tablouri/Tablou4-600w.webp" type="image/webp"><source srcset="Materiale/Tablouri/Tablou4.webp" type="image/webp"><img loading="lazy" src="Materiale/Tablouri/Tablou4.jpg" alt="Tablou electric conform SR EN 61439 — proiectare și execuție EUROELECTRIC"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/Tablouri/Tablou5-600w.webp" type="image/webp"><source srcset="Materiale/Tablouri/Tablou5.webp" type="image/webp"><img loading="lazy" src="Materiale/Tablouri/Tablou5.jpg" alt="Tablou electric comercial și industrial — asamblat în România de EUROELECTRIC"></picture>
-<picture><source srcset="Materiale/Tablouri/Tablou6.webp" type="image/webp"><img loading="lazy" src="Materiale/Tablouri/Tablou6.jpg" alt="Tablou electric cu echipamente Siemens și Rittal — EUROELECTRIC S.R.L."></picture>
+<img loading="lazy" src="Materiale/Tablouri/Tablou1.webp" alt="Tablou electric joasă tensiune proiectat și asamblat de EUROELECTRIC">
+<img loading="lazy" src="Materiale/Tablouri/Tablou2.webp" alt="Tablou de distribuție industrială 400V — execuție EUROELECTRIC Hunedoara">
+<img loading="lazy" src="Materiale/Tablouri/Tablou3.webp" alt="Panou electric comandă și automatizare — soluție personalizată EUROELECTRIC">
+<img loading="lazy" src="Materiale/Tablouri/Tablou4.webp" alt="Tablou electric conform SR EN 61439 — proiectare și execuție EUROELECTRIC">
+<img loading="lazy" src="Materiale/Tablouri/Tablou5.webp" alt="Tablou electric comercial și industrial — asamblat în România de EUROELECTRIC">
+<img loading="lazy" src="Materiale/Tablouri/Tablou6.webp" alt="Tablou electric cu echipamente Siemens și Rittal — EUROELECTRIC S.R.L.">
 </div>
 <div class="project-overlay-static">
 <span class="project-tag">Tablouri Electrice</span>
@@ -787,12 +1761,12 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 </div>
 <div class="project-card reveal reveal-delay-1" data-category="instalatii">
 <div class="project-slideshow" id="slideshow-instalatii">
-<picture><source srcset="Materiale/Instalatii/MT1.webp" type="image/webp"><img loading="lazy" src="Materiale/Instalatii/MT1 .jpeg" alt="Instalații Electrice — Rețele subterane"></picture>
-<picture><source srcset="Materiale/Instalatii/Instalatii2.webp" type="image/webp"><img loading="lazy" src="Materiale/Instalatii/Instalatii2.jpeg" alt="Instalații Electrice — Spații comerciale"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/Instalatii/MT-2-600w.webp" type="image/webp"><source srcset="Materiale/Instalatii/MT-2.webp" type="image/webp"><img loading="lazy" src="Materiale/Instalatii/MT 2.jpeg" alt="Instalații Electrice — Tablouri MT"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/Instalatii/Instalatii4-600w.webp" type="image/webp"><source srcset="Materiale/Instalatii/Instalatii4.webp" type="image/webp"><img loading="lazy" src="Materiale/Instalatii/Instalatii4.jpeg" alt="Instalații Electrice — Bare colectoare"></picture>
-<picture><source srcset="Materiale/Instalatii/Instalatii5.webp" type="image/webp"><img loading="lazy" src="Materiale/Instalatii/Instalatii5.jpeg" alt="Instalații Electrice — Jgheaburi cablu industrial"></picture>
-<picture><source srcset="Materiale/Instalatii/MT-5.webp" type="image/webp"><img loading="lazy" src="Materiale/Instalatii/MT 5 .jpeg" alt="Instalații Electrice — Tablouri MT Siemens"></picture>
+<img loading="lazy" src="Materiale/Instalatii/Instalatii1.webp" alt="Instalații Electrice — Rețele subterane">
+<img loading="lazy" src="Materiale/Instalatii/Instalatii2.webp" alt="Instalații Electrice — Spații comerciale">
+<img loading="lazy" src="Materiale/Instalatii/Instalatii3.webp" alt="Instalații Electrice — Tablouri MT">
+<img loading="lazy" src="Materiale/Instalatii/Instalatii4.webp" alt="Instalații Electrice — Bare colectoare">
+<img loading="lazy" src="Materiale/Instalatii/Instalatii5.webp" alt="Instalații Electrice — Jgheaburi cablu industrial">
+<img loading="lazy" src="Materiale/Instalatii/Instalatii6.webp" alt="Instalații Electrice — Tablouri MT Siemens">
 </div>
 <div class="project-overlay-static">
 <span class="project-tag">Instalații Electrice</span>
@@ -803,8 +1777,8 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 </div>
 <div class="project-card reveal reveal-delay-2" data-category="statii-ev">
 <div class="project-slideshow" id="slideshow-statii">
-<picture><source srcset="Materiale/StatiiIncarcare/StatiiEV1.webp" type="image/webp"><img loading="lazy" src="Materiale/StatiiIncarcare/StatiiEV1.jpg" alt="Stație de încărcare vehicule electrice instalată de EUROELECTRIC — Hunedoara"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/StatiiIncarcare/StatiiEV2-600w.webp" type="image/webp"><source srcset="Materiale/StatiiIncarcare/StatiiEV2.webp" type="image/webp"><img loading="lazy" src="Materiale/StatiiIncarcare/StatiiEV2.jpg" alt="Proiect stații încărcare EV — punere în funcțiune EUROELECTRIC S.R.L."></picture>
+<img loading="lazy" src="Materiale/Brosuri prezentare Statii Incarcare/StatiiEV1.webp" alt="Stație de încărcare vehicule electrice instalată de EUROELECTRIC — Hunedoara">
+<img loading="lazy" src="Materiale/Brosuri prezentare Statii Incarcare/StatiiEV2.webp" alt="Proiect stații încărcare EV — punere în funcțiune EUROELECTRIC S.R.L.">
 </div>
 <div class="project-overlay-static">
 <span class="project-tag">Stații Încărcare Vehicule Electrice</span>
@@ -815,10 +1789,10 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 </div>
 <div class="project-card reveal reveal-delay-3" data-category="fotovoltaice">
 <div class="project-slideshow" id="slideshow-fotovoltaice">
-<picture><source media="(max-width: 700px)" srcset="Materiale/Fotovoltaice/Fotovoltaice1-600w.webp" type="image/webp"><source srcset="Materiale/Fotovoltaice/Fotovoltaice1.webp" type="image/webp"><img loading="lazy" src="Materiale/Fotovoltaice/Fotovoltaice1.jpg" alt="Panouri fotovoltaice instalate pe acoperiș industrial — Hunedoara"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/Fotovoltaice/Fotovoltaice2-600w.webp" type="image/webp"><source srcset="Materiale/Fotovoltaice/Fotovoltaice2.webp" type="image/webp"><img loading="lazy" src="Materiale/Fotovoltaice/Fotovoltaice2.jpg" alt="Sistem fotovoltaic industrial montat pe hală — Euroelectric"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/Fotovoltaice/Fotovoltaice3-600w.webp" type="image/webp"><source srcset="Materiale/Fotovoltaice/Fotovoltaice3.webp" type="image/webp"><img loading="lazy" src="Materiale/Fotovoltaice/Fotovoltaice3.jpg" alt="Instalare panouri solare — proiect comercial Hunedoara"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/Fotovoltaice/Fotovoltaice4-600w.webp" type="image/webp"><source srcset="Materiale/Fotovoltaice/Fotovoltaice4.webp" type="image/webp"><img loading="lazy" src="Materiale/Fotovoltaice/Fotovoltaice4.jpg" alt="Sistem fotovoltaic cu stocare energie — EUROELECTRIC S.R.L."></picture>
+<img loading="lazy" src="Materiale/Fotovoltaice/Fotovoltaice1.webp" alt="Panouri fotovoltaice instalate pe acoperiș industrial — Hunedoara">
+<img loading="lazy" src="Materiale/Fotovoltaice/Fotovoltaice2.webp" alt="Sistem fotovoltaic industrial montat pe hală — Euroelectric">
+<img loading="lazy" src="Materiale/Fotovoltaice/Fotovoltaice3.webp" alt="Instalare panouri solare — proiect comercial Hunedoara">
+<img loading="lazy" src="Materiale/Fotovoltaice/Fotovoltaice4.webp" alt="Sistem fotovoltaic cu stocare energie — EUROELECTRIC S.R.L.">
 </div>
 <div class="project-overlay-static">
 <span class="project-tag">Fotovoltaice</span>
@@ -829,12 +1803,12 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 </div>
 <div class="project-card reveal reveal-delay-3" data-category="verificari">
 <div class="project-slideshow" id="slideshow-verificari">
-<picture><source media="(max-width: 700px)" srcset="Materiale/VERIFICARI/VERIFICARI1-600w.webp" type="image/webp"><source srcset="Materiale/VERIFICARI/VERIFICARI1.webp" type="image/webp"><img loading="lazy" src="Materiale/VERIFICARI/VERIFICARI1.jpg" alt="Verificări instalații electrice cu autolaborator SEBAKMT Centrix 1"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/VERIFICARI/VERIFICARI2-600w.webp" type="image/webp"><source srcset="Materiale/VERIFICARI/VERIFICARI2.webp" type="image/webp"><img loading="lazy" src="Materiale/VERIFICARI/VERIFICARI2.jpg" alt="Măsurători și testare instalații electrice industriale — EUROELECTRIC"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/VERIFICARI/VERIFICARI3-600w.webp" type="image/webp"><source srcset="Materiale/VERIFICARI/VERIFICARI3.webp" type="image/webp"><img loading="lazy" src="Materiale/VERIFICARI/VERIFICARI3.jpg" alt="Inspecție termografică instalații electrice — Hunedoara"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/Laborator PRAM/LABORATOR1-600w.webp" type="image/webp"><source srcset="Materiale/Laborator PRAM/LABORATOR1.webp" type="image/webp"><img loading="lazy" src="Materiale/Laborator PRAM/LABORATOR1.jpg" alt="Laborator verificări electrice PRAM — EUROELECTRIC S.R.L."></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/Laborator PRAM/LABORATOR2-600w.webp" type="image/webp"><source srcset="Materiale/Laborator PRAM/LABORATOR2.webp" type="image/webp"><img loading="lazy" src="Materiale/Laborator PRAM/LABORATOR2.jpg" alt="Echipamente laborator autorizat verificări electrice"></picture>
-<picture><source media="(max-width: 700px)" srcset="Materiale/Laborator PRAM/LABORATOR3-600w.webp" type="image/webp"><source srcset="Materiale/Laborator PRAM/LABORATOR3.webp" type="image/webp"><img loading="lazy" src="Materiale/Laborator PRAM/LABORATOR3.jpg" alt="Laborator PRAM — testare și certificare instalații electrice"></picture>
+<img loading="lazy" src="Materiale/Verificari/VERIFICARI1.webp" alt="Verificări instalații electrice cu autolaborator SEBAKMT Centrix 1">
+<img loading="lazy" src="Materiale/Verificari/VERIFICARI2.webp" alt="Măsurători și testare instalații electrice industriale — EUROELECTRIC">
+<img loading="lazy" src="Materiale/Verificari/VERIFICARI3.webp" alt="Inspecție termografică instalații electrice — Hunedoara">
+<img loading="lazy" src="Materiale/Laborator PRAM/LABORATOR1.jpg" alt="Laborator verificări electrice PRAM — EUROELECTRIC S.R.L.">
+<img loading="lazy" src="Materiale/Laborator PRAM/LABORATOR2.jpg" alt="Echipamente laborator autorizat verificări electrice">
+<img loading="lazy" src="Materiale/Laborator PRAM/LABORATOR3.jpg" alt="Laborator PRAM — testare și certificare instalații electrice">
 </div>
 <div class="project-overlay-static">
 <span class="project-tag">Verificări Instalații</span>
@@ -863,39 +1837,6 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 <p class="section-desc reveal reveal-delay-1" data-i18n="blog-desc">Articole, ghiduri și noutăți din domeniul instalațiilor electrice și energiei regenerabile.</p>
 <div class="blog-grid">
 <div class="blog-card reveal">
-<div class="blog-card-img-placeholder" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#f0f7ff,#e0f0e8);">
-<div style="display:inline-flex;align-items:center;gap:16px;background:#fff;border:1px solid #b2d4b2;border-radius:10px;padding:14px 22px;">
-<svg width="90" height="60" viewBox="0 0 80 54" xmlns="http://www.w3.org/2000/svg">
-<rect width="80" height="54" fill="#003399" rx="2"/>
-<text x="40" y="9"  fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
-<text x="49" y="11" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
-<text x="56" y="18" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
-<text x="58" y="27" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
-<text x="56" y="36" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
-<text x="49" y="43" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
-<text x="40" y="45" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
-<text x="31" y="43" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
-<text x="24" y="36" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
-<text x="22" y="27" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
-<text x="24" y="18" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
-<text x="31" y="11" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
-</svg>
-<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.05rem;color:#003399;line-height:1.5;">Cofinanțat de<br>Uniunea Europeană</div>
-</div>
-<div style="font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:700;color:#2e7d32;background:#e8f5e9;border-radius:20px;padding:4px 14px;letter-spacing:0.5px;">✓ PROIECT FINALIZAT</div>
-</div>
-<div class="blog-card-body">
-<span class="blog-card-tag" style="background:rgba(46,125,50,0.1);color:#2e7d32;">Comunicat de presă</span>
-<div class="blog-card-meta">
-<span><i class="far fa-calendar-alt"></i> 29 Mai 2026</span>
-<span><i class="fas fa-tag"></i> Industrie 4.0</span>
-</div>
-<h3>FINALIZARE — Industrie 4.0 în hala echipamente electrice pentru tehnologii verzi</h3>
-<p>EUROELECTRIC SRL comunică finalizarea proiectului „Industrie 4.0 în hala echipamente electrice pentru tehnologii verzi" (cod SMIS 318133). 7 locuri de muncă create, 13 echipamente moderne achiziționate. Cofinanțat prin Programul Dezvoltare Durabilă și Tranziție Justă.</p>
-<a href="#" onclick="event.preventDefault();openBlogModal5();" class="blog-card-link">Citește comunicatul <i class="fas fa-arrow-right"></i></a>
-</div>
-</div>
-<div class="blog-card reveal reveal-delay-1">
   <a href="https://www.linkedin.com/posts/cristovaobento_rittal-eplan-leadership-ugcPost-7422540663348465665-_F22" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
     <div style="width:100%;height:200px;background:linear-gradient(135deg,#003B7A 0%,#0066CC 60%,#00AEEF 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
       <div style="position:absolute;inset:0;background:rgba(0,0,0,0.18);"></div>
@@ -1006,7 +1947,7 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
     <a href="https://www.linkedin.com/posts/siemensromania-siemensdigitalindustries-teamsiemens-share-7130567665110179840-WVCl" target="_blank" rel="noopener" class="blog-card-link" data-i18n="blog-siemens-link">Vezi pe LinkedIn <i class="fas fa-arrow-right"></i></a>
   </div>
 </div>
-<div class="blog-card" id="blog-card-extra" style="display:none;">
+<div class="blog-card reveal reveal-delay-5">
 <div class="blog-card-img-placeholder" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:linear-gradient(135deg,#f0f5ff,#e8f0fb);">
 <div style="display:inline-flex;align-items:center;gap:16px;background:#fff;border:1px solid #c5d5e8;border-radius:10px;padding:14px 22px;">
 <svg width="90" height="60" viewBox="0 0 80 54" xmlns="http://www.w3.org/2000/svg">
@@ -1038,13 +1979,40 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 <a href="#" onclick="event.preventDefault();openBlogModal4();" class="blog-card-link" data-i18n="blog-read">Citește mai mult <i class="fas fa-arrow-right"></i></a>
 </div>
 </div>
+<div class="blog-card reveal reveal-delay-1">
+<div class="blog-card-img-placeholder" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#f0f7ff,#e0f0e8);">
+<div style="display:inline-flex;align-items:center;gap:16px;background:#fff;border:1px solid #b2d4b2;border-radius:10px;padding:14px 22px;">
+<svg width="90" height="60" viewBox="0 0 80 54" xmlns="http://www.w3.org/2000/svg">
+<rect width="80" height="54" fill="#003399" rx="2"/>
+<text x="40" y="9"  fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
+<text x="49" y="11" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
+<text x="56" y="18" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
+<text x="58" y="27" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
+<text x="56" y="36" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
+<text x="49" y="43" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
+<text x="40" y="45" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
+<text x="31" y="43" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
+<text x="24" y="36" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
+<text x="22" y="27" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
+<text x="24" y="18" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
+<text x="31" y="11" fill="#FFD700" font-size="8" text-anchor="middle" dominant-baseline="middle" font-family="serif">★</text>
+</svg>
+<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.05rem;color:#003399;line-height:1.5;">Cofinanțat de<br>Uniunea Europeană</div>
+</div>
+<div style="font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:700;color:#2e7d32;background:#e8f5e9;border-radius:20px;padding:4px 14px;letter-spacing:0.5px;">✓ PROIECT FINALIZAT</div>
+</div>
+<div class="blog-card-body">
+<span class="blog-card-tag" style="background:rgba(46,125,50,0.1);color:#2e7d32;">Comunicat de presă</span>
+<div class="blog-card-meta">
+<span><i class="far fa-calendar-alt"></i> 29 Mai 2026</span>
+<span><i class="fas fa-tag"></i> Industrie 4.0</span>
+</div>
+<h3>FINALIZARE — Industrie 4.0 în hala echipamente electrice pentru tehnologii verzi</h3>
+<p>EUROELECTRIC SRL comunică finalizarea proiectului „Industrie 4.0 în hala echipamente electrice pentru tehnologii verzi" (cod SMIS 318133). 7 locuri de muncă create, 13 echipamente moderne achiziționate. Cofinanțat prin Programul Dezvoltare Durabilă și Tranziție Justă.</p>
+<a href="#" onclick="event.preventDefault();openBlogModal5();" class="blog-card-link">Citește comunicatul <i class="fas fa-arrow-right"></i></a>
 </div>
 </div>
-<div style="text-align:center;margin-top:36px;">
-<button id="blog-more-btn" onclick="toggleBlogExtra()" style="display:inline-flex;align-items:center;gap:10px;background:#003B7A;color:#fff;border:none;border-radius:30px;padding:13px 32px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.92rem;cursor:pointer;transition:background 0.2s,transform 0.2s;letter-spacing:0.3px;">
-<i class="fas fa-plus-circle" id="blog-more-icon"></i>
-<span id="blog-more-text">Mai multe</span>
-</button>
+</div>
 </div>
 </section>
 <section id="contact">
@@ -1092,9 +2060,9 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 <span>RO51 BTRL 0220 1202 2333 49XX<br>Banca Transilvania — Petroșani</span>
 </div>
 <div class="social-row">
-<a href="https://www.facebook.com/EuroElectricHD/" target="_blank" rel="noopener" class="social-btn" aria-label="EUROELECTRIC pe Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-<a href="https://www.linkedin.com/company/euroelectric-srl/posts/?feedView=all" target="_blank" rel="noopener" class="social-btn" aria-label="EUROELECTRIC pe LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-<a href="mailto:office@euroelectric.ro" class="social-btn" aria-label="Trimite email la office@euroelectric.ro"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+<a href="https://www.facebook.com/EuroElectricHD/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.linkedin.com/company/euroelectric-srl/posts/?feedView=all" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+<a href="mailto:office@euroelectric.ro" class="social-btn"><i class="fas fa-envelope"></i></a>
 </div>
 <div class="map-placeholder">
 <div class="map-tabs">
@@ -1106,11 +2074,11 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 </button>
 </div>
 <div class="map-frame-wrap">
-<iframe id="map-baru" title="Harta Google: Sediu EUROELECTRIC Baru, Hunedoara"
+<iframe id="map-baru"
 data-src="https://maps.google.com/maps?q=Baru,+Hunedoara,+Romania&z=14&ie=UTF8&output=embed"
 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
 </iframe>
-<iframe id="map-petrosani" title="Harta Google: Punct de lucru EUROELECTRIC Petrosani"
+<iframe id="map-petrosani"
 data-src="https://maps.google.com/maps?q=Str.+Petru+Maior+14,+Petrosani,+Hunedoara,+Romania&z=15&ie=UTF8&output=embed"
 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
 style="display:none;">
@@ -1130,27 +2098,24 @@ target="_blank" rel="noopener">
 </div>
 <div class="contact-form reveal reveal-delay-1">
 <h3 data-i18n="form-title">Trimite o solicitare</h3>
-<form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+<form id="contactForm" onsubmit="handleSubmit(event)">
 <div class="form-row">
 <div class="form-group">
 <label data-i18n="form-name">Nume *</label>
-<input type="text" name="name" data-i18n-placeholder="form-name-ph" placeholder="Numele dvs." data-validate="name" required>
-<div class="field-error" data-error-for="name"><i class="fas fa-exclamation-circle"></i><span data-i18n="err-name">Introduceți numele (minim 2 caractere).</span></div>
+<input type="text" name="name" data-i18n-placeholder="form-name-ph" placeholder="Numele dvs." required>
 </div>
 <div class="form-group">
 <label data-i18n="form-phone">Telefon *</label>
-<input type="tel" name="phone" placeholder="07XX XXX XXX" data-validate="phone" required>
-<div class="field-error" data-error-for="phone"><i class="fas fa-exclamation-circle"></i><span data-i18n="err-phone">Număr de telefon invalid. Format: 07XX XXX XXX sau +40 7XX XXX XXX.</span></div>
+<input type="tel" name="phone" placeholder="07XX XXX XXX" required>
 </div>
 </div>
 <div class="form-group">
 <label data-i18n="form-email">Email</label>
-<input type="email" name="email" data-i18n-placeholder="form-email-ph" placeholder="email@exemplu.ro" data-validate="email">
-<div class="field-error" data-error-for="email"><i class="fas fa-exclamation-circle"></i><span data-i18n="err-email">Adresă email invalidă (ex: nume@domeniu.ro).</span></div>
+<input type="email" name="email" data-i18n-placeholder="form-email-ph" placeholder="email@exemplu.ro">
 </div>
 <div class="form-group">
-<label for="service-select" data-i18n="form-service">Serviciu solicitat</label>
-<select id="service-select" name="service" data-i18n-select="form-select" aria-label="Selecteaza serviciul solicitat">
+<label data-i18n="form-service">Serviciu solicitat</label>
+<select name="service" data-i18n-select="form-select">
 <option value="">— Selectați serviciul —</option>
 <option>Tablouri Electrice</option>
 <option>Instalații Electrice</option>
@@ -1161,21 +2126,18 @@ target="_blank" rel="noopener">
 </div>
 <div class="form-group">
 <label data-i18n="form-message">Mesaj *</label>
-<textarea name="message" data-i18n-placeholder="form-msg-ph" placeholder="Descrieți pe scurt proiectul sau solicitarea dvs..." data-validate="message" required></textarea>
-<div class="field-error" data-error-for="message"><i class="fas fa-exclamation-circle"></i><span data-i18n="err-message">Mesajul trebuie să aibă minim 10 caractere.</span></div>
+<textarea name="message" data-i18n-placeholder="form-msg-ph" placeholder="Descrieți pe scurt proiectul sau solicitarea dvs..." required></textarea>
 </div>
-<div class="form-group" style="display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;">
-  <input type="checkbox" id="gdpr-consent" name="gdpr" data-validate="gdpr" required style="width:18px;height:18px;min-width:18px;margin-top:3px;accent-color:var(--navy);cursor:pointer;">
+<div class="form-group" style="display:flex;align-items:flex-start;gap:10px;margin-bottom:20px;">
+  <input type="checkbox" id="gdpr-consent" name="gdpr" required style="width:18px;height:18px;min-width:18px;margin-top:3px;accent-color:var(--navy);cursor:pointer;">
   <label for="gdpr-consent" style="font-family:'Open Sans',sans-serif;font-size:0.82rem;color:var(--text-grey);line-height:1.6;cursor:pointer;text-transform:none;letter-spacing:0;font-weight:400;">
     <span data-i18n="form-gdpr">Sunt de acord cu prelucrarea datelor cu caracter personal conform <a href="politica-confidentialitate.html" target="_blank" style="color:var(--cyan);font-weight:600;">Politicii de Confidențialitate</a>. *</span>
   </label>
 </div>
-<div class="field-error" data-error-for="gdpr" style="margin-bottom:14px;"><i class="fas fa-exclamation-circle"></i><span data-i18n="err-gdpr">Trebuie să acceptați Politica de Confidențialitate.</span></div>
 <input type="hidden" name="_subject" value="Solicitare nouă — EUROELECTRIC">
 <button type="submit" class="btn-submit" data-i18n="form-submit">
 <i class="fas fa-paper-plane"></i> Trimite Solicitarea
 </button>
-<div id="formFeedback" class="form-feedback"></div>
 </form>
 </div>
 </div>
@@ -1184,12 +2146,12 @@ target="_blank" rel="noopener">
 <footer>
 <div class="footer-grid">
 <div class="footer-brand">
-<img src="Materiale/logo-euroelectric.png" alt="EUROELECTRIC S.R.L." width="200" height="40">
+<img src="Materiale/logo-euroelectric.webp" alt="EUROELECTRIC S.R.L.">
 <p data-i18n="footer-brand">Soluții electrice complete pentru sectorul rezidențial, comercial și industrial. Profesionalism și Siguranță — din 2003.</p>
 <div class="social-row">
-<a href="https://www.facebook.com/EuroElectricHD/" target="_blank" rel="noopener" class="social-btn" aria-label="EUROELECTRIC pe Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-<a href="https://www.linkedin.com/company/euroelectric-srl/posts/?feedView=all" target="_blank" rel="noopener" class="social-btn" aria-label="EUROELECTRIC pe LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-<a href="mailto:office@euroelectric.ro" class="social-btn" aria-label="Trimite email la office@euroelectric.ro"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+<a href="https://www.facebook.com/EuroElectricHD/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.linkedin.com/company/euroelectric-srl/posts/?feedView=all" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+<a href="mailto:office@euroelectric.ro" class="social-btn"><i class="fas fa-envelope"></i></a>
 </div>
 </div>
 <div>
@@ -1246,10 +2208,838 @@ target="_blank" rel="noopener">
 </div>
 </div>
 </footer>
-<button class="back-to-top" id="backToTop" aria-label="Inapoi sus" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-<i class="fas fa-chevron-up" aria-hidden="true"></i>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<i class="fas fa-chevron-up"></i>
 </button>
-
+<script>
+// Navbar scroll effect
+const navbar = document.getElementById("navbar");
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+navbar.classList.toggle("scrolled", window.scrollY > 50);
+backToTop.classList.toggle("visible", window.scrollY > 400);
+});
+// Scrollspy - evidentiaza sectiunea activa in navbar
+(function() {
+const sections = document.querySelectorAll('section[id], div[id="acasa"]');
+const navLinks = document.querySelectorAll('.nav-menu a');
+window.addEventListener('scroll', function() {
+let current = '';
+sections.forEach(sec => {
+if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+});
+navLinks.forEach(link => {
+link.classList.remove('nav-active');
+if (link.getAttribute('href') === '#' + current) link.classList.add('nav-active');
+});
+});
+})();
+// Mobile menu
+function toggleMenu() {
+document.getElementById("navMenu").classList.toggle("open");
+}
+document.querySelectorAll(".nav-menu a").forEach(link => {
+link.addEventListener("click", () => document.getElementById("navMenu").classList.remove("open"));
+});
+// Filter buttons
+document.querySelectorAll(".filter-btn").forEach(btn => {
+btn.addEventListener("click", () => {
+document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+btn.classList.add("active");
+const filter = btn.getAttribute("data-filter");
+document.querySelectorAll(".project-card").forEach(card => {
+if (filter === "all" || card.getAttribute("data-category") === filter) {
+card.style.display = "";
+} else {
+card.style.display = "none";
+}
+});
+});
+});
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+}, { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+// Counter animation
+function animateCounters() {
+document.querySelectorAll(".stat-number[data-target]").forEach(el => {
+const target = parseInt(el.dataset.target);
+const suffix = target > 10 ? "+" : "";
+let current = 0;
+const step = Math.max(1, Math.floor(target / 50));
+const timer = setInterval(() => {
+current += step;
+if (current >= target) { el.textContent = target + suffix; clearInterval(timer); }
+else { el.textContent = current + suffix; }
+}, 30);
+});
+}
+const statsObs = new IntersectionObserver((entries) => {
+if (entries[0].isIntersecting) { animateCounters(); statsObs.disconnect(); }
+}, { threshold: 0.3 });
+const statsEl = document.querySelector("#de-ce-noi .why-visual");
+if (statsEl) statsObs.observe(statsEl);
+// Hero stat animation on load
+window.addEventListener("load", () => {
+document.querySelectorAll(".hero-stat-num").forEach(el => {
+const text = el.textContent;
+const num = parseInt(text);
+const suffix = text.replace(num.toString(), "");
+if (isNaN(num)) return;
+let c = 0;
+const step = Math.max(1, Math.floor(num / 40));
+const t = setInterval(() => {
+c += step;
+if (c >= num) { el.textContent = num + suffix; clearInterval(t); }
+else { el.textContent = c + suffix; }
+}, 35);
+});
+});
+// Form submit
+async function handleSubmit(e) {
+e.preventDefault();
+const form = e.target;
+const btn = form.querySelector(".btn-submit");
+btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Se trimite...';
+btn.disabled = true;
+try {
+const res = await fetch("https://formspree.io/f/maqvglgv", {
+method: "POST",
+body: new FormData(form),
+headers: { "Accept": "application/json" }
+});
+if (res.ok) {
+btn.innerHTML = '<i class="fas fa-check"></i> Solicitare trimisă!';
+btn.style.background = "#2E8B2E";
+form.reset();
+setTimeout(() => {
+btn.innerHTML = '<i class="fas fa-paper-plane"></i> Trimite Solicitarea';
+btn.style.background = "";
+btn.disabled = false;
+}, 4000);
+} else {
+throw new Error();
+}
+} catch {
+btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Eroare — reîncercați';
+btn.style.background = "#c0392b";
+setTimeout(() => {
+btn.innerHTML = '<i class="fas fa-paper-plane"></i> Trimite Solicitarea';
+btn.style.background = "";
+btn.disabled = false;
+}, 3500);
+}
+}
+// ===== BILINGUAL SYSTEM =====
+const translations = {
+ro: {
+'nav-acasa':'Acasă','nav-de-ce-noi':'De ce noi?','nav-servicii':'Servicii',
+'nav-proiecte':'Proiecte','nav-contact':'Contact',
+'hero-badge':'<i class="fas fa-bolt"></i> Soluții Electrice Premium',
+'hero-title':'PROFESIONALISM <span class="highlight">ȘI SIGURANȚĂ</span>',
+'hero-desc':'Euroelectric este o firmă cu capital privat românesc înființată în anul 2003. În peste 20 de ani de activitate, am construit o echipă dinamică de ingineri și specialiști în instalații electrice, tablouri electrice, verificări echipamente și dezvoltare de produse pentru vehicule electrice și energii verzi.',
+'cert-label':'Certificări &amp; Autorizații',
+'why-tag':'De ce să ne alegeți',
+'why-title':'Expertiză, <span>Calitate</span> și Siguranță',
+'why-desc':'Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotările de ultimă oră (precum autolaboratorul Centrix 1) cu precizia software-ului Eplan pentru a oferi siguranță totală instalației tale electrice.',
+'why-f1-title':'Experiență și Profesionalism','why-f1-desc':'Peste 20 de ani de activitate în instalații electrice comerciale, industriale și rezidențiale de înaltă performanță.',
+'why-f2-title':'Certificări ISO','why-f2-desc':'Certificați ISO 9001, ISO 14001 și ISO 45001 — garanția calității, responsabilității ecologice și siguranței muncii.',
+'why-f3-title':'Autorizat ANRE &amp; IGSU','why-f3-desc':'Autorizație completă pentru proiectare, execuție și verificare instalații electrice la toate tensiunile.',
+'why-f4-title':'Suport și Garanție','why-f4-desc':'Asistență tehnică post-instalare și garanție extinsă pentru toate lucrările realizate.',
+'stats-title':'EUROELECTRIC în cifre',
+'stat1':'Ani de experiență în domeniu','stat2':'Proiecte finalizate cu succes',
+'stat3':'Certificări ISO internaționale','stat4':'Puncte de lucru în Hunedoara',
+'srv-tag':'Ce oferim','srv-title':'Serviciile <span>Noastre</span>',
+'srv-desc':'Soluții electrice complete pentru sectorul rezidențial, comercial și industrial — de la proiectare la punerea în funcțiune.',
+'srv-more':'Află mai multe <i class="fas fa-arrow-right"></i>',
+'s1-title':'Tablouri Electrice','s1-desc':'Proiectare și asamblare tablouri electrice principale și secundare conform normelor europene. Soluții personalizate pentru orice tip de instalație.',
+'s2-title':'Instalații Electrice','s2-desc':'Proiectare și execuție instalații electrice pentru clădiri rezidențiale, comerciale și industriale. Lucrări certificate și garantate.',
+'s3-title':'Verificări Instalații Electrice','s3-desc':'Siguranța rețelei tale electrice începe cu o diagnoză corectă. Prin autolaboratorul performant SEBAKMT – Centrix 1, asigurăm localizarea defectelor, testarea izolației, verificarea prizelor de pământ și inspecție termografică pentru instalații fără surprize.',
+'s4-title':'Sisteme Fotovoltaice','s4-desc':'Instalare panouri solare și sisteme de stocare energie pentru independență energetică. Proiecte rezidențiale și industriale cu randament maxim.',
+'s5-title':'Stații Încărcare Vehicule Electrice','s5-desc':'Proiectare, instalare și punere în funcțiune a stațiilor de încărcare pentru vehicule electrice. Soluții pentru uz rezidențial, comercial și industrial.',
+'s6-title':'Instalații Curenți Slabi','s6-desc':'Infrastructuri de rețea structurată, fibră optică și sisteme wireless profesionale. Soluții complete pentru date și telecomunicații.',
+'prj-tag':'Portofoliu','prj-title':'Proiecte <span>Realizate</span>',
+'prj-desc':'O selecție din lucrările noastre — de la instalații rezidențiale la proiecte industriale de amploare.',
+'prj-f0':'Toate','prj-f1':'Tablouri Electrice','prj-f2':'Instalații','prj-f3':'Fotovoltaice','prj-f4':'Stații EV',
+'cta-title':'Ai nevoie de o <span>ofertă personalizată</span>?',
+'cta-desc':'Contactați-ne astăzi pentru o consultanță gratuită. Echipa noastră de specialiști vă va oferi soluția electrică potrivită nevoilor dvs.',
+'cta-btn':'<i class="fas fa-paper-plane"></i> Trimite o cerere',
+'blog-tag':'Noutăți &amp; Resurse',
+'blog-desc':'Articole, ghiduri și noutăți din domeniul instalațiilor electrice și energiei regenerabile.',
+'blog-read':'Citește mai mult <i class="fas fa-arrow-right"></i>',
+'blog-rittal-tag':'Video','blog-rittal-title':'Soluții Rittal &amp; Eplan pentru tablouri electrice profesionale','blog-rittal-desc':'Descoperă cum EUROELECTRIC integrează tehnologiile Rittal și Eplan în proiectarea și execuția tablourilor electrice de înaltă calitate.','blog-rittal-link':'Vizionează pe LinkedIn <i class="fas fa-arrow-right"></i>',
+'blog-siemens-tag':'Partener','blog-siemens-title':'Siemens Digital Industries — Soluții pentru automatizare și eficiență energetică','blog-siemens-desc':'EUROELECTRIC colaborează cu Siemens Romania pentru integrarea celor mai avansate soluții de automatizare industrială și echipamente electrice.','blog-siemens-link':'Vezi pe LinkedIn <i class="fas fa-arrow-right"></i>',
+'blog-euro-video-tag':'Video','blog-euro-video-title':'EUROELECTRIC — Lucrări și instalații electrice industriale','blog-euro-video-desc':'Descoperă cele mai recente proiecte și realizări EUROELECTRIC SRL — instalații electrice, tablouri și echipamente pentru sectorul industrial.','blog-euro-video-link':'Vizionează pe LinkedIn <i class="fas fa-arrow-right"></i>',
+'blog-surlea-video-tag':'Video','blog-surlea-video-title':'EUROELECTRIC — Execuție instalații electrice industriale','blog-surlea-video-desc':'Urmărește echipa EUROELECTRIC în acțiune — execuție profesională de instalații electrice pentru sectorul industrial și comercial.','blog-surlea-video-link':'Vizionează pe LinkedIn <i class="fas fa-arrow-right"></i>',
+'blog-ind40-video-tag':'Video','blog-ind40-video-title':'EUROELECTRIC — Industrie 4.0 în proiectarea instalațiilor electrice','blog-ind40-video-desc':'Cum integrează EUROELECTRIC tehnologiile Industrie 4.0 în proiectarea și execuția instalațiilor electrice moderne.','blog-ind40-video-link':'Vizionează pe LinkedIn <i class="fas fa-arrow-right"></i>',
+'con-tag':'Luați legătura cu noi','con-title':'Contact <span>&amp;</span> Locații',
+'con-desc':'Suntem la dispoziția dvs. pentru orice întrebare sau solicitare de ofertă.',
+'con-info-title':'Datele noastre de contact',
+'form-title':'Trimite o solicitare','form-name':'Nume *','form-phone':'Telefon *',
+'form-email':'Email','form-service':'Serviciu solicitat','form-message':'Mesaj *',
+'form-name-ph':'Numele dvs.','form-email-ph':'email@exemplu.ro',
+'form-msg-ph':'Descrieți pe scurt proiectul sau solicitarea dvs...',
+'form-select':'— Selectați serviciul —|Tablouri Electrice|Instalații Electrice|Panouri Fotovoltaice|Stații Încărcare Vehicule Electrice|Altele / General',
+'form-gdpr':'Sunt de acord cu prelucrarea datelor cu caracter personal conform <a href="politica-confidentialitate.html" target="_blank" style="color:var(--cyan);font-weight:600;">Politicii de Confidențialitate</a>. *',
+'form-submit':'<i class="fas fa-paper-plane"></i> Trimite Solicitarea',
+'footer-brand':'Soluții electrice complete pentru sectorul rezidențial, comercial și industrial. Profesionalism și Siguranță — din 2003.',
+'footer-nav':'Navigare',
+'footer-copy':'© 2026 S.C. EUROELECTRIC S.R.L. — Toate drepturile rezervate',
+'footer-srv':'Servicii','footer-contact-title':'Contact','footer-privacy':'Confidențialitate','footer-cookies':'Cookie-uri',
+'te-tag':'Serviciu Detaliat',
+'te-title':'Tablouri Electrice <span>Joasă Tensiune</span>',
+'te-desc':'Panouri de distribuție și control pentru instalații până la 2500A. Soluții industriale, comerciale și publice — de la proiectare la punerea în funcțiune.',
+'te-apps-title':'Aplicații Principale',
+'te-app1':'Industrie și Manufacturing',
+'te-app2':'Centre Comerciale (Auchan, Lidl, Hornbach)',
+'te-app3':'Spitale și Instituții Publice',
+'te-app4':'Energie Regenerabilă (Solar, Eolian)',
+'te-app5':'Telecomunicații și Centre de Date',
+'te-app6':'Stații de Încărcare Vehicule Electrice',
+'te-srv-title':'Servicii Complete',
+'te-srv1-title':'Proiectare',
+'te-srv1-desc':'Soluții personalizate, calcule, scheme electrice, documentație',
+'te-srv2-title':'Fabricație',
+'te-srv2-desc':'Prelucrare CNC, asamblare, cablare, protecție anticorozivă',
+'te-srv3-title':'Montaj',
+'te-srv3-desc':'Echipă experimentată, instalare la fața locului, suport continuu',
+'te-srv4-title':'Testare',
+'te-srv4-desc':'Teste izolație, verificare funcționalitate, rapoarte conformitate',
+'te-std-title':'Standarde și Conformitate',
+'te-std1-title':'Europene',
+'te-std1-desc':'EN 61439-1, EN 61439-2, EN 60950-1, EN 61010-1',
+'te-std2-title':'Naționale',
+'te-std2-desc':'SR EN 60364, NTE 006, NTPA, Legea 123/2012',
+'te-std3-title':'Certificări',
+'te-std3-desc':'Marcaj CE, Declarație de Conformitate, Asigurare Răspundere Civilă',
+'s1-desc':'Proiectare și asamblare tablouri electrice joasă tensiune până la 1000V. Soluții industriale, comerciale și publice conform normelor europene.',
+'ie-tag':'Serviciu Detaliat',
+'ie-title':'Instalații Electrice <span>Certificate și Garantate</span>',
+'ie-desc':'Proiectare și execuție instalații electrice pentru orice tip de clădire — rezidențial, comercial și industrial. Lucrări executate conform normelor în vigoare, cu garanție și suport 24/7.',
+'ie-types-title':'Tipuri de Instalații',
+'ie-type1':'Instalații Rezidențiale',
+'ie-type2':'Instalații Comerciale',
+'ie-type3':'Instalații Industriale',
+'ie-type4':'Sisteme de Iluminat',
+'ie-type5':'Sisteme de Siguranță',
+'ie-type6':'Instalații Speciale',
+'ie-apps-title':'Aplicații Principale',
+'ie-app1':'Apartamente și Case',
+'ie-app2':'Centre Comerciale (Auchan, Lidl, Hornbach)',
+'ie-app3':'Spitale și Instituții Medicale',
+'ie-app4':'Fabrici și Ateliere',
+'ie-app5':'Iluminat Stradal și Public',
+'ie-app6':'Stații de Încărcare Vehicule Electrice',
+'ie-srv-title':'Servicii Complete',
+'ie-srv1-title':'Proiectare',
+'ie-srv1-desc':'Soluții adaptate, calcule sarcini, planuri, dimensionare siguranțe',
+'ie-srv2-title':'Execuție',
+'ie-srv2-desc':'Montaj conform normelor, trasare rute, suduri și îmbinări, finisare',
+'ie-srv3-title':'Testare',
+'ie-srv3-desc':'Măsurări rezistență, probe sub sarcină, rapoarte conformitate',
+'ie-srv4-title':'Suport',
+'ie-srv4-desc':'Garanție, asigurare răspundere civilă, service 24/7',
+'ie-std-title':'Standarde și Certificări',
+'ie-std1-title':'Europene',
+'ie-std1-desc':'EN 60364, EN 50160, EN 61000, IEC 60950',
+'ie-std2-title':'Naționale',
+'ie-std2-desc':'NTE 006-2002, NTPA, SR EN 50083, Legea 123/2012',
+'ie-std3-title':'Certificări',
+'ie-std3-desc':'Marcaj CE, Declarație de Conformitate, Inspecție ANRE',
+'vi-tag':'Serviciu Detaliat',
+'vi-title':'Verificări Instalații <span>Electrice</span>',
+'vi-desc':'Măsurători și verificări complete ale instalațiilor electrice cu echipamente calibrate. Rapoarte tehnice detaliate, certificate de conformitate și recomandări de remediere.',
+'vi-types-title':'Tipuri de Verificări',
+'vi-type1':'Măsurări Rezistență Izolație',
+'vi-type2':'Măsurări Rezistență Pământ',
+'vi-type3':'Probe Sub Sarcină',
+'vi-type4':'Defectoscopie Instalații',
+'vi-type5':'Măsurări Continuitate',
+'vi-type6':'Inspecție și Certificare',
+'vi-apps-title':'Domenii de Aplicare',
+'vi-app1':'Instalații Rezidențiale',
+'vi-app2':'Instalații Comerciale și Industriale',
+'vi-app3':'Centre de Date și Telecomunicații',
+'vi-app4':'Sisteme de Iluminat',
+'vi-app5':'Sisteme de Siguranță',
+'vi-app6':'Controlul Calității și Conformității',
+'vi-srv-title':'Servicii Verificare',
+'vi-srv1-title':'Măsurări',
+'vi-srv1-desc':'Echipamente calibrate, măsurări precise, date documentate',
+'vi-srv2-title':'Analiză',
+'vi-srv2-desc':'Evaluare conform standarde, identificare defecte, diagnostice',
+'vi-srv3-title':'Rapoarte',
+'vi-srv3-desc':'Documentație detaliată, recomandări, certificări de conformitate',
+'vi-srv4-title':'Follow-up',
+'vi-srv4-desc':'Remediere defecte, re-verificări, asigurare calitate',
+'vi-std-title':'Echipamente și Standarde',
+'vi-std1-title':'Aparate',
+'vi-std1-desc':'Megohmmetru, Terrameter, Multimetru, Ampermetru — toate calibrate',
+'vi-std2-title':'Standarde',
+'vi-std2-desc':'EN 60364, EN 61557, SR EN 60309, IEC 61010-1',
+'vi-std3-title':'Certificări',
+'vi-std3-desc':'Acreditare ANRE, Certificate de Conformitate, Rapoarte Inspecție',
+'fv-tag':'Serviciu Detaliat',
+'fv-title':'Sisteme Fotovoltaice <span>Solar</span>',
+'fv-desc':'Proiectare și instalare sisteme solare complete — On-Grid, Off-Grid și Hibride. Energie curată, independență energetică și recuperarea investiției în 5–8 ani.',
+'fv-types-title':'Tipuri de Sisteme',
+'fv-type1':'On-Grid (conectate la rețea)',
+'fv-type2':'Off-Grid (sisteme izolate)',
+'fv-type3':'Hibride (cu baterii)',
+'fv-type4':'Rezidențiale',
+'fv-type5':'Comerciale și Industriale',
+'fv-type6':'Instalații la Scară Mare',
+'fv-ben-title':'Beneficii și Aplicații',
+'fv-ben1':'Energie curată și regenerabilă',
+'fv-ben2':'Reducerea costurilor de energie',
+'fv-ben3':'Deduceri fiscale și subvenții',
+'fv-ben4':'Durabilitate și protecția mediului',
+'fv-ben5':'Independență energetică',
+'fv-ben6':'ROI în 5–8 ani',
+'fv-srv-title':'Servicii Complete',
+'fv-srv1-title':'Proiectare',
+'fv-srv1-desc':'Studiu insolație, calcul putere, schiță instalare, costuri',
+'fv-srv2-title':'Instalare',
+'fv-srv2-desc':'Montaj panouri, invertoare, cablare, conectare la rețea',
+'fv-srv3-title':'Testare',
+'fv-srv3-desc':'Probe funcționalitate, măsurări, rapoarte de conformitate',
+'fv-srv4-title':'Mentenanță',
+'fv-srv4-desc':'Curățare panouri, monitorizare, reparații, garanție',
+'fv-std-title':'Componente și Standarde',
+'fv-std1-title':'Componente',
+'fv-std1-desc':'Panouri de înaltă eficiență, invertoare, structuri montare, cabluri',
+'fv-std2-title':'Standarde',
+'fv-std2-desc':'IEC 61215, IEC 61730, EN 50160, SR EN 60364',
+'fv-std3-title':'Certificări',
+'fv-std3-desc':'CE Marking, Garanție 25 ani, Certificat conectare ANRE',
+'ai-tag':'Serviciu Detaliat',
+'ai-title':'Automatizări <span>Industriale</span>',
+'ai-desc':'Soluții complete de automatizare și control pentru fabrici și hale industriale — PLC, SCADA, HMI și convertizoare de frecvență. Productivitate crescută, erori reduse, siguranța operatorilor.',
+'ai-types-title':'Sisteme Automatizare',
+'ai-type1':'PLC și Controlere',
+'ai-type2':'Sisteme SCADA',
+'ai-type3':'Convertizoare de Frecvență',
+'ai-type4':'Sisteme de Monitorizare',
+'ai-type5':'Interfețe HMI',
+'ai-type6':'Robotică și Mecanizare',
+'ai-apps-title':'Domenii de Aplicare',
+'ai-app1':'Fabrici și Ateliere',
+'ai-app2':'Linii de Producție',
+'ai-app3':'Sisteme de Distribuție',
+'ai-app4':'Instalații de Apă și Gaze',
+'ai-app5':'Centre de Tratare Deșeuri',
+'ai-app6':'Controlul Proceselor',
+'ai-srv-title':'Servicii Complete',
+'ai-srv1-title':'Proiectare',
+'ai-srv1-desc':'Analiza necesități, schiță sistem, selecție echipamente',
+'ai-srv2-title':'Programare',
+'ai-srv2-desc':'Dezvoltare programe PLC, SCADA, teste logică',
+'ai-srv3-title':'Instalare',
+'ai-srv3-desc':'Montaj componente, cablare, configurare hardware',
+'ai-srv4-title':'Mentenanță',
+'ai-srv4-desc':'Suport tehnic, upgrade, training operatori, garanție',
+'ai-std-title':'Beneficii și Standarde',
+'ai-std1-title':'Beneficii',
+'ai-std1-desc':'Creșterea productivității, reducerea erorilor, siguranța operatorilor',
+'ai-std2-title':'Standarde',
+'ai-std2-desc':'EN 61131-3, EN 60204-1, EN 61508, IEC 61010-1',
+'ai-std3-title':'Certificări',
+'ai-std3-desc':'CE Marking, Documente conformitate, Manuale de operare',
+'cs-tag':'Serviciu Detaliat',
+'cs-title':'Instalații <span>Curenți Slabi</span>',
+'cs-desc':'Infrastructuri complete de telecomunicații, date și siguranță — CCTV, alarme, control acces, rețele LAN/WiFi și fibră optică. Conectivitate și siguranță pentru orice tip de clădire.',
+'cs-types-title':'Tipuri de Instalații',
+'cs-type1':'Telecomunicații și Date',
+'cs-type2':'Sisteme de Siguranță (CCTV)',
+'cs-type3':'Sisteme de Alarme',
+'cs-type4':'Sonorizare și Multimedia',
+'cs-type5':'Sisteme de Control Acces',
+'cs-type6':'Rețele LAN/WiFi/Fibră Optică',
+'cs-apps-title':'Domenii de Aplicare',
+'cs-app1':'Clădiri de Birouri',
+'cs-app2':'Centre Comerciale și Magazine',
+'cs-app3':'Spitale și Centre Medicale',
+'cs-app4':'Fabrici și Ateliere',
+'cs-app5':'Centre de Date',
+'cs-app6':'Bănci și Instituții Financiare',
+'cs-srv-title':'Servicii Complete',
+'cs-srv1-title':'Proiectare',
+'cs-srv1-desc':'Studiu necesități, schiță rute, dimensionare cabluri și canale',
+'cs-srv2-title':'Instalare',
+'cs-srv2-desc':'Trasare rute, montaj dulii, instalare fire și conectori',
+'cs-srv3-title':'Testare',
+'cs-srv3-desc':'Verificări continuitate, teste transmisie, certificări',
+'cs-srv4-title':'Mentenanță',
+'cs-srv4-desc':'Suport 24/7, update sisteme, training utilizatori',
+'cs-std-title':'Echipamente și Standarde',
+'cs-std1-title':'Materiale',
+'cs-std1-desc':'Cabluri Cat5e/Cat6/Cat6A, Fibră optică, Conectori, Panouri',
+'cs-std2-title':'Standarde',
+'cs-std2-desc':'EN 50173, EN 50174, EN 60364-5-56, IEC 61076-2-109',
+'cs-std3-title':'Certificări',
+'cs-std3-desc':'Teste de Transmisie, Documente Conformitate, Manuale'
+},
+en: {
+'nav-acasa':'Home','nav-de-ce-noi':'Why us?','nav-servicii':'Services',
+'nav-proiecte':'Projects','nav-contact':'Contact',
+'hero-badge':'<i class="fas fa-bolt"></i> Premium Electrical Solutions',
+'hero-title':'PROFESSIONALISM <span class="highlight">AND SAFETY</span>',
+'hero-desc':'Euroelectric is a privately-owned Romanian company founded in 2003. Over more than 20 years of activity, we have built a dynamic team of engineers and specialists in electrical installations, switchboards, equipment testing and development of products for electric vehicles and green energy.',
+'cert-label':'Certifications &amp; Authorizations',
+'why-tag':'Why choose us',
+'why-title':'Expertise, <span>Quality</span> and Safety',
+'why-desc':'We are not just contractors — we are your technical consultants. We combine state-of-the-art equipment (such as the Centrix 1 mobile laboratory) with the precision of Eplan software to deliver complete safety for your electrical installation.',
+'why-f1-title':'Experience and Professionalism','why-f1-desc':'Over 20 years of activity in high-performance commercial, industrial and residential electrical installations.',
+'why-f2-title':'ISO Certifications','why-f2-desc':'ISO 9001, ISO 14001 and ISO 45001 certified — the guarantee of quality, environmental responsibility and workplace safety.',
+'why-f3-title':'Authorized ANRE &amp; IGSU','why-f3-desc':'Full authorization for design, execution and verification of electrical installations at all voltage levels.',
+'why-f4-title':'Support and Warranty','why-f4-desc':'Post-installation technical assistance and extended warranty for all completed works.',
+'stats-title':'EUROELECTRIC in numbers',
+'stat1':'Years of experience','stat2':'Successfully completed projects',
+'stat3':'International ISO certifications','stat4':'Work points in Hunedoara County',
+'srv-tag':'What we offer','srv-title':'Our <span>Services</span>',
+'srv-desc':'Complete electrical solutions for the residential, commercial and industrial sector — from design to commissioning.',
+'srv-more':'Learn more <i class="fas fa-arrow-right"></i>',
+'s1-title':'Electrical Panels','s1-desc':'Design and assembly of main and secondary electrical panels according to European standards. Customized solutions for any type of installation.',
+'s2-title':'Electrical Installations','s2-desc':'Design and execution of electrical installations for residential, commercial and industrial buildings. Certified and guaranteed work.',
+'s3-title':'Electrical Inspection','s3-desc':'Verification and measurement of electrical installations according to current regulations. Technical reports and authorizations for the safety of your installations.',
+'s4-title':'Photovoltaic Systems','s4-desc':'Installation of solar panels and energy storage systems for energy independence. Residential and industrial projects with maximum efficiency.',
+'s5-title':'EV Charging Stations','s5-desc':'Design, installation and commissioning of electric vehicle charging stations. Solutions for residential, commercial and industrial use.',
+'s6-title':'Low Current Installations','s6-desc':'Structured network infrastructure, fiber optics and professional wireless systems. Complete solutions for data and telecommunications.',
+'prj-tag':'Portfolio','prj-title':'Completed <span>Projects</span>',
+'prj-desc':'A selection of our work — from residential installations to large-scale industrial projects.',
+'prj-f0':'All','prj-f1':'Electrical Panels','prj-f2':'Installations','prj-f3':'Photovoltaic','prj-f4':'EV Stations',
+'cta-title':'Do you need a <span>customized offer</span>?',
+'cta-desc':'Contact us today for a free consultation. Our team of specialists will provide the right electrical solution for your needs.',
+'cta-btn':'<i class="fas fa-paper-plane"></i> Send a request',
+'blog-tag':'News &amp; Resources',
+'blog-desc':'Articles, guides and news from the field of electrical installations and renewable energy.',
+'blog-read':'Read more <i class="fas fa-arrow-right"></i>',
+'blog-rittal-tag':'Video','blog-rittal-title':'Rittal &amp; Eplan Solutions for Professional Electrical Panels','blog-rittal-desc':'Discover how EUROELECTRIC integrates Rittal and Eplan technologies in the design and assembly of high-quality electrical panels.','blog-rittal-link':'Watch on LinkedIn <i class="fas fa-arrow-right"></i>',
+'blog-siemens-tag':'Partner','blog-siemens-title':'Siemens Digital Industries — Automation &amp; Energy Efficiency Solutions','blog-siemens-desc':'EUROELECTRIC collaborates with Siemens Romania to integrate the most advanced industrial automation and electrical equipment solutions.','blog-siemens-link':'View on LinkedIn <i class="fas fa-arrow-right"></i>',
+'blog-euro-video-tag':'Video','blog-euro-video-title':'EUROELECTRIC — Industrial Electrical Installations & Projects','blog-euro-video-desc':'Discover the latest projects and achievements of EUROELECTRIC SRL — electrical installations, panels and equipment for the industrial sector.','blog-euro-video-link':'Watch on LinkedIn <i class="fas fa-arrow-right"></i>',
+'blog-surlea-video-tag':'Video','blog-surlea-video-title':'EUROELECTRIC — Industrial Electrical Installation Work','blog-surlea-video-desc':'Watch the EUROELECTRIC team in action — professional execution of electrical installations for industrial and commercial sectors.','blog-surlea-video-link':'Watch on LinkedIn <i class="fas fa-arrow-right"></i>',
+'blog-ind40-video-tag':'Video','blog-ind40-video-title':'EUROELECTRIC — Industry 4.0 in Electrical Installation Design','blog-ind40-video-desc':'How EUROELECTRIC integrates Industry 4.0 technologies in the design and execution of modern electrical installations.','blog-ind40-video-link':'Watch on LinkedIn <i class="fas fa-arrow-right"></i>',
+'con-tag':'Get in touch','con-title':'Contact <span>&amp;</span> Locations',
+'con-desc':'We are at your disposal for any question or offer request.',
+'con-info-title':'Our contact details',
+'form-title':'Send a request','form-name':'Name *','form-phone':'Phone *',
+'form-email':'Email','form-service':'Service requested','form-message':'Message *',
+'form-name-ph':'Your name','form-email-ph':'email@example.com',
+'form-msg-ph':'Briefly describe your project or request...',
+'form-select':'— Select service —|Electrical Panels|Electrical Installations|Photovoltaic Panels|EV Charging Stations|Other / General',
+'form-gdpr':'I agree to the processing of personal data in accordance with the <a href="politica-confidentialitate.html" target="_blank" style="color:var(--cyan);font-weight:600;">Privacy Policy</a>. *',
+'form-submit':'<i class="fas fa-paper-plane"></i> Send Request',
+'footer-brand':'Complete electrical solutions for the residential, commercial and industrial sector. Professionalism and Safety — since 2003.',
+'footer-nav':'Navigation',
+'footer-copy':'© 2026 S.C. EUROELECTRIC S.R.L. — All rights reserved',
+'footer-srv':'Services','footer-contact-title':'Contact','footer-privacy':'Privacy Policy','footer-cookies':'Cookies',
+'te-tag':'Featured Service',
+'te-title':'Low Voltage <span>Electrical Panels</span>',
+'te-desc':'Distribution and control panels for installations up to 1000V. Industrial, commercial and public solutions — from design to commissioning.',
+'te-apps-title':'Main Applications',
+'te-app1':'Industry & Manufacturing',
+'te-app2':'Shopping Centers (Auchan, Lidl, Hornbach)',
+'te-app3':'Hospitals & Public Institutions',
+'te-app4':'Renewable Energy (Solar, Wind)',
+'te-app5':'Telecommunications & Data Centers',
+'te-app6':'Electric Vehicle Charging Stations',
+'te-srv-title':'Complete Services',
+'te-srv1-title':'Design',
+'te-srv1-desc':'Custom solutions, calculations, electrical diagrams, documentation',
+'te-srv2-title':'Manufacturing',
+'te-srv2-desc':'CNC machining, assembly, wiring, anti-corrosion protection',
+'te-srv3-title':'Installation',
+'te-srv3-desc':'Experienced team, on-site installation, ongoing support',
+'te-srv4-title':'Testing',
+'te-srv4-desc':'Insulation tests, functionality checks, compliance reports',
+'te-std-title':'Standards & Compliance',
+'te-std1-title':'European',
+'te-std1-desc':'EN 61439-1, EN 61439-2, EN 60950-1, EN 61010-1',
+'te-std2-title':'National',
+'te-std2-desc':'SR EN 60364, NTE 006, NTPA, Law 123/2012',
+'te-std3-title':'Certifications',
+'te-std3-desc':'CE Marking, Declaration of Conformity, Civil Liability Insurance',
+'s1-desc':'Design and assembly of low-voltage electrical panels up to 1000V. Industrial, commercial and public solutions in accordance with European standards.',
+'ie-tag':'Featured Service',
+'ie-title':'Electrical Installations <span>Certified & Guaranteed</span>',
+'ie-desc':'Design and execution of electrical installations for any type of building — residential, commercial and industrial. Work carried out in accordance with current standards, with warranty and 24/7 support.',
+'ie-types-title':'Types of Installations',
+'ie-type1':'Residential Installations',
+'ie-type2':'Commercial Installations',
+'ie-type3':'Industrial Installations',
+'ie-type4':'Lighting Systems',
+'ie-type5':'Safety Systems',
+'ie-type6':'Special Installations',
+'ie-apps-title':'Main Applications',
+'ie-app1':'Apartments & Houses',
+'ie-app2':'Shopping Centers (Auchan, Lidl, Hornbach)',
+'ie-app3':'Hospitals & Medical Institutions',
+'ie-app4':'Factories & Workshops',
+'ie-app5':'Street & Public Lighting',
+'ie-app6':'Electric Vehicle Charging Stations',
+'ie-srv-title':'Complete Services',
+'ie-srv1-title':'Design',
+'ie-srv1-desc':'Custom solutions, load calculations, plans, circuit breaker sizing',
+'ie-srv2-title':'Execution',
+'ie-srv2-desc':'Installation per standards, cable routing, joints and connections, finishing',
+'ie-srv3-title':'Testing',
+'ie-srv3-desc':'Resistance measurements, load tests, compliance reports',
+'ie-srv4-title':'Support',
+'ie-srv4-desc':'Warranty, civil liability insurance, 24/7 service',
+'ie-std-title':'Standards & Certifications',
+'ie-std1-title':'European',
+'ie-std1-desc':'EN 60364, EN 50160, EN 61000, IEC 60950',
+'ie-std2-title':'National',
+'ie-std2-desc':'NTE 006-2002, NTPA, SR EN 50083, Law 123/2012',
+'ie-std3-title':'Certifications',
+'ie-std3-desc':'CE Marking, Declaration of Conformity, ANRE Inspection',
+'vi-tag':'Featured Service',
+'vi-title':'Electrical Installation <span>Inspections</span>',
+'vi-desc':'Complete measurements and inspections of electrical installations using calibrated equipment. Detailed technical reports, compliance certificates and remediation recommendations.',
+'vi-types-title':'Types of Inspections',
+'vi-type1':'Insulation Resistance Measurements',
+'vi-type2':'Earth Resistance Measurements',
+'vi-type3':'Load Tests',
+'vi-type4':'Installation Fault Detection',
+'vi-type5':'Continuity Measurements',
+'vi-type6':'Inspection & Certification',
+'vi-apps-title':'Fields of Application',
+'vi-app1':'Residential Installations',
+'vi-app2':'Commercial & Industrial Installations',
+'vi-app3':'Data Centers & Telecommunications',
+'vi-app4':'Lighting Systems',
+'vi-app5':'Safety Systems',
+'vi-app6':'Quality & Compliance Control',
+'vi-srv-title':'Inspection Services',
+'vi-srv1-title':'Measurements',
+'vi-srv1-desc':'Calibrated equipment, precise measurements, documented data',
+'vi-srv2-title':'Analysis',
+'vi-srv2-desc':'Standards evaluation, fault identification, diagnostics',
+'vi-srv3-title':'Reports',
+'vi-srv3-desc':'Detailed documentation, recommendations, compliance certificates',
+'vi-srv4-title':'Follow-up',
+'vi-srv4-desc':'Fault remediation, re-inspections, quality assurance',
+'vi-std-title':'Equipment & Standards',
+'vi-std1-title':'Equipment',
+'vi-std1-desc':'Megohmmeter, Terrameter, Multimeter, Ammeter — all calibrated',
+'vi-std2-title':'Standards',
+'vi-std2-desc':'EN 60364, EN 61557, SR EN 60309, IEC 61010-1',
+'vi-std3-title':'Certifications',
+'vi-std3-desc':'ANRE Accreditation, Compliance Certificates, Inspection Reports',
+'fv-tag':'Featured Service',
+'fv-title':'Photovoltaic Systems <span>Solar</span>',
+'fv-desc':'Design and installation of complete solar systems — On-Grid, Off-Grid and Hybrid. Clean energy, energy independence and return on investment in 5–8 years.',
+'fv-types-title':'Types of Systems',
+'fv-type1':'On-Grid (grid-connected)',
+'fv-type2':'Off-Grid (standalone systems)',
+'fv-type3':'Hybrid (with batteries)',
+'fv-type4':'Residential',
+'fv-type5':'Commercial & Industrial',
+'fv-type6':'Large-Scale Installations',
+'fv-ben-title':'Benefits & Applications',
+'fv-ben1':'Clean and renewable energy',
+'fv-ben2':'Reduced energy costs',
+'fv-ben3':'Tax deductions and subsidies',
+'fv-ben4':'Sustainability and environmental protection',
+'fv-ben5':'Energy independence',
+'fv-ben6':'ROI in 5–8 years',
+'fv-srv-title':'Complete Services',
+'fv-srv1-title':'Design',
+'fv-srv1-desc':'Insolation study, power calculation, installation layout, costs',
+'fv-srv2-title':'Installation',
+'fv-srv2-desc':'Panel mounting, inverters, wiring, grid connection',
+'fv-srv3-title':'Testing',
+'fv-srv3-desc':'Functionality tests, measurements, compliance reports',
+'fv-srv4-title':'Maintenance',
+'fv-srv4-desc':'Panel cleaning, monitoring, repairs, warranty',
+'fv-std-title':'Components & Standards',
+'fv-std1-title':'Components',
+'fv-std1-desc':'High-efficiency panels, inverters, mounting structures, cables',
+'fv-std2-title':'Standards',
+'fv-std2-desc':'IEC 61215, IEC 61730, EN 50160, SR EN 60364',
+'fv-std3-title':'Certifications',
+'fv-std3-desc':'CE Marking, 25-year Warranty, ANRE Grid Connection Certificate',
+'ai-tag':'Featured Service',
+'ai-title':'Industrial <span>Automation</span>',
+'ai-desc':'Complete automation and control solutions for factories and industrial facilities — PLC, SCADA, HMI and frequency converters. Increased productivity, reduced errors, operator safety.',
+'ai-types-title':'Automation Systems',
+'ai-type1':'PLC & Controllers',
+'ai-type2':'SCADA Systems',
+'ai-type3':'Frequency Converters',
+'ai-type4':'Monitoring Systems',
+'ai-type5':'HMI Interfaces',
+'ai-type6':'Robotics & Mechanization',
+'ai-apps-title':'Fields of Application',
+'ai-app1':'Factories & Workshops',
+'ai-app2':'Production Lines',
+'ai-app3':'Distribution Systems',
+'ai-app4':'Water & Gas Installations',
+'ai-app5':'Waste Treatment Centers',
+'ai-app6':'Process Control',
+'ai-srv-title':'Complete Services',
+'ai-srv1-title':'Design',
+'ai-srv1-desc':'Needs analysis, system layout, equipment selection',
+'ai-srv2-title':'Programming',
+'ai-srv2-desc':'PLC & SCADA program development, logic testing',
+'ai-srv3-title':'Installation',
+'ai-srv3-desc':'Component mounting, wiring, hardware configuration',
+'ai-srv4-title':'Maintenance',
+'ai-srv4-desc':'Technical support, upgrades, operator training, warranty',
+'ai-std-title':'Benefits & Standards',
+'ai-std1-title':'Benefits',
+'ai-std1-desc':'Increased productivity, reduced errors, operator safety',
+'ai-std2-title':'Standards',
+'ai-std2-desc':'EN 61131-3, EN 60204-1, EN 61508, IEC 61010-1',
+'ai-std3-title':'Certifications',
+'ai-std3-desc':'CE Marking, Compliance Documents, Operation Manuals',
+'cs-tag':'Featured Service',
+'cs-title':'Low Current <span>Installations</span>',
+'cs-desc':'Complete telecommunications, data and security infrastructure — CCTV, alarms, access control, LAN/WiFi networks and fiber optics. Connectivity and security for any type of building.',
+'cs-types-title':'Types of Installations',
+'cs-type1':'Telecommunications & Data',
+'cs-type2':'Security Systems (CCTV)',
+'cs-type3':'Alarm Systems',
+'cs-type4':'Sound & Multimedia',
+'cs-type5':'Access Control Systems',
+'cs-type6':'LAN/WiFi/Fiber Optic Networks',
+'cs-apps-title':'Fields of Application',
+'cs-app1':'Office Buildings',
+'cs-app2':'Shopping Centers & Stores',
+'cs-app3':'Hospitals & Medical Centers',
+'cs-app4':'Factories & Workshops',
+'cs-app5':'Data Centers',
+'cs-app6':'Banks & Financial Institutions',
+'cs-srv-title':'Complete Services',
+'cs-srv1-title':'Design',
+'cs-srv1-desc':'Needs study, route layout, cable and conduit sizing',
+'cs-srv2-title':'Installation',
+'cs-srv2-desc':'Route tracing, outlet mounting, wire and connector installation',
+'cs-srv3-title':'Testing',
+'cs-srv3-desc':'Continuity checks, transmission tests, certifications',
+'cs-srv4-title':'Maintenance',
+'cs-srv4-desc':'24/7 support, system updates, user training',
+'cs-std-title':'Equipment & Standards',
+'cs-std1-title':'Materials',
+'cs-std1-desc':'Cat5e/Cat6/Cat6A cables, Fiber optic, Connectors, Panels',
+'cs-std2-title':'Standards',
+'cs-std2-desc':'EN 50173, EN 50174, EN 60364-5-56, IEC 61076-2-109',
+'cs-std3-title':'Certifications',
+'cs-std3-desc':'Transmission Tests, Compliance Documents, Manuals'
+},
+de: {
+'nav-acasa':'Startseite','nav-de-ce-noi':'Warum wir?','nav-servicii':'Leistungen',
+'nav-proiecte':'Projekte','nav-contact':'Kontakt',
+'hero-badge':'<i class="fas fa-bolt"></i> Premium Elektrolösungen',
+'hero-title':'PROFESSIONALITÄT <span class="highlight">UND SICHERHEIT</span>',
+'hero-desc':'Euroelectric ist ein rumänisches Privatunternehmen, das 2003 gegründet wurde. In über 20 Jahren Tätigkeit haben wir ein dynamisches Team aus Ingenieuren und Fachleuten für Elektroinstallationen, Schaltschränke, Geräteprüfungen und Produktentwicklung für Elektrofahrzeuge und erneuerbare Energien aufgebaut.',
+'cert-label':'Zertifizierungen &amp; Zulassungen',
+'why-tag':'Warum uns wählen',
+'why-title':'Expertise, <span>Qualität</span> und Sicherheit',
+'why-desc':'Wir sind nicht nur Auftragnehmer – wir sind Ihre technischen Berater. Wir kombinieren modernste Ausrüstung (wie das Centrix 1 Fahrzeuglabor) mit der Präzision der Eplan-Software, um vollständige Sicherheit für Ihre Elektroinstallation zu gewährleisten.',
+'why-f1-title':'Erfahrung und Professionalität','why-f1-desc':'Über 20 Jahre Tätigkeit in hochwertigen gewerblichen, industriellen und privaten Elektroinstallationen.',
+'why-f2-title':'ISO-Zertifizierungen','why-f2-desc':'Zertifiziert nach ISO 9001, ISO 14001 und ISO 45001 – die Garantie für Qualität, ökologische Verantwortung und Arbeitssicherheit.',
+'why-f3-title':'Autorisiert ANRE &amp; IGSU','why-f3-desc':'Vollständige Zulassung für Planung, Ausführung und Überprüfung von Elektroinstallationen bei allen Spannungsebenen.',
+'why-f4-title':'Support und Garantie','why-f4-desc':'Technische Unterstützung nach der Installation und erweiterte Garantie für alle ausgeführten Arbeiten.',
+'stats-title':'EUROELECTRIC in Zahlen',
+'stat1':'Jahre Erfahrung in der Branche','stat2':'Erfolgreich abgeschlossene Projekte',
+'stat3':'Internationale ISO-Zertifizierungen','stat4':'Standorte im Kreis Hunedoara',
+'srv-tag':'Was wir anbieten','srv-title':'Unsere <span>Leistungen</span>',
+'srv-desc':'Komplette Elektrolösungen für Wohn-, Gewerbe- und Industriebereich – von der Planung bis zur Inbetriebnahme.',
+'srv-more':'Mehr erfahren <i class="fas fa-arrow-right"></i>',
+'s1-title':'Elektrische Schaltschränke','s1-desc':'Planung und Montage von Haupt- und Verteilerschaltschränken nach europäischen Normen. Individuelle Lösungen für jeden Installationstyp.',
+'s2-title':'Elektroinstallationen','s2-desc':'Planung und Ausführung von Elektroinstallationen für Wohn-, Gewerbe- und Industriegebäude. Zertifizierte und garantierte Arbeiten.',
+'s3-title':'Prüfung elektrischer Installationen','s3-desc':'Überprüfung und Messung von Elektroinstallationen mit hochmoderner Ausrüstung. Technische Berichte und Zertifizierungen für die Sicherheit Ihrer Installationen.',
+'s4-title':'Photovoltaiksysteme','s4-desc':'Installation von Solarmodulen und Energiespeichersystemen für Energieunabhängigkeit. Wohn- und Industrieprojekte mit maximaler Effizienz.',
+'s5-title':'EV-Ladestationen','s5-desc':'Planung, Installation und Inbetriebnahme von Ladestationen für Elektrofahrzeuge. Lösungen für Wohn-, Gewerbe- und Industrienutzung.',
+'s6-title':'Schwachstromanlagen','s6-desc':'Strukturierte Netzwerkinfrastruktur, Glasfaser und professionelle Funksysteme. Komplette Lösungen für Daten und Telekommunikation.',
+'prj-tag':'Portfolio','prj-title':'Realisierte <span>Projekte</span>',
+'prj-desc':'Eine Auswahl unserer Arbeiten – von privaten Installationen bis hin zu großen Industrieprojekten.',
+'prj-f0':'Alle','prj-f1':'Schaltschränke','prj-f2':'Installationen','prj-f3':'Photovoltaik','prj-f4':'EV-Stationen','prj-f5':'Installationsprüfungen',
+'cta-title':'Benötigen Sie ein <span>individuelles Angebot</span>?',
+'cta-desc':'Kontaktieren Sie uns noch heute für eine kostenlose Beratung. Unser Spezialistenteam bietet Ihnen die passende Elektrolösung für Ihre Bedürfnisse.',
+'cta-btn':'<i class="fas fa-paper-plane"></i> Anfrage senden',
+'blog-tag':'Neuigkeiten &amp; Ressourcen',
+'blog-desc':'Artikel, Leitfäden und Neuigkeiten aus dem Bereich Elektroinstallationen und erneuerbare Energien.',
+'blog-read':'Mehr lesen <i class="fas fa-arrow-right"></i>',
+'blog-rittal-tag':'Video','blog-rittal-title':'Rittal &amp; Eplan Lösungen für professionelle Schaltschränke','blog-rittal-desc':'Entdecken Sie, wie EUROELECTRIC Rittal- und Eplan-Technologien in der Planung und Montage hochwertiger Schaltschränke integriert.','blog-rittal-link':'Auf LinkedIn ansehen <i class="fas fa-arrow-right"></i>',
+'blog-siemens-tag':'Partner','blog-siemens-title':'Siemens Digital Industries — Automatisierungs- und Energieeffizienzlösungen','blog-siemens-desc':'EUROELECTRIC arbeitet mit Siemens Romania zusammen, um modernste industrielle Automatisierungs- und Elektroanlagenlösungen zu integrieren.','blog-siemens-link':'Auf LinkedIn ansehen <i class="fas fa-arrow-right"></i>',
+'blog-euro-video-tag':'Video','blog-euro-video-title':'EUROELECTRIC — Industrielle Elektroinstallationen &amp; Projekte','blog-euro-video-desc':'Entdecken Sie die neuesten Projekte und Leistungen von EUROELECTRIC SRL – Elektroinstallationen, Schaltschränke und Geräte für den Industriesektor.','blog-euro-video-link':'Auf LinkedIn ansehen <i class="fas fa-arrow-right"></i>',
+'blog-surlea-video-tag':'Video','blog-surlea-video-title':'EUROELECTRIC — Industrielle Elektroinstallationsarbeiten','blog-surlea-video-desc':'Beobachten Sie das EUROELECTRIC-Team bei der Arbeit – professionelle Ausführung von Elektroinstallationen für Industrie- und Gewerbebereich.','blog-surlea-video-link':'Auf LinkedIn ansehen <i class="fas fa-arrow-right"></i>',
+'blog-ind40-video-tag':'Video','blog-ind40-video-title':'EUROELECTRIC — Industrie 4.0 in der Elektroinstallationsplanung','blog-ind40-video-desc':'Wie EUROELECTRIC Industrie 4.0 Technologien in die Planung und Ausführung moderner Elektroinstallationen integriert.','blog-ind40-video-link':'Auf LinkedIn ansehen <i class="fas fa-arrow-right"></i>',
+'con-tag':'Kontaktieren Sie uns','con-title':'Kontakt <span>&amp;</span> Standorte',
+'con-desc':'Wir stehen Ihnen für jede Frage oder Angebotsanfrage zur Verfügung.',
+'con-info-title':'Unsere Kontaktdaten',
+'form-title':'Anfrage senden','form-name':'Name *','form-phone':'Telefon *',
+'form-email':'E-Mail','form-service':'Gewünschte Leistung','form-message':'Nachricht *',
+'form-name-ph':'Ihr Name','form-email-ph':'email@beispiel.de',
+'form-msg-ph':'Beschreiben Sie kurz Ihr Projekt oder Ihre Anfrage...',
+'form-select':'— Leistung auswählen —|Schaltschränke|Elektroinstallationen|Photovoltaikanlagen|EV-Ladestationen|Sonstiges / Allgemein',
+'form-gdpr':'Ich stimme der Verarbeitung personenbezogener Daten gemäß der <a href="politica-confidentialitate.html" target="_blank" style="color:var(--cyan);font-weight:600;">Datenschutzrichtlinie</a> zu. *',
+'form-submit':'<i class="fas fa-paper-plane"></i> Anfrage absenden',
+'footer-brand':'Komplette Elektrolösungen für Wohn-, Gewerbe- und Industriebereich. Professionalität und Sicherheit – seit 2003.',
+'footer-nav':'Navigation',
+'footer-copy':'© 2026 S.C. EUROELECTRIC S.R.L. — Alle Rechte vorbehalten',
+'footer-srv':'Leistungen','footer-contact-title':'Kontakt','footer-privacy':'Datenschutz','footer-cookies':'Cookie-Richtlinie',
+'te-tag':'Detaillierte Leistung',
+'te-title':'Niederspannungs-<span>Schaltschränke</span>',
+'te-desc':'Verteilungs- und Steuerschränke für Installationen bis 2500A. Industrie-, Gewerbe- und öffentliche Lösungen – von der Planung bis zur Inbetriebnahme.',
+'te-apps-title':'Hauptanwendungen',
+'te-app1':'Industrie &amp; Fertigung',
+'te-app2':'Einkaufszentren (Auchan, Lidl, Hornbach)',
+'te-app3':'Krankenhäuser &amp; Öffentliche Einrichtungen',
+'te-app4':'Erneuerbare Energien (Solar, Wind)',
+'te-app5':'Telekommunikation &amp; Rechenzentren',
+'te-app6':'EV-Ladestationen',
+'te-srv-title':'Komplette Leistungen',
+'te-srv1-title':'Planung','te-srv1-desc':'Individuelle Lösungen, Berechnungen, Elektroschemas, Dokumentation',
+'te-srv2-title':'Fertigung','te-srv2-desc':'CNC-Bearbeitung, Montage, Verkabelung, Korrosionsschutz',
+'te-srv3-title':'Montage','te-srv3-desc':'Erfahrenes Team, Vor-Ort-Installation, laufende Unterstützung',
+'te-srv4-title':'Prüfung','te-srv4-desc':'Isolationsprüfungen, Funktionsprüfungen, Konformitätsberichte',
+'te-std-title':'Normen &amp; Konformität',
+'te-std1-title':'Europäisch','te-std1-desc':'EN 61439-1, EN 61439-2, EN 60950-1, EN 61010-1',
+'te-std2-title':'National','te-std2-desc':'SR EN 60364, NTE 006, NTPA, Gesetz 123/2012',
+'te-std3-title':'Zertifizierungen','te-std3-desc':'CE-Kennzeichnung, Konformitätserklärung, Haftpflichtversicherung',
+'ie-tag':'Detaillierte Leistung',
+'ie-title':'Elektroinstallationen <span>Zertifiziert &amp; Garantiert</span>',
+'ie-desc':'Planung und Ausführung von Elektroinstallationen für jeden Gebäudetyp – Wohn-, Gewerbe- und Industriebereich. Arbeiten nach geltenden Normen mit Garantie und 24/7-Support.',
+'ie-types-title':'Installationstypen',
+'ie-type1':'Private Installationen','ie-type2':'Gewerbliche Installationen',
+'ie-type3':'Industrielle Installationen','ie-type4':'Beleuchtungssysteme',
+'ie-type5':'Sicherheitssysteme','ie-type6':'Spezialinstallationen',
+'ie-apps-title':'Hauptanwendungen',
+'ie-app1':'Wohnungen &amp; Häuser','ie-app2':'Einkaufszentren (Auchan, Lidl, Hornbach)',
+'ie-app3':'Krankenhäuser &amp; Medizinische Einrichtungen','ie-app4':'Fabriken &amp; Werkstätten',
+'ie-app5':'Straßen- &amp; Öffentliche Beleuchtung','ie-app6':'EV-Ladestationen',
+'ie-srv-title':'Komplette Leistungen',
+'ie-srv1-title':'Planung','ie-srv1-desc':'Maßgeschneiderte Lösungen, Lastberechnungen, Pläne, Sicherungsdimensionierung',
+'ie-srv2-title':'Ausführung','ie-srv2-desc':'Normgerechte Montage, Kabelführung, Verbindungen, Fertigstellung',
+'ie-srv3-title':'Prüfung','ie-srv3-desc':'Widerstandsmessungen, Lasttests, Konformitätsberichte',
+'ie-srv4-title':'Support','ie-srv4-desc':'Garantie, Haftpflichtversicherung, 24/7-Service',
+'ie-std-title':'Normen &amp; Zertifizierungen',
+'ie-std1-title':'Europäisch','ie-std1-desc':'EN 60364, EN 50160, EN 61000, IEC 60950',
+'ie-std2-title':'National','ie-std2-desc':'NTE 006-2002, NTPA, SR EN 50083, Gesetz 123/2012',
+'ie-std3-title':'Zertifizierungen','ie-std3-desc':'CE-Kennzeichnung, Konformitätserklärung, ANRE-Inspektion',
+'vi-tag':'Detaillierte Leistung',
+'vi-title':'Prüfung elektrischer <span>Installationen</span>',
+'vi-desc':'Vollständige Messungen und Prüfungen von Elektroinstallationen mit kalibrierten Geräten. Detaillierte technische Berichte, Konformitätsbescheinigungen und Sanierungsempfehlungen.',
+'vi-types-title':'Prüfungsarten',
+'vi-type1':'Isolationswiderstandsmessungen','vi-type2':'Erdungswiderstandsmessungen',
+'vi-type3':'Lasttests','vi-type4':'Fehlererkennung in Installationen',
+'vi-type5':'Kontinuitätsmessungen','vi-type6':'Inspektion &amp; Zertifizierung',
+'vi-apps-title':'Anwendungsbereiche',
+'vi-app1':'Private Installationen','vi-app2':'Gewerbe- &amp; Industrieinstallationen',
+'vi-app3':'Rechenzentren &amp; Telekommunikation','vi-app4':'Beleuchtungssysteme',
+'vi-app5':'Sicherheitssysteme','vi-app6':'Qualitäts- &amp; Konformitätskontrolle',
+'vi-srv-title':'Prüfungsleistungen',
+'vi-srv1-title':'Messungen','vi-srv1-desc':'Kalibrierte Geräte, präzise Messungen, dokumentierte Daten',
+'vi-srv2-title':'Analyse','vi-srv2-desc':'Normenbewertung, Fehlererkennung, Diagnose',
+'vi-srv3-title':'Berichte','vi-srv3-desc':'Detaillierte Dokumentation, Empfehlungen, Konformitätsbescheinigungen',
+'vi-srv4-title':'Nachverfolgung','vi-srv4-desc':'Fehlerbehebung, Nachprüfungen, Qualitätssicherung',
+'vi-std-title':'Geräte &amp; Normen',
+'vi-std1-title':'Geräte','vi-std1-desc':'Megaohmmeter, Terrameter, Multimeter, Amperemeter – alle kalibriert',
+'vi-std2-title':'Normen','vi-std2-desc':'EN 60364, EN 61557, SR EN 60309, IEC 61010-1',
+'vi-std3-title':'Zertifizierungen','vi-std3-desc':'ANRE-Akkreditierung, Konformitätsbescheinigungen, Prüfberichte',
+'fv-tag':'Detaillierte Leistung',
+'fv-title':'Photovoltaiksysteme <span>Solar</span>',
+'fv-desc':'Planung und Installation kompletter Solaranlagen – On-Grid, Off-Grid und Hybrid. Saubere Energie, Energieunabhängigkeit und Amortisation in 5–8 Jahren.',
+'fv-types-title':'Systemtypen',
+'fv-type1':'On-Grid (netzgekoppelt)','fv-type2':'Off-Grid (Inselanlagen)',
+'fv-type3':'Hybrid (mit Batterien)','fv-type4':'Privat',
+'fv-type5':'Gewerbe &amp; Industrie','fv-type6':'Großanlagen',
+'fv-ben-title':'Vorteile &amp; Anwendungen',
+'fv-ben1':'Saubere und erneuerbare Energie','fv-ben2':'Reduzierte Energiekosten',
+'fv-ben3':'Steuervorteile und Förderungen','fv-ben4':'Nachhaltigkeit und Umweltschutz',
+'fv-ben5':'Energieunabhängigkeit','fv-ben6':'ROI in 5–8 Jahren',
+'fv-srv-title':'Komplette Leistungen',
+'fv-srv1-title':'Planung','fv-srv1-desc':'Einstrahlungsstudie, Leistungsberechnung, Installationsplan, Kosten',
+'fv-srv2-title':'Installation','fv-srv2-desc':'Modulmontage, Wechselrichter, Verkabelung, Netzanschluss',
+'fv-srv3-title':'Prüfung','fv-srv3-desc':'Funktionstests, Messungen, Konformitätsberichte',
+'fv-srv4-title':'Wartung','fv-srv4-desc':'Modulreinigung, Überwachung, Reparaturen, Garantie',
+'fv-std-title':'Komponenten &amp; Normen',
+'fv-std1-title':'Komponenten','fv-std1-desc':'Hocheffiziente Module, Wechselrichter, Montagestrukturen, Kabel',
+'fv-std2-title':'Normen','fv-std2-desc':'IEC 61215, IEC 61730, EN 50160, SR EN 60364',
+'fv-std3-title':'Zertifizierungen','fv-std3-desc':'CE-Kennzeichnung, 25 Jahre Garantie, ANRE-Netzanschluss-Zertifikat',
+'ai-tag':'Detaillierte Leistung',
+'ai-title':'Industrielle <span>Automatisierung</span>',
+'ai-desc':'Komplette Automatisierungs- und Steuerlösungen für Fabriken und Industrieanlagen – SPS, SCADA, HMI und Frequenzumrichter. Höhere Produktivität, weniger Fehler, Bediensicherheit.',
+'ai-types-title':'Automatisierungssysteme',
+'ai-type1':'SPS &amp; Steuerungen','ai-type2':'SCADA-Systeme',
+'ai-type3':'Frequenzumrichter','ai-type4':'Überwachungssysteme',
+'ai-type5':'HMI-Schnittstellen','ai-type6':'Robotik &amp; Mechanisierung',
+'ai-apps-title':'Anwendungsbereiche',
+'ai-app1':'Fabriken &amp; Werkstätten','ai-app2':'Produktionslinien',
+'ai-app3':'Verteilungssysteme','ai-app4':'Wasser- &amp; Gasanlagen',
+'ai-app5':'Abfallbehandlungszentren','ai-app6':'Prozesssteuerung',
+'ai-srv-title':'Komplette Leistungen',
+'ai-srv1-title':'Planung','ai-srv1-desc':'Bedarfsanalyse, Systemkonzept, Geräteauswahl',
+'ai-srv2-title':'Programmierung','ai-srv2-desc':'SPS- &amp; SCADA-Programmentwicklung, Logiktests',
+'ai-srv3-title':'Installation','ai-srv3-desc':'Komponentenmontage, Verkabelung, Hardware-Konfiguration',
+'ai-srv4-title':'Wartung','ai-srv4-desc':'Technischer Support, Upgrades, Bedienerschulung, Garantie',
+'ai-std-title':'Vorteile &amp; Normen',
+'ai-std1-title':'Vorteile','ai-std1-desc':'Höhere Produktivität, weniger Fehler, Bediensicherheit',
+'ai-std2-title':'Normen','ai-std2-desc':'EN 61131-3, EN 60204-1, EN 61508, IEC 61010-1',
+'ai-std3-title':'Zertifizierungen','ai-std3-desc':'CE-Kennzeichnung, Konformitätsdokumente, Bedienungsanleitungen',
+'cs-tag':'Detaillierte Leistung',
+'cs-title':'<span>Schwachstrom</span>installationen',
+'cs-desc':'Komplette Telekommunikations-, Daten- und Sicherheitsinfrastruktur – CCTV, Alarmanlagen, Zutrittskontrolle, LAN/WLAN-Netzwerke und Glasfaser. Konnektivität und Sicherheit für jeden Gebäudetyp.',
+'cs-types-title':'Installationstypen',
+'cs-type1':'Telekommunikation &amp; Daten','cs-type2':'Sicherheitssysteme (CCTV)',
+'cs-type3':'Alarmsysteme','cs-type4':'Beschallung &amp; Multimedia',
+'cs-type5':'Zutrittskontrollsysteme','cs-type6':'LAN/WLAN/Glasfaser-Netzwerke',
+'cs-apps-title':'Anwendungsbereiche',
+'cs-app1':'Bürogebäude','cs-app2':'Einkaufszentren &amp; Geschäfte',
+'cs-app3':'Krankenhäuser &amp; Medizinische Zentren','cs-app4':'Fabriken &amp; Werkstätten',
+'cs-app5':'Rechenzentren','cs-app6':'Banken &amp; Finanzinstitutionen',
+'cs-srv-title':'Komplette Leistungen',
+'cs-srv1-title':'Planung','cs-srv1-desc':'Bedarfsanalyse, Wegeplanung, Kabel- und Kanaldimensionierung',
+'cs-srv2-title':'Installation','cs-srv2-desc':'Kabelführung, Dosenmontage, Kabel- und Steckerinstallation',
+'cs-srv3-title':'Prüfung','cs-srv3-desc':'Kontinuitätsprüfungen, Übertragungstests, Zertifizierungen',
+'cs-srv4-title':'Wartung','cs-srv4-desc':'24/7-Support, Systemaktualisierungen, Benutzerschulung',
+'cs-std-title':'Geräte &amp; Normen',
+'cs-std1-title':'Materialien','cs-std1-desc':'Cat5e/Cat6/Cat6A-Kabel, Glasfaser, Steckverbinder, Panels',
+'cs-std2-title':'Normen','cs-std2-desc':'EN 50173, EN 50174, EN 60364-5-56, IEC 61076-2-109',
+'cs-std3-title':'Zertifizierungen','cs-std3-desc':'Übertragungstests, Konformitätsdokumente, Handbücher'
+}
+};
+function setLang(lang) {
+// Text elements
+document.querySelectorAll('[data-i18n]').forEach(el => {
+const key = el.getAttribute('data-i18n');
+if (translations[lang][key] !== undefined) el.innerHTML = translations[lang][key];
+});
+// Placeholder elements
+document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+const key = el.getAttribute('data-i18n-placeholder');
+if (translations[lang][key]) el.placeholder = translations[lang][key];
+});
+// Select elements
+document.querySelectorAll('[data-i18n-select]').forEach(el => {
+const key = el.getAttribute('data-i18n-select');
+if (translations[lang][key]) {
+const opts = translations[lang][key].split('|');
+Array.from(el.options).forEach((opt, i) => { if (opts[i]) opt.text = opts[i]; });
+}
+});
+// Update buttons
+document.querySelectorAll('.lang-btn').forEach(btn => {
+btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+});
+document.documentElement.lang = lang;
+localStorage.setItem('lang', lang);
+}
+// Init language from localStorage
+(function(){ setLang(localStorage.getItem('lang') || 'ro'); })();
+// Active nav highlight
+const sections = document.querySelectorAll("section[id]");
+window.addEventListener("scroll", () => {
+let current = "";
+sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+document.querySelectorAll(".nav-menu a").forEach(a => {
+a.style.color = a.getAttribute("href") === "#" + current ? "var(--cyan)" : "";
+});
+});
+</script>
 <div id="cookieBanner" style="display:none">
 <div class="cookie-banner-inner">
 <div class="cookie-banner-text">
@@ -1276,7 +3066,7 @@ target="_blank" rel="noopener">
 <span id="certModalCounter"></span>
 <button class="cert-nav-btn" id="certNavNext" onclick="certNavStep(1)">&#8250;</button>
 </div>
-<button class="cert-modal-close" onclick="closeCertModal()" aria-label="Închide certificat">&times;</button>
+<button class="cert-modal-close" onclick="closeCertModal()">&times;</button>
 </div>
 </div>
 <div class="cert-modal-body">
@@ -1285,15 +3075,6 @@ target="_blank" rel="noopener">
 </div>
 </div>
 </div>
-<!-- Bara mobila SUNA ACUM (vizibila doar pe mobil) -->
-<a href="tel:+40254545444" class="mobile-call-bar" aria-label="Sună acum la EUROELECTRIC">
-  <span class="mcb-icon"><i class="fas fa-phone-volume"></i></span>
-  <span class="mcb-text">
-    <strong data-i18n="mcb-cta">SUNĂ ACUM</strong>
-    <small>0254 545 444</small>
-  </span>
-  <span class="mcb-arrow"><i class="fas fa-chevron-right"></i></span>
-</a>
 <div class="float-contact" id="floatContact">
 <div class="float-contact-options">
 <a href="tel:+40254545444" class="float-option">
@@ -1308,14 +3089,14 @@ target="_blank" rel="noopener">
 </button>
 </div>
 <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
-<button class="lightbox-close" onclick="closeLightbox()" aria-label="Închide imaginea">&times;</button>
+<button class="lightbox-close" onclick="closeLightbox()">&times;</button>
 <img class="lightbox-img" id="lightboxImg" src="" alt="">
 </div>
 <div class="blog-modal-overlay" id="blogModal4" onclick="closeBlogModal4(event)">
 <div class="blog-modal-box">
 <div class="blog-modal-header">
 <h3>Industrie 4.0 — Hala echipamente electrice pentru tehnologii verzi</h3>
-<button class="blog-modal-close" onclick="closeBlogModal4()" aria-label="Închide articol">&times;</button>
+<button class="blog-modal-close" onclick="closeBlogModal4()">&times;</button>
 </div>
 <div class="blog-modal-body">
 <div class="blog-modal-eu-bar">
@@ -1430,7 +3211,7 @@ target="_blank" rel="noopener">
 <div class="blog-modal-box">
 <div class="blog-modal-header">
 <h3>Comunicat de presă — Finalizare Industrie 4.0</h3>
-<button class="blog-modal-close" onclick="closeBlogModal5()" aria-label="Închide articol">&times;</button>
+<button class="blog-modal-close" onclick="closeBlogModal5()">&times;</button>
 </div>
 <div class="blog-modal-body">
 <div class="blog-modal-eu-bar">
@@ -1547,6 +3328,296 @@ target="_blank" rel="noopener">
 </div>
 </div>
 </div>
-<script src="euroelectric.js" defer></script>
+<script>
+(function() {
+var slides = document.querySelectorAll('#slideshow-tablou img');
+if (!slides.length) return;
+var idx = 0;
+slides[0].classList.add('slide-active');
+setInterval(function() {
+slides[idx].classList.remove('slide-active');
+idx = (idx + 1) % slides.length;
+slides[idx].classList.add('slide-active');
+}, 3000);
+})();
+(function() {
+var slides = document.querySelectorAll('#slideshow-instalatii img');
+if (!slides.length) return;
+var idx = 0;
+slides[0].classList.add('slide-active');
+setInterval(function() {
+slides[idx].classList.remove('slide-active');
+idx = (idx + 1) % slides.length;
+slides[idx].classList.add('slide-active');
+}, 3000);
+})();
+(function() {
+var slides = document.querySelectorAll('#slideshow-statii img');
+if (!slides.length) return;
+var idx = 0;
+slides[0].classList.add('slide-active');
+setInterval(function() {
+slides[idx].classList.remove('slide-active');
+idx = (idx + 1) % slides.length;
+slides[idx].classList.add('slide-active');
+}, 3000);
+})();
+(function() {
+var slides = document.querySelectorAll('#slideshow-fotovoltaice img');
+if (!slides.length) return;
+var idx = 0;
+slides[0].classList.add('slide-active');
+setInterval(function() {
+slides[idx].classList.remove('slide-active');
+idx = (idx + 1) % slides.length;
+slides[idx].classList.add('slide-active');
+}, 3000);
+})();
+(function() {
+var slides = document.querySelectorAll('#slideshow-verificari img');
+if (!slides.length) return;
+var idx = 0;
+slides[0].classList.add('slide-active');
+setInterval(function() {
+slides[idx].classList.remove('slide-active');
+idx = (idx + 1) % slides.length;
+slides[idx].classList.add('slide-active');
+}, 3500);
+})();
+// Cookie banner
+function loadMaps() {
+var block = document.getElementById('map-cookie-block');
+var baru = document.getElementById('map-baru');
+var petro = document.getElementById('map-petrosani');
+if (!baru) return;
+if (block) block.style.display = 'none';
+if (!baru.src || baru.src === window.location.href) {
+baru.src = baru.getAttribute('data-src');
+}
+if (!petro.src || petro.src === window.location.href) {
+petro.src = petro.getAttribute('data-src');
+}
+}
+function showMapBlock() {
+var block = document.getElementById('map-cookie-block');
+if (block) block.style.display = 'flex';
+}
+(function() {
+var consent = localStorage.getItem('euro_cookie_consent');
+if (!consent) {
+document.getElementById('cookieBanner').style.display = 'block';
+showMapBlock();
+} else if (localStorage.getItem('euro_cookie_functional') === '1') {
+loadMaps();
+} else {
+showMapBlock();
+}
+})();
+function cookieChoice(type) {
+localStorage.setItem('euro_cookie_consent', type);
+localStorage.setItem('euro_cookie_functional', type === 'all' ? '1' : '0');
+var b = document.getElementById('cookieBanner');
+if (b && b.style.display !== 'none') {
+b.style.transition = 'transform 0.4s ease';
+b.style.transform = 'translateY(100%)';
+setTimeout(function() { b.style.display = 'none'; }, 400);
+}
+if (type === 'all') {
+loadMaps();
+} else {
+showMapBlock();
+}
+}
+var CERT_ANRE = [
+{src:'docs/Atestat-C2A.pdf',    title:'Atestat ANRE — Tip C2A'},
+{src:'docs/Atestat-tipA.pdf',   title:'Atestat ANRE — Tip A'},
+{src:'docs/Atestat-tipBp.pdf',  title:'Atestat ANRE — Tip Bp'}
+];
+var CERT_IGSU = [
+{src:'docs/Autorizatie-ISU-Executie.jpg', title:'Autorizație ISU — Execuție (Seria A Nr. 3307)'},
+{src:'docs/Autorizatie-ISU-Proiectare.pdf', title:'Autorizație ISU — Proiectare (Seria A Nr. 9861)'}
+];
+var _certDocs = [], _certIdx = 0;
+function openCertSet(docs) {
+_certDocs = docs; _certIdx = 0;
+_renderCertDoc();
+document.getElementById("certModal").classList.add("active");
+document.body.style.overflow = "hidden";
+}
+function openCertModal(src, title) {
+openCertSet([{src:src, title:title}]);
+}
+function _renderCertDoc() {
+var doc = _certDocs[_certIdx];
+document.getElementById("certModalTitle").textContent = doc.title;
+var nav = document.getElementById("certModalNav");
+if (_certDocs.length > 1) {
+nav.style.display = "flex";
+document.getElementById("certModalCounter").textContent = (_certIdx+1) + " / " + _certDocs.length;
+document.getElementById("certNavPrev").disabled = _certIdx === 0;
+document.getElementById("certNavNext").disabled = _certIdx === _certDocs.length - 1;
+} else {
+nav.style.display = "none";
+}
+var iframe = document.getElementById("certModalIframe");
+var img = document.getElementById("certModalImg");
+if (/\.(jpg|jpeg|png|gif|webp)$/i.test(doc.src)) {
+iframe.style.display = "none"; iframe.src = "";
+img.src = doc.src; img.style.display = "block";
+} else {
+img.style.display = "none"; img.src = "";
+iframe.src = doc.src + "#view=Fit&toolbar=1"; iframe.style.display = "block";
+}
+}
+function certNavStep(dir) {
+var next = _certIdx + dir;
+if (next >= 0 && next < _certDocs.length) { _certIdx = next; _renderCertDoc(); }
+}
+function closeCertModal(e) {
+if (e && e.target !== document.getElementById("certModal")) return;
+document.getElementById("certModal").classList.remove("active");
+document.getElementById("certModalIframe").src = "";
+document.getElementById("certModalIframe").style.display = "none";
+document.getElementById("certModalImg").src = "";
+document.getElementById("certModalImg").style.display = "none";
+document.body.style.overflow = "";
+}
+function openBlogModal4() {
+document.getElementById("blogModal4").classList.add("active");
+document.body.style.overflow = "hidden";
+}
+function closeBlogModal4(e) {
+if (e && e.target !== document.getElementById("blogModal4")) return;
+document.getElementById("blogModal4").classList.remove("active");
+document.body.style.overflow = "";
+}
+function openBlogModal5() {
+document.getElementById("blogModal5").classList.add("active");
+document.body.style.overflow = "hidden";
+}
+function closeBlogModal5(e) {
+if (e && e.target !== document.getElementById("blogModal5")) return;
+document.getElementById("blogModal5").classList.remove("active");
+document.body.style.overflow = "";
+}
+// ===== FLOATING CONTACT BUTTON =====
+(function() {
+var btn = document.getElementById("floatBtn");
+var wrap = document.getElementById("floatContact");
+btn.addEventListener("click", function(e) {
+e.stopPropagation();
+wrap.classList.toggle("open");
+});
+document.addEventListener("click", function(e) {
+if (!wrap.contains(e.target)) wrap.classList.remove("open");
+});
+})();
+// ===== MAP TABS =====
+function switchMap(loc, btn) {
+document.querySelectorAll(".map-tab-btn").forEach(function(b){ b.classList.remove("active"); });
+btn.classList.add("active");
+var baru = document.getElementById("map-baru");
+var petro = document.getElementById("map-petrosani");
+var link = document.getElementById("map-open-link");
+if (loc === "baru") {
+baru.style.display = "block";
+petro.style.display = "none";
+link.href = "https://www.google.com/maps/search/Baru,+Hunedoara,+Romania";
+} else {
+baru.style.display = "none";
+petro.style.display = "block";
+link.href = "https://www.google.com/maps/search/Str.+Petru+Maior+14,+Petrosani,+Hunedoara";
+}
+}
+// ===== LIGHTBOX =====
+function openLightbox(src, alt) {
+document.getElementById("lightboxImg").src = src;
+document.getElementById("lightboxImg").alt = alt || "";
+document.getElementById("lightbox").classList.add("active");
+document.body.style.overflow = "hidden";
+}
+function closeLightbox(e) {
+if (e && e.target === document.getElementById("lightboxImg")) return;
+document.getElementById("lightbox").classList.remove("active");
+document.getElementById("lightboxImg").src = "";
+document.body.style.overflow = "";
+}
+document.querySelectorAll(".project-slideshow img").forEach(function(img) {
+img.addEventListener("click", function() {
+openLightbox(this.src, this.alt);
+});
+});
+document.addEventListener("keydown", function(e) {
+if (e.key === "Escape") {
+closeCertModal();
+closeBlogModal4();
+closeBlogModal5();
+closeLightbox();
+}
+if (e.key === "ArrowLeft") certNavStep(-1);
+if (e.key === "ArrowRight") certNavStep(1);
+});
+</script>
+
+<!-- ===== FULLPAGE DOT NAVIGATION ===== -->
+<script>
+(function(){
+  if (window.innerWidth <= 900) return;
+
+  var sectionData = [
+    { id:'acasa',                  label:'Acasă' },
+    { id:'de-ce-noi',              label:'De ce noi' },
+    { id:'servicii',               label:'Servicii' },
+    { id:'tablouri-electrice',     label:'Tablouri electrice' },
+    { id:'instalatii-electrice',   label:'Instalații electrice' },
+    { id:'verificari-instalatii',  label:'Verificări instalații' },
+    { id:'sisteme-fotovoltaice',   label:'Sisteme fotovoltaice' },
+    { id:'curenti-slabi',          label:'Curenți slabi' },
+    { id:'proiecte',               label:'Proiecte' },
+    { id:'blog',                   label:'Blog' },
+    { id:'contact',                label:'Contact' }
+  ];
+
+  var nav = document.createElement('div');
+  nav.id = 'fp-nav';
+  var dots = [];
+
+  sectionData.forEach(function(s, i){
+    var btn = document.createElement('button');
+    btn.className = 'fp-dot' + (i === 0 ? ' active' : '');
+    btn.setAttribute('data-label', s.label);
+    btn.setAttribute('aria-label', 'Mergi la secțiunea ' + s.label);
+    btn.addEventListener('click', function(){
+      var el = document.getElementById(s.id);
+      if (el) el.scrollIntoView({ behavior:'smooth' });
+    });
+    nav.appendChild(btn);
+    dots.push(btn);
+  });
+
+  document.body.appendChild(nav);
+
+  function updateDots(){
+    var midY = window.scrollY + window.innerHeight * 0.5;
+    var bestIdx = 0, bestDist = Infinity;
+    sectionData.forEach(function(s, i){
+      var el = document.getElementById(s.id);
+      if (!el) return;
+      var dist = Math.abs(midY - (el.offsetTop + el.offsetHeight * 0.5));
+      if (dist < bestDist){ bestDist = dist; bestIdx = i; }
+    });
+    dots.forEach(function(d){ d.classList.remove('active'); });
+    if (dots[bestIdx]) dots[bestIdx].classList.add('active');
+  }
+
+  window.addEventListener('scroll', updateDots, { passive:true });
+  window.addEventListener('resize', function(){
+    if (window.innerWidth <= 900) nav.style.display='none';
+    else nav.style.display='flex';
+    updateDots();
+  });
+  updateDots();
+})();
+</script>
 </body>
 </html>
