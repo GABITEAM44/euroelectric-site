@@ -597,8 +597,9 @@ font-weight: 800; font-size: 0.9rem; color: #e63946;
 .blog-modal-body { padding: 20px 18px; }
 }
 /* ===== SECTIONS ===== */
-section { display: none; height: 100vh; overflow-y: auto; padding: 90px 40px; box-sizing: border-box; }
-section.fp-visible { display: block; }
+section { display: none !important; height: 100vh; overflow-y: auto; padding: 90px 40px; box-sizing: border-box; }
+section.fp-visible { display: block !important; }
+#acasa.fp-visible { display: flex !important; }
 .section-inner { max-width: 1280px; margin: 0 auto; }
 .section-tag {
 display: inline-flex; align-items: center; gap: 8px;
