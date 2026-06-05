@@ -3584,16 +3584,19 @@ function toggleBlogExtra(){
   };
 
   function showSection(id){
-    // Ascunde toate secțiunile
+    // Ascunde toate secțiunile și resetează scroll-ul lor
     document.querySelectorAll('section[id]').forEach(function(s){
       s.classList.remove('fp-visible');
-      s.scrollTop = 0;
     });
 
     // Afișează secțiunea țintă
     var target = document.getElementById(id);
     if(!target || target.tagName !== 'SECTION'){ id = 'acasa'; target = document.getElementById('acasa'); }
     target.classList.add('fp-visible');
+    // Reset scroll DUPĂ ce devine vizibilă (display:none ignora scrollTop)
+    requestAnimationFrame(function(){
+      target.scrollTop = 0;
+    });
     history.replaceState(null, '', '#' + id);
 
     // Actualizează nav active
