@@ -1050,6 +1050,48 @@ nav { padding: 0 16px; }
 .footer-bottom-links { justify-content: center; flex-wrap: wrap; }
 .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
 }
+/* ===== ADAPTIVE DISPLAY — viewport fit cu clamp() ===== */
+/* Padding secțiuni scalat după înălțimea viewport-ului */
+section { padding: clamp(48px,6.5vh,90px) clamp(20px,3vw,40px); }
+/* Spațiu sub descriere — mai mic pe ecrane mici */
+.section-desc { margin-bottom: clamp(20px,3.5vh,60px); }
+
+/* DE CE NOI — spațiere compactă */
+.why-grid { gap: clamp(24px,4vw,60px); margin-bottom: clamp(12px,2vh,80px); }
+.why-features { gap: clamp(10px,1.6vh,24px); }
+.why-feature { padding: clamp(10px,1.4vh,20px) clamp(12px,1.2vw,20px); }
+.why-feature-icon { width: clamp(38px,4.5vh,52px); height: clamp(38px,4.5vh,52px); min-width: clamp(38px,4.5vh,52px); font-size: clamp(1rem,2vh,1.3rem); }
+.why-feature-text h4 { font-size: clamp(0.85rem,1.4vh,1rem); }
+.why-feature-text p { font-size: clamp(0.78rem,1.2vh,0.9rem); line-height: 1.5; }
+.stats-grid { gap: clamp(10px,1.6vh,24px); }
+.stat-card { padding: clamp(12px,1.8vh,24px); }
+.stat-number { font-size: clamp(1.5rem,3.2vh,2.2rem); margin-bottom: clamp(4px,0.6vh,8px); }
+.stat-label { font-size: clamp(0.72rem,1.1vh,0.82rem); }
+
+/* PROIECTE — limitează înălțimea imaginilor mari */
+.project-slideshow { padding-top: min(62%, 44vh); }
+.project-placeholder { padding-top: min(62%, 44vh); }
+
+/* BLOG — imagini și grid scalate */
+.blog-card > a > div { height: clamp(140px,16vh,200px) !important; }
+.blog-card-img { height: clamp(140px,16vh,200px); }
+.blog-card-img-placeholder { min-height: clamp(130px,15vh,180px); }
+.blog-grid { gap: clamp(14px,2vh,28px); }
+.blog-card-body { padding: clamp(14px,1.8vh,24px); }
+.blog-card-body h3 { font-size: clamp(0.88rem,1.4vh,1.05rem); margin-bottom: clamp(6px,0.8vh,12px); }
+.blog-card-body p { font-size: clamp(0.8rem,1.2vh,0.92rem); line-height: 1.5; }
+
+/* CONTACT — spațiere compactă */
+.contact-grid { gap: clamp(24px,3.5vw,60px); }
+.contact-form { padding: clamp(22px,2.8vh,40px); }
+.contact-info h3 { margin-bottom: clamp(14px,2vh,32px); font-size: clamp(1.1rem,1.8vh,1.3rem); }
+.contact-locations { gap: clamp(10px,1.4vh,20px); margin-bottom: clamp(14px,2vh,28px); }
+.contact-location { padding: clamp(14px,1.8vh,24px); }
+.contact-location h4 { margin-bottom: clamp(8px,1.2vh,16px); font-size: clamp(0.82rem,1.3vh,0.95rem); }
+.contact-form h3 { margin-bottom: clamp(16px,2.2vh,32px); font-size: clamp(1.1rem,1.8vh,1.3rem); }
+.form-group { margin-bottom: clamp(12px,1.8vh,24px); }
+.form-row { gap: clamp(10px,1.5vw,20px); }
+
 /* ===== ANIMATIONS ===== */
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 .animate { animation: fadeInUp 0.6s ease forwards; }
