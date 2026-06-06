@@ -1050,6 +1050,27 @@ nav { padding: 0 16px; }
 .footer-bottom-links { justify-content: center; flex-wrap: wrap; }
 .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
 }
+/* ===== SECTION GROUP — mai multe secțiuni pe o pagină ===== */
+.section-group {
+  display: none;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+.section-group.fp-visible { display: block; }
+/* Secțiunile din grup NU mai au display:none și height:100vh propriu */
+.section-group section {
+  display: block !important;
+  height: auto !important;
+  min-height: unset !important;
+  overflow-y: visible !important;
+}
+/* #acasa în grup rămâne 100vh + flex pentru centrare */
+.section-group #acasa {
+  display: flex !important;
+  height: 100vh !important;
+}
+
 /* ===== ADAPTIVE DISPLAY — viewport fit cu clamp() ===== */
 /* Padding secțiuni scalat după înălțimea viewport-ului */
 section { padding: clamp(48px,6.5vh,90px) clamp(20px,3vw,40px); }
@@ -1149,6 +1170,7 @@ section { padding: clamp(48px,6.5vh,90px) clamp(20px,3vw,40px); }
 <span></span><span></span><span></span>
 </div>
 </nav>
+<div id="group-home" class="section-group">
 <section id="acasa">
 <div class="hero-bg-pattern"></div>
 <div class="hero-shapes">
@@ -1285,6 +1307,7 @@ Nu suntem doar executanți, suntem consultanții tăi tehnici. Combinăm dotări
 </div>
 </div>
 </section>
+</div><!-- /group-home -->
 <section id="servicii">
 <div class="section-inner">
 <div class="section-tag" data-i18n="srv-tag">Ce oferim</div>
@@ -2200,7 +2223,7 @@ target="_blank" rel="noopener">
 </div>
 </div>
 </footer>
-<button class="back-to-top" id="backToTop" onclick="(document.querySelector('section.fp-visible')||document.body).scrollTo({top:0,behavior:'smooth'})">
+<button class="back-to-top" id="backToTop" onclick="(document.querySelector('.section-group.fp-visible')||document.querySelector('section.fp-visible')||document.body).scrollTo({top:0,behavior:'smooth'})">
 <i class="fas fa-chevron-up"></i>
 </button>
 <script>
@@ -3583,21 +3606,50 @@ function toggleBlogExtra(){
     'curenti-slabi':         'servicii'
   };
 
+  // Grupuri: secțiuni care scrollează împreună pe aceeași pagină
+  var sectionGroups = {
+    'acasa':     'group-home',
+    'de-ce-noi': 'group-home'
+  };
+
   function showSection(id){
-    // Ascunde toate secțiunile și resetează scroll-ul lor
+    // Ascunde toate secțiunile individuale
     document.querySelectorAll('section[id]').forEach(function(s){
       s.classList.remove('fp-visible');
     });
-
-    // Afișează secțiunea țintă
-    var target = document.getElementById(id);
-    if(!target || target.tagName !== 'SECTION'){ id = 'acasa'; target = document.getElementById('acasa'); }
-    target.classList.add('fp-visible');
-    // Reset scroll DUPĂ ce devine vizibilă (display:none ignora scrollTop)
-    requestAnimationFrame(function(){
-      target.scrollTop = 0;
+    // Ascunde toate grupurile
+    document.querySelectorAll('.section-group').forEach(function(g){
+      g.classList.remove('fp-visible');
     });
-    history.replaceState(null, '', '#' + id);
+
+    var groupId = sectionGroups[id];
+    var scrollContainer;
+
+    if(groupId){
+      // Navighează în grup
+      var group = document.getElementById(groupId);
+      if(group){
+        group.classList.add('fp-visible');
+        scrollContainer = group;
+        requestAnimationFrame(function(){
+          if(id === 'de-ce-noi'){
+            var el = document.getElementById('de-ce-noi');
+            if(el) group.scrollTop = el.offsetTop;
+          } else {
+            group.scrollTop = 0;
+          }
+        });
+      }
+      history.replaceState(null, '', '#' + id);
+    } else {
+      // Secțiune individuală
+      var target = document.getElementById(id);
+      if(!target || target.tagName !== 'SECTION'){ id = 'acasa'; target = document.getElementById('acasa'); }
+      target.classList.add('fp-visible');
+      scrollContainer = target;
+      requestAnimationFrame(function(){ target.scrollTop = 0; });
+      history.replaceState(null, '', '#' + id);
+    }
 
     // Actualizează nav active
     var parentId = navParent[id] || id;
@@ -3607,13 +3659,15 @@ function toggleBlogExtra(){
       if(href === parentId || href === id) a.classList.add('nav-active');
     });
 
-    // Navbar scrolled + back-to-top: ascultă scroll-ul secțiunii active
+    // Navbar scrolled + back-to-top: ascultă scroll-ul containerului activ
     if(navbar) navbar.classList.remove('scrolled');
     if(backToTop) backToTop.classList.remove('visible');
-    target.addEventListener('scroll', function(){
-      if(navbar)   navbar.classList.toggle('scrolled', target.scrollTop > 50);
-      if(backToTop) backToTop.classList.toggle('visible', target.scrollTop > 400);
-    });
+    if(scrollContainer){
+      scrollContainer.addEventListener('scroll', function(){
+        if(navbar)    navbar.classList.toggle('scrolled', scrollContainer.scrollTop > 50);
+        if(backToTop) backToTop.classList.toggle('visible', scrollContainer.scrollTop > 400);
+      });
+    }
   }
 
   // Interceptează toate link-urile hash → secțiuni
