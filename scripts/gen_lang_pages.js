@@ -5,14 +5,20 @@ const path = require('path');
 const { JSDOM } = require('jsdom');
 
 const ROOT = path.resolve(__dirname, '..');
-const SRC = path.join(ROOT, 'euroelectric-nou.html');
+const SRC = path.join(ROOT, 'index.html');
 const html = fs.readFileSync(SRC, 'utf-8');
 
-const m = html.match(/const translations\s*=\s*(\{[\s\S]*?\n\});/);
-if (!m) throw new Error('translations object not found');
+// CSS si JS sunt externalizate; le citim ca sa le inline-am in paginile statice
+// (paginile en/de raman self-contained si independente de caile relative)
+const cssContent = fs.readFileSync(path.join(ROOT, 'euroelectric.css'), 'utf-8');
+const jsContent = fs.readFileSync(path.join(ROOT, 'euroelectric.js'), 'utf-8');
+
+// translations se afla acum in euroelectric.js, nu in HTML
+const m = jsContent.match(/const translations\s*=\s*(\{[\s\S]*?\n\});/);
+if (!m) throw new Error('translations object not found in euroelectric.js');
 const translations = eval('(' + m[1] + ')');
 
-const SITE_BASE = 'https://gabiteam44.github.io/euroelectric-site';
+const SITE_BASE = 'https://euroelectric.ro';
 const META = {
   en: {
     title: 'Electrical Switchboards & Installations Hunedoara | EUROELECTRIC S.R.L.',
@@ -68,15 +74,15 @@ function buildLangPage(lang) {
   setMeta('meta[property="og:url"]', 'content', pageUrl);
   doc.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => {
     const hl = el.getAttribute('hreflang');
-    if (hl === 'ro') el.setAttribute('href', `${SITE_BASE}/euroelectric-nou.html`);
+    if (hl === 'ro') el.setAttribute('href', `${SITE_BASE}/`);
     else if (hl === 'en') el.setAttribute('href', `${SITE_BASE}/en/`);
     else if (hl === 'de') el.setAttribute('href', `${SITE_BASE}/de/`);
-    else if (hl === 'x-default') el.setAttribute('href', `${SITE_BASE}/euroelectric-nou.html`);
+    else if (hl === 'x-default') el.setAttribute('href', `${SITE_BASE}/`);
   });
 
   // Comutatorul de limba devine link real catre pagina statica corespunzatoare
   // (evita flicker RO->lang si ofera Google linkuri crawlabile intre versiuni)
-  const langHrefs = { ro: '../euroelectric-nou.html', en: './', de: '../de/' };
+  const langHrefs = { ro: '../', en: './', de: '../de/' };
   doc.querySelectorAll('.lang-btn').forEach(btn => {
     const target = btn.getAttribute('data-lang');
     const a = doc.createElement('a');
@@ -86,22 +92,26 @@ function buildLangPage(lang) {
     btn.replaceWith(a);
   });
 
-  // Elimina auto-restaurarea din localStorage care ar suprascrie traducerea pre-randata
-  doc.querySelectorAll('script').forEach(s => {
-    if (s.textContent.includes("setLang(localStorage.getItem('lang')")) {
-      s.textContent = s.textContent.replace(
-        /\(function\(\)\{ setLang\(localStorage\.getItem\('lang'\) \|\| 'ro'\); \}\)\(\);/,
-        `document.querySelectorAll('[data-i18n], [data-i18n-placeholder], [data-i18n-select]').forEach(()=>{}); /* lang fixat la generare: ${lang} */`
-      );
-    }
+  // Inline CSS extern -> <style> (pagina self-contained, independenta de cai relative)
+  doc.querySelectorAll('link[rel="stylesheet"][href*="euroelectric.css"]').forEach(link => {
+    const style = doc.createElement('style');
+    style.textContent = cssContent;
+    link.replaceWith(style);
   });
 
-  // Linkurile relative catre resurse trebuie sa ramana valide din subdirector
-  doc.querySelectorAll('link[href^="Materiale/"], link[href^="euroelectric."], script[src^="euroelectric."]')
-    .forEach(el => {
-      const attr = el.hasAttribute('href') ? 'href' : 'src';
-      el.setAttribute(attr, '../' + el.getAttribute(attr));
-    });
+  // Inline JS extern -> <script>, cu auto-restaurarea localStorage neutralizata
+  // (altfel setLang(localStorage||'ro') ar suprascrie traducerea pre-randata)
+  const jsInlined = jsContent.replace(
+    /\(function\(\)\{ setLang\(localStorage\.getItem\('lang'\) \|\| 'ro'\); \}\)\(\);/,
+    `/* lang fixat la generare: ${lang} */`
+  );
+  doc.querySelectorAll('script[src*="euroelectric.js"]').forEach(s => {
+    const script = doc.createElement('script');
+    script.textContent = jsInlined;
+    s.replaceWith(script);
+  });
+
+  // Caile relative catre Materiale/ trebuie ajustate pentru subdirector (../)
   doc.querySelectorAll('img[src^="Materiale/"], a[href^="Materiale/"], source[srcset^="Materiale/"]')
     .forEach(el => {
       ['src', 'href', 'srcset'].forEach(attr => {
