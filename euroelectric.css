@@ -885,7 +885,8 @@ padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); gap: 4px;
 .nav-menu.open { display: flex; }
 .nav-menu a { padding: 12px 16px; border-radius: 8px; }
 .hamburger { display: flex; }
-.hero-container { padding: 40px 20px; }
+#acasa { align-items: flex-start; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.hero-container { padding: 40px 20px; align-items: start; }
 .hero-title { font-size: clamp(1.8rem, 6vw, 2.6rem); }
 .hero-visual { max-width: 100%; }
 .services-grid { grid-template-columns: 1fr; }
